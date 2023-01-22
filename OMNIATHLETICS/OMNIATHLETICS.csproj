@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BB5FCE92-FDAF-44BD-9910-6F41843243E6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>OMNIATHLETICS</RootNamespace>
+    <AssemblyName>OMNIATHLETICS</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormACSMPredictor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormACSMPredictor.Designer.cs">
+      <DependentUpon>FormACSMPredictor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAngularAcceleration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAngularAcceleration.Designer.cs">
+      <DependentUpon>FormAngularAcceleration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAngularVelocity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAngularVelocity.Designer.cs">
+      <DependentUpon>FormAngularVelocity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBMI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBMI.Designer.cs">
+      <DependentUpon>FormBMI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDSI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDSI.Designer.cs">
+      <DependentUpon>FormDSI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEUR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEUR.Designer.cs">
+      <DependentUpon>FormEUR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormFFMI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFFMI.Designer.cs">
+      <DependentUpon>FormFFMI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInertia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInertia.Designer.cs">
+      <DependentUpon>FormInertia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoadingTool.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoadingTool.Designer.cs">
+      <DependentUpon>FormLoadingTool.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLowerBodyPeakPowerPredictor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLowerBodyPeakPowerPredictor.Designer.cs">
+      <DependentUpon>FormLowerBodyPeakPowerPredictor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMetabolicRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMetabolicRate.Designer.cs">
+      <DependentUpon>FormMetabolicRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPhosphateRecovery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPhosphateRecovery.Designer.cs">
+      <DependentUpon>FormPhosphateRecovery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPowerZones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPowerZones.Designer.cs">
+      <DependentUpon>FormPowerZones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProjectionVelocity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProjectionVelocity.Designer.cs">
+      <DependentUpon>FormProjectionVelocity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProteinIndex.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProteinIndex.Designer.cs">
+      <DependentUpon>FormProteinIndex.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormRAST.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRAST.Designer.cs">
+      <DependentUpon>FormRAST.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormROFD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormROFD.Designer.cs">
+      <DependentUpon>FormROFD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTorque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTorque.Designer.cs">
+      <DependentUpon>FormTorque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVOMax.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVOMax.Designer.cs">
+      <DependentUpon>FormVOMax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWingate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWingate.Designer.cs">
+      <DependentUpon>FormWingate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormYoyo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormYoyo.Designer.cs">
+      <DependentUpon>FormYoyo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormACSMPredictor.resx">
+      <DependentUpon>FormACSMPredictor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAngularAcceleration.resx">
+      <DependentUpon>FormAngularAcceleration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAngularVelocity.resx">
+      <DependentUpon>FormAngularVelocity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBMI.resx">
+      <DependentUpon>FormBMI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDSI.resx">
+      <DependentUpon>FormDSI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEUR.resx">
+      <DependentUpon>FormEUR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFFMI.resx">
+      <DependentUpon>FormFFMI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInertia.resx">
+      <DependentUpon>FormInertia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoadingTool.resx">
+      <DependentUpon>FormLoadingTool.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLowerBodyPeakPowerPredictor.resx">
+      <DependentUpon>FormLowerBodyPeakPowerPredictor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMetabolicRate.resx">
+      <DependentUpon>FormMetabolicRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPhosphateRecovery.resx">
+      <DependentUpon>FormPhosphateRecovery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPowerZones.resx">
+      <DependentUpon>FormPowerZones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProjectionVelocity.resx">
+      <DependentUpon>FormProjectionVelocity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProteinIndex.resx">
+      <DependentUpon>FormProteinIndex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRAST.resx">
+      <DependentUpon>FormRAST.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormROFD.resx">
+      <DependentUpon>FormROFD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTorque.resx">
+      <DependentUpon>FormTorque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVOMax.resx">
+      <DependentUpon>FormVOMax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWingate.resx">
+      <DependentUpon>FormWingate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormYoyo.resx">
+      <DependentUpon>FormYoyo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
