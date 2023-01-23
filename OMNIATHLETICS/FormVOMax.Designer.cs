@@ -136,9 +136,9 @@
             this.textBoxBloodLactate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxBloodLactate.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxBloodLactate.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBoxBloodLactate.Location = new System.Drawing.Point(130, 103);
+            this.textBoxBloodLactate.Location = new System.Drawing.Point(194, 102);
             this.textBoxBloodLactate.Name = "textBoxBloodLactate";
-            this.textBoxBloodLactate.Size = new System.Drawing.Size(170, 15);
+            this.textBoxBloodLactate.Size = new System.Drawing.Size(106, 15);
             this.textBoxBloodLactate.TabIndex = 22;
             // 
             // textBoxRER
@@ -147,9 +147,9 @@
             this.textBoxRER.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxRER.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxRER.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBoxRER.Location = new System.Drawing.Point(124, 144);
+            this.textBoxRER.Location = new System.Drawing.Point(86, 144);
             this.textBoxRER.Name = "textBoxRER";
-            this.textBoxRER.Size = new System.Drawing.Size(176, 15);
+            this.textBoxRER.Size = new System.Drawing.Size(214, 15);
             this.textBoxRER.TabIndex = 23;
             // 
             // labelValid
@@ -268,9 +268,9 @@
             this.textRPE.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textRPE.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textRPE.ForeColor = System.Drawing.SystemColors.Control;
-            this.textRPE.Location = new System.Drawing.Point(130, 180);
+            this.textRPE.Location = new System.Drawing.Point(86, 180);
             this.textRPE.Name = "textRPE";
-            this.textRPE.Size = new System.Drawing.Size(170, 15);
+            this.textRPE.Size = new System.Drawing.Size(214, 15);
             this.textRPE.TabIndex = 4;
             // 
             // textBoxHeartRate
@@ -279,9 +279,9 @@
             this.textBoxHeartRate.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxHeartRate.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxHeartRate.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBoxHeartRate.Location = new System.Drawing.Point(124, 221);
+            this.textBoxHeartRate.Location = new System.Drawing.Point(162, 221);
             this.textBoxHeartRate.Name = "textBoxHeartRate";
-            this.textBoxHeartRate.Size = new System.Drawing.Size(176, 15);
+            this.textBoxHeartRate.Size = new System.Drawing.Size(138, 15);
             this.textBoxHeartRate.TabIndex = 5;
             // 
             // FormVOMax
