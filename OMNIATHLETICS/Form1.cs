@@ -263,7 +263,7 @@ namespace OMNIATHLETICS
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
+            //childForm.Dock = DockStyle.Fill;
             panelHomePage.Controls.Add(childForm);
             panelHomePage.Tag = childForm;
             childForm.BringToFront();
