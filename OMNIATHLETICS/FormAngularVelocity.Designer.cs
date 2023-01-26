@@ -30,6 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAngularVelocity));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.textBoxTimeInit = new System.Windows.Forms.TextBox();
+            this.textBoxTimeFinal = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelAngularVelocity = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,12 +49,7 @@
             this.buttonCalculate = new System.Windows.Forms.Button();
             this.textBoxAngleInit = new System.Windows.Forms.TextBox();
             this.textBoxAngleFinal = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.textBoxTimeInit = new System.Windows.Forms.TextBox();
-            this.textBoxTimeFinal = new System.Windows.Forms.TextBox();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -56,6 +57,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
+            this.panel1.Controls.Add(this.buttonRefresh);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.panel4);
@@ -79,6 +81,66 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(350, 562);
             this.panel1.TabIndex = 12;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(42, 299);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 16);
+            this.label4.TabIndex = 28;
+            this.label4.Text = "Time Final (s):";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.Control;
+            this.label5.Location = new System.Drawing.Point(42, 258);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(92, 16);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "Time Initial (s):";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Location = new System.Drawing.Point(45, 321);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(255, 1);
+            this.panel4.TabIndex = 26;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Location = new System.Drawing.Point(45, 280);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(255, 1);
+            this.panel5.TabIndex = 25;
+            // 
+            // textBoxTimeInit
+            // 
+            this.textBoxTimeInit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
+            this.textBoxTimeInit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxTimeInit.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTimeInit.ForeColor = System.Drawing.SystemColors.Control;
+            this.textBoxTimeInit.Location = new System.Drawing.Point(140, 259);
+            this.textBoxTimeInit.Name = "textBoxTimeInit";
+            this.textBoxTimeInit.Size = new System.Drawing.Size(160, 15);
+            this.textBoxTimeInit.TabIndex = 23;
+            // 
+            // textBoxTimeFinal
+            // 
+            this.textBoxTimeFinal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
+            this.textBoxTimeFinal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxTimeFinal.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTimeFinal.ForeColor = System.Drawing.SystemColors.Control;
+            this.textBoxTimeFinal.Location = new System.Drawing.Point(138, 300);
+            this.textBoxTimeFinal.Name = "textBoxTimeFinal";
+            this.textBoxTimeFinal.Size = new System.Drawing.Size(162, 15);
+            this.textBoxTimeFinal.TabIndex = 24;
             // 
             // pictureBox1
             // 
@@ -187,6 +249,7 @@
             this.buttonExit.TabIndex = 0;
             this.buttonExit.Text = "Exit";
             this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // buttonCalculate
             // 
@@ -222,65 +285,17 @@
             this.textBoxAngleFinal.Size = new System.Drawing.Size(144, 15);
             this.textBoxAngleFinal.TabIndex = 5;
             // 
-            // label4
+            // buttonRefresh
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(42, 299);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 16);
-            this.label4.TabIndex = 28;
-            this.label4.Text = "Time Final (s):";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(42, 258);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 16);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "Time Initial (s):";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(45, 321);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(255, 1);
-            this.panel4.TabIndex = 26;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(45, 280);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(255, 1);
-            this.panel5.TabIndex = 25;
-            // 
-            // textBoxTimeInit
-            // 
-            this.textBoxTimeInit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
-            this.textBoxTimeInit.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxTimeInit.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTimeInit.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBoxTimeInit.Location = new System.Drawing.Point(140, 259);
-            this.textBoxTimeInit.Name = "textBoxTimeInit";
-            this.textBoxTimeInit.Size = new System.Drawing.Size(160, 15);
-            this.textBoxTimeInit.TabIndex = 23;
-            // 
-            // textBoxTimeFinal
-            // 
-            this.textBoxTimeFinal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
-            this.textBoxTimeFinal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxTimeFinal.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTimeFinal.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBoxTimeFinal.Location = new System.Drawing.Point(138, 300);
-            this.textBoxTimeFinal.Name = "textBoxTimeFinal";
-            this.textBoxTimeFinal.Size = new System.Drawing.Size(162, 15);
-            this.textBoxTimeFinal.TabIndex = 24;
+            this.buttonRefresh.BackColor = System.Drawing.Color.White;
+            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRefresh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.Location = new System.Drawing.Point(140, 494);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(66, 31);
+            this.buttonRefresh.TabIndex = 29;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.UseVisualStyleBackColor = false;
             // 
             // FormAngularVelocity
             // 
@@ -322,5 +337,6 @@
         private System.Windows.Forms.Button buttonCalculate;
         private System.Windows.Forms.TextBox textBoxAngleInit;
         private System.Windows.Forms.TextBox textBoxAngleFinal;
+        private System.Windows.Forms.Button buttonRefresh;
     }
 }

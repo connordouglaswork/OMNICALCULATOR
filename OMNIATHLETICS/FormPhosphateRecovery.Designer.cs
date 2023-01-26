@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPhosphateRecovery));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.textBoxFirstSprint = new System.Windows.Forms.TextBox();
             this.labelDropOff = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.buttonAbout = new System.Windows.Forms.Button();
@@ -39,15 +42,14 @@
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonCalculate = new System.Windows.Forms.Button();
             this.textBoxLastSprint = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.textBoxFirstSprint = new System.Windows.Forms.TextBox();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
+            this.panel1.Controls.Add(this.buttonRefresh);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.textBoxFirstSprint);
@@ -64,6 +66,36 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(350, 508);
             this.panel1.TabIndex = 12;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.Control;
+            this.label4.Location = new System.Drawing.Point(42, 139);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(153, 16);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "First Sprint Distance (m):";
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Location = new System.Drawing.Point(45, 161);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(255, 1);
+            this.panel4.TabIndex = 23;
+            // 
+            // textBoxFirstSprint
+            // 
+            this.textBoxFirstSprint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
+            this.textBoxFirstSprint.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxFirstSprint.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxFirstSprint.ForeColor = System.Drawing.SystemColors.Control;
+            this.textBoxFirstSprint.Location = new System.Drawing.Point(201, 140);
+            this.textBoxFirstSprint.Name = "textBoxFirstSprint";
+            this.textBoxFirstSprint.Size = new System.Drawing.Size(99, 15);
+            this.textBoxFirstSprint.TabIndex = 22;
             // 
             // labelDropOff
             // 
@@ -143,6 +175,7 @@
             this.buttonExit.TabIndex = 0;
             this.buttonExit.Text = "Exit";
             this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // buttonCalculate
             // 
@@ -167,35 +200,17 @@
             this.textBoxLastSprint.Size = new System.Drawing.Size(100, 15);
             this.textBoxLastSprint.TabIndex = 4;
             // 
-            // label4
+            // buttonRefresh
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(42, 139);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(153, 16);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "First Sprint Distance (m):";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(45, 161);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(255, 1);
-            this.panel4.TabIndex = 23;
-            // 
-            // textBoxFirstSprint
-            // 
-            this.textBoxFirstSprint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
-            this.textBoxFirstSprint.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxFirstSprint.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFirstSprint.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBoxFirstSprint.Location = new System.Drawing.Point(201, 140);
-            this.textBoxFirstSprint.Name = "textBoxFirstSprint";
-            this.textBoxFirstSprint.Size = new System.Drawing.Size(99, 15);
-            this.textBoxFirstSprint.TabIndex = 22;
+            this.buttonRefresh.BackColor = System.Drawing.Color.White;
+            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRefresh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.Location = new System.Drawing.Point(140, 452);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(66, 31);
+            this.buttonRefresh.TabIndex = 25;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.UseVisualStyleBackColor = false;
             // 
             // FormPhosphateRecovery
             // 
@@ -229,5 +244,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox textBoxFirstSprint;
+        private System.Windows.Forms.Button buttonRefresh;
     }
 }

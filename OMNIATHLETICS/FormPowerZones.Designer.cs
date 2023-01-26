@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPowerZones));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelPeakPowerZone = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,10 +44,7 @@
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonCalculate = new System.Windows.Forms.Button();
             this.textBox1RM = new System.Windows.Forms.TextBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +52,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
+            this.panel1.Controls.Add(this.buttonRefresh);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.radioButton3);
@@ -69,6 +71,51 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(350, 508);
             this.panel1.TabIndex = 12;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(45, 268);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(255, 1);
+            this.panel3.TabIndex = 27;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(42, 223);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(101, 16);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Movement Type:";
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.radioButton3.ForeColor = System.Drawing.SystemColors.Control;
+            this.radioButton3.Location = new System.Drawing.Point(158, 221);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(93, 20);
+            this.radioButton3.TabIndex = 25;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Upper Body";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Arial", 9.75F);
+            this.radioButton2.ForeColor = System.Drawing.SystemColors.Control;
+            this.radioButton2.Location = new System.Drawing.Point(158, 242);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(93, 20);
+            this.radioButton2.TabIndex = 24;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Lower Body";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -158,6 +205,7 @@
             this.buttonExit.TabIndex = 0;
             this.buttonExit.Text = "Exit";
             this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // buttonCalculate
             // 
@@ -182,50 +230,17 @@
             this.textBox1RM.Size = new System.Drawing.Size(188, 15);
             this.textBox1RM.TabIndex = 4;
             // 
-            // radioButton2
+            // buttonRefresh
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.radioButton2.ForeColor = System.Drawing.SystemColors.Control;
-            this.radioButton2.Location = new System.Drawing.Point(158, 242);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(93, 20);
-            this.radioButton2.TabIndex = 24;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Lower Body";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.radioButton3.ForeColor = System.Drawing.SystemColors.Control;
-            this.radioButton3.Location = new System.Drawing.Point(158, 221);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(93, 20);
-            this.radioButton3.TabIndex = 25;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Upper Body";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 9.75F);
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(42, 223);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 16);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "Movement Type:";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(45, 268);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(255, 1);
-            this.panel3.TabIndex = 27;
+            this.buttonRefresh.BackColor = System.Drawing.Color.White;
+            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRefresh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.Location = new System.Drawing.Point(141, 452);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(66, 31);
+            this.buttonRefresh.TabIndex = 28;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.UseVisualStyleBackColor = false;
             // 
             // FormPowerZones
             // 
@@ -262,5 +277,6 @@
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button buttonRefresh;
     }
 }

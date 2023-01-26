@@ -43,12 +43,14 @@
             this.buttonCalculate = new System.Windows.Forms.Button();
             this.textBoxLevel = new System.Windows.Forms.TextBox();
             this.textBoxDistance = new System.Windows.Forms.TextBox();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
+            this.panel1.Controls.Add(this.buttonRefresh);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.labelRating);
             this.panel1.Controls.Add(this.label3);
@@ -175,6 +177,7 @@
             this.buttonExit.TabIndex = 0;
             this.buttonExit.Text = "Exit";
             this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // buttonCalculate
             // 
@@ -210,6 +213,18 @@
             this.textBoxDistance.Size = new System.Drawing.Size(188, 15);
             this.textBoxDistance.TabIndex = 5;
             // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.BackColor = System.Drawing.Color.White;
+            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRefresh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.Location = new System.Drawing.Point(143, 452);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(66, 31);
+            this.buttonRefresh.TabIndex = 24;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.UseVisualStyleBackColor = false;
+            // 
             // FormYoyo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -243,5 +258,6 @@
         private System.Windows.Forms.TextBox textBoxLevel;
         private System.Windows.Forms.TextBox textBoxDistance;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button buttonRefresh;
     }
 }

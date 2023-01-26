@@ -43,6 +43,7 @@
             this.buttonCalculate = new System.Windows.Forms.Button();
             this.textBoxForce = new System.Windows.Forms.TextBox();
             this.textBoxRadius = new System.Windows.Forms.TextBox();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -50,6 +51,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
+            this.panel1.Controls.Add(this.buttonRefresh);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.labelTorque);
             this.panel1.Controls.Add(this.label3);
@@ -175,6 +177,7 @@
             this.buttonExit.TabIndex = 0;
             this.buttonExit.Text = "Exit";
             this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // buttonCalculate
             // 
@@ -211,6 +214,18 @@
             this.textBoxRadius.Size = new System.Drawing.Size(183, 15);
             this.textBoxRadius.TabIndex = 5;
             // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.BackColor = System.Drawing.Color.White;
+            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRefresh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.Location = new System.Drawing.Point(143, 452);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(66, 31);
+            this.buttonRefresh.TabIndex = 24;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.UseVisualStyleBackColor = false;
+            // 
             // FormTorque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -245,5 +260,6 @@
         private System.Windows.Forms.Button buttonCalculate;
         private System.Windows.Forms.TextBox textBoxForce;
         private System.Windows.Forms.TextBox textBoxRadius;
+        private System.Windows.Forms.Button buttonRefresh;
     }
 }

@@ -24,7 +24,7 @@ namespace OMNIATHLETICS
 
 
         //Reset Feilds
-        public static void ResetFields(List<TextBox> feilds)
+        public static void RefreshFields(List<TextBox> feilds)
         {
             foreach(TextBox feild in feilds)
             {

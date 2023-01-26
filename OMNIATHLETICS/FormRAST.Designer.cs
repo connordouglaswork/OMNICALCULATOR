@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRAST));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.textBoxTime = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.textBoxPPO6 = new System.Windows.Forms.TextBox();
@@ -65,15 +68,14 @@
             this.buttonAbout = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.textBoxTime = new System.Windows.Forms.TextBox();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
+            this.panel1.Controls.Add(this.buttonRefresh);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.textBoxTime);
@@ -116,6 +118,36 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(476, 521);
             this.panel1.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(263, 215);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 16);
+            this.label2.TabIndex = 61;
+            this.label2.Text = "Total Time (s):";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(266, 237);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(185, 1);
+            this.panel2.TabIndex = 60;
+            // 
+            // textBoxTime
+            // 
+            this.textBoxTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
+            this.textBoxTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxTime.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTime.ForeColor = System.Drawing.SystemColors.Control;
+            this.textBoxTime.Location = new System.Drawing.Point(358, 216);
+            this.textBoxTime.Name = "textBoxTime";
+            this.textBoxTime.Size = new System.Drawing.Size(93, 15);
+            this.textBoxTime.TabIndex = 59;
             // 
             // label15
             // 
@@ -487,36 +519,19 @@
             this.buttonExit.TabIndex = 0;
             this.buttonExit.Text = "Exit";
             this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
-            // label2
+            // buttonRefresh
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(263, 215);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 16);
-            this.label2.TabIndex = 61;
-            this.label2.Text = "Total Time (s):";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(266, 237);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(185, 1);
-            this.panel2.TabIndex = 60;
-            // 
-            // textBoxTime
-            // 
-            this.textBoxTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
-            this.textBoxTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxTime.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTime.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBoxTime.Location = new System.Drawing.Point(358, 216);
-            this.textBoxTime.Name = "textBoxTime";
-            this.textBoxTime.Size = new System.Drawing.Size(93, 15);
-            this.textBoxTime.TabIndex = 59;
+            this.buttonRefresh.BackColor = System.Drawing.Color.White;
+            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRefresh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.Location = new System.Drawing.Point(5, 40);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(88, 31);
+            this.buttonRefresh.TabIndex = 62;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.UseVisualStyleBackColor = false;
             // 
             // FormRAST
             // 
@@ -576,5 +591,6 @@
         private System.Windows.Forms.Button buttonAbout;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonExit;
+        private System.Windows.Forms.Button buttonRefresh;
     }
 }

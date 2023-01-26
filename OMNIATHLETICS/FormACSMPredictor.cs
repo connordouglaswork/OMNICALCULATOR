@@ -21,5 +21,10 @@ namespace OMNIATHLETICS
         {
             this.Close();
         }
+
+        private void buttonCalculate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

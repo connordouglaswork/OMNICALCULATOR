@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormROFD));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.textBoxTime = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelROFD = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,9 +43,7 @@
             this.buttonExit = new System.Windows.Forms.Button();
             this.buttonCalculate = new System.Windows.Forms.Button();
             this.textBoxPeakForce = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.textBoxTime = new System.Windows.Forms.TextBox();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -50,6 +51,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
+            this.panel1.Controls.Add(this.buttonRefresh);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.textBoxTime);
@@ -67,6 +69,36 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(350, 508);
             this.panel1.TabIndex = 13;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(42, 222);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(142, 16);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Time to Acheive PF (s):";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.Location = new System.Drawing.Point(45, 244);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(255, 1);
+            this.panel3.TabIndex = 24;
+            // 
+            // textBoxTime
+            // 
+            this.textBoxTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
+            this.textBoxTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxTime.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTime.ForeColor = System.Drawing.SystemColors.Control;
+            this.textBoxTime.Location = new System.Drawing.Point(190, 223);
+            this.textBoxTime.Name = "textBoxTime";
+            this.textBoxTime.Size = new System.Drawing.Size(110, 15);
+            this.textBoxTime.TabIndex = 23;
             // 
             // pictureBox1
             // 
@@ -156,6 +188,7 @@
             this.buttonExit.TabIndex = 0;
             this.buttonExit.Text = "Exit";
             this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // buttonCalculate
             // 
@@ -180,35 +213,17 @@
             this.textBoxPeakForce.Size = new System.Drawing.Size(153, 15);
             this.textBoxPeakForce.TabIndex = 4;
             // 
-            // label3
+            // buttonRefresh
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(42, 222);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(142, 16);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "Time to Acheive PF (s):";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(45, 244);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(255, 1);
-            this.panel3.TabIndex = 24;
-            // 
-            // textBoxTime
-            // 
-            this.textBoxTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
-            this.textBoxTime.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxTime.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTime.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBoxTime.Location = new System.Drawing.Point(190, 223);
-            this.textBoxTime.Name = "textBoxTime";
-            this.textBoxTime.Size = new System.Drawing.Size(110, 15);
-            this.textBoxTime.TabIndex = 23;
+            this.buttonRefresh.BackColor = System.Drawing.Color.White;
+            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRefresh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.Location = new System.Drawing.Point(139, 452);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(66, 31);
+            this.buttonRefresh.TabIndex = 26;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.UseVisualStyleBackColor = false;
             // 
             // FormROFD
             // 
@@ -244,5 +259,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBoxTime;
+        private System.Windows.Forms.Button buttonRefresh;
     }
 }

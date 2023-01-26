@@ -49,12 +49,14 @@
             this.buttonCalculate = new System.Windows.Forms.Button();
             this.textRPE = new System.Windows.Forms.TextBox();
             this.textBoxHeartRate = new System.Windows.Forms.TextBox();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
+            this.panel1.Controls.Add(this.buttonRefresh);
             this.panel1.Controls.Add(this.radioButtonPlatau);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label5);
@@ -249,6 +251,7 @@
             this.buttonExit.TabIndex = 0;
             this.buttonExit.Text = "Exit";
             this.buttonExit.UseVisualStyleBackColor = false;
+            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // buttonCalculate
             // 
@@ -283,6 +286,18 @@
             this.textBoxHeartRate.Name = "textBoxHeartRate";
             this.textBoxHeartRate.Size = new System.Drawing.Size(138, 15);
             this.textBoxHeartRate.TabIndex = 5;
+            // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.BackColor = System.Drawing.Color.White;
+            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRefresh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.Location = new System.Drawing.Point(134, 452);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(66, 31);
+            this.buttonRefresh.TabIndex = 29;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.UseVisualStyleBackColor = false;
             // 
             // FormVOMax
             // 
@@ -323,5 +338,6 @@
         private System.Windows.Forms.TextBox textRPE;
         private System.Windows.Forms.TextBox textBoxHeartRate;
         private System.Windows.Forms.RadioButton radioButtonPlatau;
+        private System.Windows.Forms.Button buttonRefresh;
     }
 }

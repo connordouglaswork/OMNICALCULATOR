@@ -35,14 +35,15 @@
             this.textBoxLoading = new System.Windows.Forms.TextBox();
             this.textBoxRepetitions = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1RM = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.buttonBack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label1RM = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -84,6 +85,7 @@
             this.buttonCalculate.TabIndex = 3;
             this.buttonCalculate.Text = "Calculate";
             this.buttonCalculate.UseVisualStyleBackColor = false;
+            this.buttonCalculate.Click += new System.EventHandler(this.buttonCalculate_Click);
             // 
             // textBoxLoading
             // 
@@ -110,6 +112,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
+            this.panel1.Controls.Add(this.buttonRefresh);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label1RM);
             this.panel1.Controls.Add(this.label3);
@@ -127,6 +130,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(350, 508);
             this.panel1.TabIndex = 11;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(130, 68);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(97, 93);
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label1RM
+            // 
+            this.label1RM.AutoSize = true;
+            this.label1RM.Font = new System.Drawing.Font("Arial", 16F);
+            this.label1RM.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1RM.Location = new System.Drawing.Point(47, 272);
+            this.label1RM.Name = "label1RM";
+            this.label1RM.Size = new System.Drawing.Size(71, 25);
+            this.label1RM.TabIndex = 21;
+            this.label1RM.Text = "1RM: ";
             // 
             // label3
             // 
@@ -190,26 +214,17 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "ASCM 1RM Predictor";
             // 
-            // label1RM
+            // buttonRefresh
             // 
-            this.label1RM.AutoSize = true;
-            this.label1RM.Font = new System.Drawing.Font("Arial", 16F);
-            this.label1RM.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1RM.Location = new System.Drawing.Point(47, 272);
-            this.label1RM.Name = "label1RM";
-            this.label1RM.Size = new System.Drawing.Size(71, 25);
-            this.label1RM.TabIndex = 21;
-            this.label1RM.Text = "1RM: ";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(130, 68);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(97, 93);
-            this.pictureBox1.TabIndex = 22;
-            this.pictureBox1.TabStop = false;
+            this.buttonRefresh.BackColor = System.Drawing.Color.White;
+            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRefresh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.Location = new System.Drawing.Point(140, 452);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(66, 31);
+            this.buttonRefresh.TabIndex = 23;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.UseVisualStyleBackColor = false;
             // 
             // FormACSMPredictor
             // 
@@ -246,5 +261,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1RM;
+        private System.Windows.Forms.Button buttonRefresh;
     }
 }
