@@ -9,19 +9,39 @@ namespace OMNIATHLETICS
 {
     public class PowerCalculator : Calculator
     {
-        List<string> localCalculatioMemory = new List<string>();
+        public List<string> localZonesCalculationMemory = new List<string>();
 
-        public int currentCalcualtionLoaded = -1;
+        public int currentZonesCalcualtionLoaded = -1;
 
-        public void SaveToMemory(string calculation)
+        public void SaveToZonesMemory(string calculation)
         {
-            localCalculatioMemory.Add(calculation);
-            currentCalcualtionLoaded++;
+            localZonesCalculationMemory.Add(calculation);
+            currentZonesCalcualtionLoaded++;
+        }
+
+        public List<string> localROFDCalculationMemory = new List<string>();
+
+        public int currentROFDCalcualtionLoaded = -1;
+
+        public void SaveToROFDMemory(string calculation)
+        {
+            localROFDCalculationMemory.Add(calculation);
+            currentROFDCalcualtionLoaded++;
+        }
+
+        public List<string> localPeakCalculationMemory = new List<string>();
+
+        public int currentPeakCalcualtionLoaded = -1;
+
+        public void SaveToPeakMemory(string calculation)
+        {
+            localPeakCalculationMemory.Add(calculation);
+            currentPeakCalcualtionLoaded++;
         }
 
         public PowerCalculator() { }
 
-        public static string About(string calcualtion)
+        public string About(string calcualtion)
         {
             string aboutMSG = "";
             if (calcualtion == "Power Zones")
@@ -45,7 +65,7 @@ namespace OMNIATHLETICS
         }
 
         //Power Zones - Unit = kg
-        public static string PowerZones(string movementType, double oneRepMax)
+        public string PowerZones(string movementType, double oneRepMax)
         {
             double peakPowerZoneLowerLimit;
             double peakPowerZoneUpperLimit;
@@ -63,14 +83,14 @@ namespace OMNIATHLETICS
         }
 
         //Rate of Force Development - Unit= N.s^-1 
-        public static string RateOfForceDevelopment(double peakForce, double time)
+        public string RateOfForceDevelopment(double peakForce, double time)
         {
             double ROFD = peakForce / time;
             return (ROFD.ToString() + "N.s^-1");
         }
 
         //Lower Body Peak Power Predictor - Unit = W
-        public static string LowerBodyPeakPowerPredictor(double jumpHeight, double bodyMass)
+        public string LowerBodyPeakPowerPredictor(double jumpHeight, double bodyMass)
         {
             double power = 60.7 * jumpHeight + 45.3 * bodyMass - 2055;
             return (power.ToString() + "W");

@@ -29,6 +29,26 @@ namespace OMNIATHLETICS
             currentDSICalcualtionLoaded++;
         }
 
+        public int currentLoadingCalcualtionLoaded = -1;
+
+        public List<string> localLoadingCalculatioMemory = new List<string>();
+
+        public void SaveToLoadingMemory(string calculation)
+        {
+            localLoadingCalculatioMemory.Add(calculation);
+            currentLoadingCalcualtionLoaded++;
+        }
+
+        public int currentEURCalcualtionLoaded = -1;
+
+        public List<string> localEURCalculatioMemory = new List<string>();
+
+        public void SaveToEURMemory(string calculation)
+        {
+            localEURCalculatioMemory.Add(calculation);
+            currentEURCalcualtionLoaded++;
+        }
+
 
         public StrengthCalculator() { }
 

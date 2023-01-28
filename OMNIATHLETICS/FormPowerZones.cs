@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OMNIATHLETICS.ActiveDirectory;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,60 @@ namespace OMNIATHLETICS
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonCalculate_Click(object sender, EventArgs e)
+        {
+            string max = textBox1RM.Text;
+            string type = "";
+            if (radioButton2.Checked)
+            {
+                type = "Upper Body";
+            }
+            else if (radioButton3.Checked)
+            {
+                type = "Lower Body";
+            }
+            string zone = ActiveCalculator.powerCalculator.PowerZones(type, double.Parse(max));
+            string labelDesc = "Peak Power Zone: " + zone;
+            labelPeakPowerZone.Text = (labelDesc);
+            ActiveCalculator.powerCalculator.SaveToZonesMemory(max + "," + type + "," + labelDesc);
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            if (ActiveCalculator.powerCalculator.currentZonesCalcualtionLoaded > 0)
+            {
+                string calculationData = ActiveCalculator.powerCalculator.localZonesCalculationMemory[ActiveCalculator.powerCalculator.currentZonesCalcualtionLoaded - 1];
+                string[] calculationFileds = calculationData.Split(',');
+                textBox1RM.Text = calculationFileds[0];
+                if(calculationFileds[1] == "Upper Body")
+                {
+                    radioButton2.Checked = true;
+                    radioButton3.Checked = false;
+                }
+                else
+                {
+                    radioButton2.Checked = false;
+                    radioButton3.Checked = true;
+                }
+
+                labelPeakPowerZone.Text = calculationFileds[2];
+                //delete it from list when gone
+                ActiveCalculator.powerCalculator.localZonesCalculationMemory.Remove(calculationData);
+                ActiveCalculator.powerCalculator.currentZonesCalcualtionLoaded--;
+            }
+        }
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            List<TextBox> textBoxes = new List<TextBox>() { textBox1RM };
+            ActiveCalculator.calcualtor.RefreshFields(textBoxes);
+        }
+
+        private void buttonAbout_Click(object sender, EventArgs e)
+        {
+            ActiveCalculator.powerCalculator.About("Power Zones");
         }
     }
 }
