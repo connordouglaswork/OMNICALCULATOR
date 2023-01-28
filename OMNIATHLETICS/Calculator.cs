@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace OMNIATHLETICS
 {
-    internal class Calculator
+    public class Calculator
     {
         //HISTORY Database
 
@@ -24,7 +24,7 @@ namespace OMNIATHLETICS
 
 
         //Reset Feilds
-        public static void RefreshFields(List<TextBox> feilds)
+        public void RefreshFields(List<TextBox> feilds)
         {
             foreach(TextBox feild in feilds)
             {

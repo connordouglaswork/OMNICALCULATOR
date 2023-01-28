@@ -6,21 +6,33 @@ using System.Threading.Tasks;
 
 namespace OMNIATHLETICS
 {
-    internal class StrengthCalculator : Calculator
-    {
-        List<string> localCalculatioMemory = new List<string>();
+    public class StrengthCalculator : Calculator
+    {     
+        public int currentACSMCalcualtionLoaded = -1;
 
-        public int currentCalcualtionLoaded = -1;
+        public List<string> localACSMCalculatioMemory = new List<string>();
 
-        public void SaveToMemory(string calculation)
+        public void SaveToACSMMemory(string calculation)
         {
-            localCalculatioMemory.Add(calculation);
-            currentCalcualtionLoaded++;
+            localACSMCalculatioMemory.Add(calculation);
+            currentACSMCalcualtionLoaded++;
         }
+
+
+        public int currentDSICalcualtionLoaded = -1;
+
+        public List<string> localDSICalculatioMemory = new List<string>();
+
+        public void SaveToDSIMemory(string calculation)
+        {
+            localDSICalculatioMemory.Add(calculation);
+            currentDSICalcualtionLoaded++;
+        }
+
 
         public StrengthCalculator() { }
 
-        public static string About(string calcualtion)
+        public void About(string calcualtion)
         {
             string aboutMSG = "";
             if (calcualtion == "ACSM 1RM Predictor")
@@ -58,35 +70,35 @@ namespace OMNIATHLETICS
                     " stretch-shortening cycle (SSC) performance in athletes. The EUR is great for exposing an athlete’s lack of ability to utilize the" +
                     " SSC. Note that most athletes should have an EUR greater than 1.";
             }
-            return aboutMSG;
+            System.Windows.Forms.MessageBox.Show(aboutMSG);
         }
 
         //ACSM 1RM Predictor - Unit = kg
-        public static string Acsm1rmPredictor(double loading, int reps)
+        public string Acsm1rmPredictor(double loading, int reps)
         {
             double oneRepMax = loading / ((100 - (reps * 2.5)) / 100);
-            return (oneRepMax.ToString() + "kg");
+            return (oneRepMax.ToString("0.00") + "kg");
         }
 
         //Dynamic Strength Index - Unit = ratio
-        public static string DynamicStrengthIndex(double BPF, double DPF)
+        public string DynamicStrengthIndex(double BPF, double DPF)
         {
             double DSI = BPF / DPF;
-            return DSI.ToString();
+            return DSI.ToString("0.00");
         }
 
         //Loading Tool - Unit = kg
-        public static string LoadingTool(int percent, double oneRepMax)
+        public string LoadingTool(int percent, double oneRepMax)
         {
             double loading = (percent / 100) * oneRepMax;
-            return (loading.ToString() + "kg");
+            return (loading.ToString("0.00") + "kg");
         }
 
         //Eccentric Utilisation Ratio - Unit = ratio
-        public static string EccentricUtilisationRatio(double CMJ, double SJ)
+        public string EccentricUtilisationRatio(double CMJ, double SJ)
         {
             double EUR = CMJ / SJ;
-            return EUR.ToString();
+            return EUR.ToString("0.00");
         }
 
     }

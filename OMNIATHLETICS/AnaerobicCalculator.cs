@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OMNIATHLETICS
 {
-    internal class AnaerobicCalculator : Calculator
+    public class AnaerobicCalculator : Calculator
     {
         List<string> localCalculatioMemory = new List<string>();
 
@@ -42,14 +42,14 @@ namespace OMNIATHLETICS
         }
 
         //Wingate Peak Power Output: - Unit = W
-        public static string WingatePeakPowerOutput(double force, double distance, double time)
+        public string WingatePeakPowerOutput(double force, double distance, double time)
         {
             double PPO = force * distance / time;
             return (PPO.ToString() + "W");
         }
 
         //Wingate Anaerobic Capacity: - Unit = ?
-        public static string WingateAnaerobicCapacity(double peakPowerOne, double peakPowerTwo, double peakPowerThree, double peakPowerFour, double peakPowerFive, double peakPowerSix)
+        public string WingateAnaerobicCapacity(double peakPowerOne, double peakPowerTwo, double peakPowerThree, double peakPowerFour, double peakPowerFive, double peakPowerSix)
         {
             double AC = peakPowerOne + peakPowerTwo + peakPowerThree + peakPowerFour + peakPowerFive + peakPowerSix;
             return (AC.ToString() + "?");

@@ -7,7 +7,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace OMNIATHLETICS
 {
-    internal class PowerCalculator : Calculator
+    public class PowerCalculator : Calculator
     {
         List<string> localCalculatioMemory = new List<string>();
 

@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActiveDirectory\ActiveCalculator.cs" />
     <Compile Include="AerobicCalculator.cs" />
     <Compile Include="AnaerobicCalculator.cs" />
     <Compile Include="BiomechanicsCalculator.cs" />

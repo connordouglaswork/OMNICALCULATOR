@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using OMNIATHLETICS.ActiveDirectory;
 
 namespace OMNIATHLETICS
 {
@@ -24,7 +25,38 @@ namespace OMNIATHLETICS
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
+            string loading = textBoxLoading.Text;
+            string reps = textBoxRepetitions.Text;
+            string AcsmPrediction = ActiveCalculator.strengthCalculator.Acsm1rmPredictor(Double.Parse(loading), int.Parse(reps));
+            string labelDesc = "1RM: " + AcsmPrediction;
+            label1RM.Text = (labelDesc);
+            ActiveCalculator.strengthCalculator.SaveToACSMMemory(loading + "," + reps + "," + labelDesc);
+        }
 
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            List<TextBox> textBoxes = new List<TextBox>() {textBoxLoading, textBoxRepetitions};
+            ActiveCalculator.calcualtor.RefreshFields(textBoxes);
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            if (ActiveCalculator.strengthCalculator.currentACSMCalcualtionLoaded > 0)
+            {
+                string calculationData = ActiveCalculator.strengthCalculator.localACSMCalculatioMemory[ActiveCalculator.strengthCalculator.currentACSMCalcualtionLoaded - 1];
+                string[] calculationFileds = calculationData.Split(',');
+                textBoxLoading.Text = calculationFileds[0];
+                textBoxRepetitions.Text = calculationFileds[1];
+                label1RM.Text = calculationFileds[2];
+                //delete it from list when gone
+                ActiveCalculator.strengthCalculator.localACSMCalculatioMemory.Remove(calculationData);
+                ActiveCalculator.strengthCalculator.currentACSMCalcualtionLoaded--;
+            }
+        }
+
+        private void buttonAbout_Click(object sender, EventArgs e)
+        {
+            ActiveCalculator.strengthCalculator.About("ACSM 1RM Predictor");
         }
     }
 }

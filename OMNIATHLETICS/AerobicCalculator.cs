@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OMNIATHLETICS
 {
-    internal class AerobicCalculator : Calculator
+    public class AerobicCalculator : Calculator
     {
         List<string> localCalculatioMemory = new List<string>();
 
