@@ -26,7 +26,7 @@ namespace OMNIATHLETICS
 
         private void buttonAbout_Click(object sender, EventArgs e)
         {
-            ActiveCalculator.powerCalculator.About("Wingate");
+            ActiveCalculator.anaerobicthCalculator.About("Wingate");
         }
 
         private void buttonRefresh_Click(object sender, EventArgs e)

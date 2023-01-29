@@ -8,19 +8,29 @@ namespace OMNIATHLETICS
 {
     public class AerobicCalculator : Calculator
     {
-        List<string> localCalculatioMemory = new List<string>();
+        public List<string> localYoYoCalculationMemory = new List<string>();
 
-        public int currentCalcualtionLoaded = -1;
+        public int currentYoYoCalcualtionLoaded = -1;
 
-        public void SaveToMemory(string calculation)
+        public void SaveToYoYoMemory(string calculation)
         {
-            localCalculatioMemory.Add(calculation);
-            currentCalcualtionLoaded++;
+            localYoYoCalculationMemory.Add(calculation);
+            currentYoYoCalcualtionLoaded++;
+        }
+
+        public List<string> localVOCalculationMemory = new List<string>();
+
+        public int currentVOCalcualtionLoaded = -1;
+
+        public void SaveToVOMemory(string calculation)
+        {
+            localVOCalculationMemory.Add(calculation);
+            currentVOCalcualtionLoaded++;
         }
 
         public AerobicCalculator() { }
 
-        public static string About(string calcualtion)
+        public string About(string calcualtion)
         {
             string aboutMSG = "";
             if (calcualtion == "Yoyo Intermittent Recovery Test Level 1")
@@ -40,7 +50,7 @@ namespace OMNIATHLETICS
         }
 
         //Yoyo Intermittent Recovery Test Level 1: - Unit = Rating
-        public static string YoyoIntermittentRecoveryTest(double meters, double level, string method)
+        public string YoyoIntermittentRecoveryTest(double meters, double level, string method)
         {
             string rating = "";
             if(method == "meters")
@@ -102,7 +112,7 @@ namespace OMNIATHLETICS
         }
 
         //VO2 Max Validator: - Unit = Rating
-        public static string VOMaxValidator(bool platau, double bloodLactate, double RER, double RPE, double BPM, int age)
+        public string VOMaxValidator(bool platau, double bloodLactate, double RER, double RPE, double BPM, int age)
         {
             string validStatus = "Not Valid";
             if(platau && bloodLactate > 8 && RER > 1.15 && RPE > 17 && BPM > (age - 30))

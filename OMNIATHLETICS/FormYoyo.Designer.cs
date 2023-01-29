@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormYoyo));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.labelRating = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.buttonCalculate = new System.Windows.Forms.Button();
             this.textBoxLevel = new System.Windows.Forms.TextBox();
             this.textBoxDistance = new System.Windows.Forms.TextBox();
-            this.buttonRefresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +68,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(350, 508);
             this.panel1.TabIndex = 12;
+            // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.BackColor = System.Drawing.Color.White;
+            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRefresh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.Location = new System.Drawing.Point(143, 452);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(66, 31);
+            this.buttonRefresh.TabIndex = 24;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.UseVisualStyleBackColor = false;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // label4
             // 
@@ -133,6 +146,7 @@
             this.buttonAbout.TabIndex = 2;
             this.buttonAbout.Text = "About";
             this.buttonAbout.UseVisualStyleBackColor = false;
+            this.buttonAbout.Click += new System.EventHandler(this.buttonAbout_Click);
             // 
             // panel2
             // 
@@ -153,6 +167,7 @@
             this.buttonBack.TabIndex = 15;
             this.buttonBack.Text = "Back";
             this.buttonBack.UseVisualStyleBackColor = false;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // label1
             // 
@@ -190,6 +205,7 @@
             this.buttonCalculate.TabIndex = 3;
             this.buttonCalculate.Text = "Calculate";
             this.buttonCalculate.UseVisualStyleBackColor = false;
+            this.buttonCalculate.Click += new System.EventHandler(this.buttonCalculate_Click);
             // 
             // textBoxLevel
             // 
@@ -212,18 +228,6 @@
             this.textBoxDistance.Name = "textBoxDistance";
             this.textBoxDistance.Size = new System.Drawing.Size(188, 15);
             this.textBoxDistance.TabIndex = 5;
-            // 
-            // buttonRefresh
-            // 
-            this.buttonRefresh.BackColor = System.Drawing.Color.White;
-            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRefresh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRefresh.Location = new System.Drawing.Point(143, 452);
-            this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(66, 31);
-            this.buttonRefresh.TabIndex = 24;
-            this.buttonRefresh.Text = "Refresh";
-            this.buttonRefresh.UseVisualStyleBackColor = false;
             // 
             // FormYoyo
             // 

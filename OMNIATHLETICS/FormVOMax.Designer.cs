@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVOMax));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.radioButtonPlatau = new System.Windows.Forms.RadioButton();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -49,15 +49,21 @@
             this.buttonCalculate = new System.Windows.Forms.Button();
             this.textRPE = new System.Windows.Forms.TextBox();
             this.textBoxHeartRate = new System.Windows.Forms.TextBox();
-            this.buttonRefresh = new System.Windows.Forms.Button();
+            this.checkBoxPlatau = new System.Windows.Forms.CheckBox();
+            this.labelAge = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.textBoxAge = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
+            this.panel1.Controls.Add(this.labelAge);
+            this.panel1.Controls.Add(this.panel6);
+            this.panel1.Controls.Add(this.textBoxAge);
+            this.panel1.Controls.Add(this.checkBoxPlatau);
             this.panel1.Controls.Add(this.buttonRefresh);
-            this.panel1.Controls.Add(this.radioButtonPlatau);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.panel4);
@@ -78,21 +84,21 @@
             this.panel1.Controls.Add(this.textBoxHeartRate);
             this.panel1.Location = new System.Drawing.Point(310, 95);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(350, 508);
+            this.panel1.Size = new System.Drawing.Size(350, 541);
             this.panel1.TabIndex = 12;
             // 
-            // radioButtonPlatau
+            // buttonRefresh
             // 
-            this.radioButtonPlatau.AutoSize = true;
-            this.radioButtonPlatau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.radioButtonPlatau.ForeColor = System.Drawing.SystemColors.Control;
-            this.radioButtonPlatau.Location = new System.Drawing.Point(45, 72);
-            this.radioButtonPlatau.Name = "radioButtonPlatau";
-            this.radioButtonPlatau.Size = new System.Drawing.Size(155, 20);
-            this.radioButtonPlatau.TabIndex = 28;
-            this.radioButtonPlatau.TabStop = true;
-            this.radioButtonPlatau.Text = "VO2 Platau Observed";
-            this.radioButtonPlatau.UseVisualStyleBackColor = true;
+            this.buttonRefresh.BackColor = System.Drawing.Color.White;
+            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRefresh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.Location = new System.Drawing.Point(137, 493);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(66, 31);
+            this.buttonRefresh.TabIndex = 29;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.UseVisualStyleBackColor = false;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // label4
             // 
@@ -159,7 +165,7 @@
             this.labelValid.AutoSize = true;
             this.labelValid.Font = new System.Drawing.Font("Arial", 16F);
             this.labelValid.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelValid.Location = new System.Drawing.Point(47, 272);
+            this.labelValid.Location = new System.Drawing.Point(50, 313);
             this.labelValid.Name = "labelValid";
             this.labelValid.Size = new System.Drawing.Size(167, 25);
             this.labelValid.TabIndex = 21;
@@ -201,12 +207,13 @@
             this.buttonAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAbout.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAbout.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonAbout.Location = new System.Drawing.Point(45, 375);
+            this.buttonAbout.Location = new System.Drawing.Point(48, 416);
             this.buttonAbout.Name = "buttonAbout";
             this.buttonAbout.Size = new System.Drawing.Size(255, 39);
             this.buttonAbout.TabIndex = 2;
             this.buttonAbout.Text = "About";
             this.buttonAbout.UseVisualStyleBackColor = false;
+            this.buttonAbout.Click += new System.EventHandler(this.buttonAbout_Click);
             // 
             // panel2
             // 
@@ -221,12 +228,13 @@
             this.buttonBack.BackColor = System.Drawing.Color.White;
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBack.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBack.Location = new System.Drawing.Point(45, 452);
+            this.buttonBack.Location = new System.Drawing.Point(48, 493);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(66, 31);
             this.buttonBack.TabIndex = 15;
             this.buttonBack.Text = "Back";
             this.buttonBack.UseVisualStyleBackColor = false;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // label1
             // 
@@ -245,7 +253,7 @@
             this.buttonExit.BackColor = System.Drawing.Color.Red;
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExit.Location = new System.Drawing.Point(234, 452);
+            this.buttonExit.Location = new System.Drawing.Point(237, 493);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(66, 31);
             this.buttonExit.TabIndex = 0;
@@ -258,12 +266,13 @@
             this.buttonCalculate.BackColor = System.Drawing.Color.White;
             this.buttonCalculate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCalculate.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCalculate.Location = new System.Drawing.Point(45, 321);
+            this.buttonCalculate.Location = new System.Drawing.Point(48, 362);
             this.buttonCalculate.Name = "buttonCalculate";
             this.buttonCalculate.Size = new System.Drawing.Size(255, 39);
             this.buttonCalculate.TabIndex = 3;
             this.buttonCalculate.Text = "Calculate";
             this.buttonCalculate.UseVisualStyleBackColor = false;
+            this.buttonCalculate.Click += new System.EventHandler(this.buttonCalculate_Click);
             // 
             // textRPE
             // 
@@ -287,17 +296,47 @@
             this.textBoxHeartRate.Size = new System.Drawing.Size(138, 15);
             this.textBoxHeartRate.TabIndex = 5;
             // 
-            // buttonRefresh
+            // checkBoxPlatau
             // 
-            this.buttonRefresh.BackColor = System.Drawing.Color.White;
-            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRefresh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRefresh.Location = new System.Drawing.Point(134, 452);
-            this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(66, 31);
-            this.buttonRefresh.TabIndex = 29;
-            this.buttonRefresh.Text = "Refresh";
-            this.buttonRefresh.UseVisualStyleBackColor = false;
+            this.checkBoxPlatau.AutoSize = true;
+            this.checkBoxPlatau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.checkBoxPlatau.ForeColor = System.Drawing.SystemColors.Control;
+            this.checkBoxPlatau.Location = new System.Drawing.Point(44, 76);
+            this.checkBoxPlatau.Name = "checkBoxPlatau";
+            this.checkBoxPlatau.Size = new System.Drawing.Size(156, 20);
+            this.checkBoxPlatau.TabIndex = 30;
+            this.checkBoxPlatau.Text = "VO2 Platau Observed";
+            this.checkBoxPlatau.UseVisualStyleBackColor = true;
+            // 
+            // labelAge
+            // 
+            this.labelAge.AutoSize = true;
+            this.labelAge.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAge.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelAge.Location = new System.Drawing.Point(46, 259);
+            this.labelAge.Name = "labelAge";
+            this.labelAge.Size = new System.Drawing.Size(34, 16);
+            this.labelAge.TabIndex = 33;
+            this.labelAge.Text = "Age:";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Location = new System.Drawing.Point(49, 281);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(255, 1);
+            this.panel6.TabIndex = 32;
+            // 
+            // textBoxAge
+            // 
+            this.textBoxAge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
+            this.textBoxAge.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxAge.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxAge.ForeColor = System.Drawing.SystemColors.Control;
+            this.textBoxAge.Location = new System.Drawing.Point(86, 260);
+            this.textBoxAge.Name = "textBoxAge";
+            this.textBoxAge.Size = new System.Drawing.Size(218, 15);
+            this.textBoxAge.TabIndex = 31;
             // 
             // FormVOMax
             // 
@@ -337,7 +376,10 @@
         private System.Windows.Forms.Button buttonCalculate;
         private System.Windows.Forms.TextBox textRPE;
         private System.Windows.Forms.TextBox textBoxHeartRate;
-        private System.Windows.Forms.RadioButton radioButtonPlatau;
         private System.Windows.Forms.Button buttonRefresh;
+        private System.Windows.Forms.CheckBox checkBoxPlatau;
+        private System.Windows.Forms.Label labelAge;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.TextBox textBoxAge;
     }
 }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRAST));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBoxTime = new System.Windows.Forms.TextBox();
@@ -68,7 +69,6 @@
             this.buttonAbout = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonExit = new System.Windows.Forms.Button();
-            this.buttonRefresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -118,6 +118,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(476, 521);
             this.panel1.TabIndex = 13;
+            // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.BackColor = System.Drawing.Color.White;
+            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRefresh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.Location = new System.Drawing.Point(5, 40);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(88, 31);
+            this.buttonRefresh.TabIndex = 62;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.UseVisualStyleBackColor = false;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // label2
             // 
@@ -422,6 +435,7 @@
             this.buttonCalcualateFatigue.TabIndex = 29;
             this.buttonCalcualateFatigue.Text = "Calculate";
             this.buttonCalcualateFatigue.UseVisualStyleBackColor = false;
+            this.buttonCalcualateFatigue.Click += new System.EventHandler(this.buttonCalcualateFatigue_Click);
             // 
             // buttonCalculateAnaerboicCapcity
             // 
@@ -434,6 +448,7 @@
             this.buttonCalculateAnaerboicCapcity.TabIndex = 28;
             this.buttonCalculateAnaerboicCapcity.Text = "Calculate";
             this.buttonCalculateAnaerboicCapcity.UseVisualStyleBackColor = false;
+            this.buttonCalculateAnaerboicCapcity.Click += new System.EventHandler(this.buttonCalculateAnaerboicCapcity_Click);
             // 
             // button2
             // 
@@ -446,6 +461,7 @@
             this.button2.TabIndex = 27;
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -458,6 +474,7 @@
             this.button1.TabIndex = 26;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -495,6 +512,7 @@
             this.buttonAbout.TabIndex = 2;
             this.buttonAbout.Text = "About";
             this.buttonAbout.UseVisualStyleBackColor = false;
+            this.buttonAbout.Click += new System.EventHandler(this.buttonAbout_Click);
             // 
             // label1
             // 
@@ -520,18 +538,6 @@
             this.buttonExit.Text = "Exit";
             this.buttonExit.UseVisualStyleBackColor = false;
             this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
-            // 
-            // buttonRefresh
-            // 
-            this.buttonRefresh.BackColor = System.Drawing.Color.White;
-            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRefresh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRefresh.Location = new System.Drawing.Point(5, 40);
-            this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(88, 31);
-            this.buttonRefresh.TabIndex = 62;
-            this.buttonRefresh.Text = "Refresh";
-            this.buttonRefresh.UseVisualStyleBackColor = false;
             // 
             // FormRAST
             // 
