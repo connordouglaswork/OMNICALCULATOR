@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormWingate));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.textBoxPPO6 = new System.Windows.Forms.TextBox();
@@ -61,7 +62,7 @@
             this.labelAnaerobicCapacity = new System.Windows.Forms.Label();
             this.buttonCalcualateFatigue = new System.Windows.Forms.Button();
             this.buttonCalculateAnaerboicCapcity = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonFIback = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -78,7 +79,6 @@
             this.buttonCalculatePPO = new System.Windows.Forms.Button();
             this.textBoxForce = new System.Windows.Forms.TextBox();
             this.textBoxDistance = new System.Windows.Forms.TextBox();
-            this.buttonRefresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -117,7 +117,7 @@
             this.panel1.Controls.Add(this.labelAnaerobicCapacity);
             this.panel1.Controls.Add(this.buttonCalcualateFatigue);
             this.panel1.Controls.Add(this.buttonCalculateAnaerboicCapcity);
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.buttonFIback);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
@@ -138,6 +138,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(763, 508);
             this.panel1.TabIndex = 12;
+            // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.BackColor = System.Drawing.Color.White;
+            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRefresh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.Location = new System.Drawing.Point(3, 3);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(66, 31);
+            this.buttonRefresh.TabIndex = 59;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.UseVisualStyleBackColor = false;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // label15
             // 
@@ -442,6 +455,7 @@
             this.buttonCalcualateFatigue.TabIndex = 29;
             this.buttonCalcualateFatigue.Text = "Calculate";
             this.buttonCalcualateFatigue.UseVisualStyleBackColor = false;
+            this.buttonCalcualateFatigue.Click += new System.EventHandler(this.buttonCalcualateFatigue_Click);
             // 
             // buttonCalculateAnaerboicCapcity
             // 
@@ -454,18 +468,20 @@
             this.buttonCalculateAnaerboicCapcity.TabIndex = 28;
             this.buttonCalculateAnaerboicCapcity.Text = "Calculate";
             this.buttonCalculateAnaerboicCapcity.UseVisualStyleBackColor = false;
+            this.buttonCalculateAnaerboicCapcity.Click += new System.EventHandler(this.buttonCalculateAnaerboicCapcity_Click);
             // 
-            // button2
+            // buttonFIback
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(540, 452);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(66, 31);
-            this.button2.TabIndex = 27;
-            this.button2.Text = "Back";
-            this.button2.UseVisualStyleBackColor = false;
+            this.buttonFIback.BackColor = System.Drawing.Color.White;
+            this.buttonFIback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonFIback.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonFIback.Location = new System.Drawing.Point(540, 452);
+            this.buttonFIback.Name = "buttonFIback";
+            this.buttonFIback.Size = new System.Drawing.Size(66, 31);
+            this.buttonFIback.TabIndex = 27;
+            this.buttonFIback.Text = "Back";
+            this.buttonFIback.UseVisualStyleBackColor = false;
+            this.buttonFIback.Click += new System.EventHandler(this.buttonFIback_Click);
             // 
             // button1
             // 
@@ -478,6 +494,7 @@
             this.button1.TabIndex = 26;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label6
             // 
@@ -568,6 +585,7 @@
             this.buttonAbout.TabIndex = 2;
             this.buttonAbout.Text = "About";
             this.buttonAbout.UseVisualStyleBackColor = false;
+            this.buttonAbout.Click += new System.EventHandler(this.buttonAbout_Click);
             // 
             // panel2
             // 
@@ -588,6 +606,7 @@
             this.buttonBack.TabIndex = 15;
             this.buttonBack.Text = "Back";
             this.buttonBack.UseVisualStyleBackColor = false;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // label1
             // 
@@ -625,6 +644,7 @@
             this.buttonCalculatePPO.TabIndex = 3;
             this.buttonCalculatePPO.Text = "Calculate";
             this.buttonCalculatePPO.UseVisualStyleBackColor = false;
+            this.buttonCalculatePPO.Click += new System.EventHandler(this.buttonCalculatePPO_Click);
             // 
             // textBoxForce
             // 
@@ -647,18 +667,6 @@
             this.textBoxDistance.Name = "textBoxDistance";
             this.textBoxDistance.Size = new System.Drawing.Size(100, 15);
             this.textBoxDistance.TabIndex = 5;
-            // 
-            // buttonRefresh
-            // 
-            this.buttonRefresh.BackColor = System.Drawing.Color.White;
-            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRefresh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRefresh.Location = new System.Drawing.Point(3, 3);
-            this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(66, 31);
-            this.buttonRefresh.TabIndex = 59;
-            this.buttonRefresh.Text = "Refresh";
-            this.buttonRefresh.UseVisualStyleBackColor = false;
             // 
             // FormWingate
             // 
@@ -684,7 +692,7 @@
         private System.Windows.Forms.Label labelAnaerobicCapacity;
         private System.Windows.Forms.Button buttonCalcualateFatigue;
         private System.Windows.Forms.Button buttonCalculateAnaerboicCapcity;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button buttonFIback;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;

@@ -8,19 +8,69 @@ namespace OMNIATHLETICS
 {
     public class AnaerobicCalculator : Calculator
     {
-        List<string> localCalculatioMemory = new List<string>();
+        public List<string> localWingatePeakPowerCalculationMemory = new List<string>();
 
-        public int currentCalcualtionLoaded = -1;
+        public int currentWingatePeakPowerCalcualtionLoaded = -1;
 
-        public void SaveToMemory(string calculation)
+        public void SaveToWingatePeakPowerMemory(string calculation)
         {
-            localCalculatioMemory.Add(calculation);
-            currentCalcualtionLoaded++;
+            localWingatePeakPowerCalculationMemory.Add(calculation);
+            currentWingatePeakPowerCalcualtionLoaded++;
+        }
+
+        public List<string> localWingateFICalculationMemory = new List<string>();
+
+        public int currentWingateFICalcualtionLoaded = -1;
+
+        public void SaveToWingateFIMemory(string calculation)
+        {
+            localWingateFICalculationMemory.Add(calculation);
+            currentWingateFICalcualtionLoaded++;
+        }
+
+        public List<string> localWingatACCalculationMemory = new List<string>();
+
+        public int currentWingatACCalcualtionLoaded = -1;
+
+        public void SaveToWingatACMemory(string calculation)
+        {
+            localWingatACCalculationMemory.Add(calculation);
+            currentWingatACCalcualtionLoaded++;
+        }
+
+        public List<string> localRASTFICalculationMemory = new List<string>();
+
+        public int currentRASTFICalcualtionLoaded = -1;
+
+        public void SaveToRASTFIMemory(string calculation)
+        {
+            localRASTFICalculationMemory.Add(calculation);
+            currentRASTFICalcualtionLoaded++;
+        }
+
+        public List<string> localRASTACCalculationMemory = new List<string>();
+
+        public int currentRASTACCalcualtionLoaded = -1;
+
+        public void SaveToRASTACMemory(string calculation)
+        {
+            localRASTACCalculationMemory.Add(calculation);
+            currentRASTACCalcualtionLoaded++;
+        }
+
+        public List<string> localPRTCalculationMemory = new List<string>();
+
+        public int currentPRTCalcualtionLoaded = -1;
+
+        public void SaveToPRTMemory(string calculation)
+        {
+            localPRTCalculationMemory.Add(calculation);
+            currentPRTCalcualtionLoaded++;
         }
 
         public AnaerobicCalculator() { }
 
-        public static string About(string calcualtion)
+        public string About(string calcualtion)
         {
             string aboutMSG = "";
             if(calcualtion == "Wingate")
@@ -56,14 +106,14 @@ namespace OMNIATHLETICS
         }
 
         //Wingate Fatigue Index: - Unit = index
-        public static string WingateFatigueIndex(double PeakPower, double LowestPower)
+        public string WingateFatigueIndex(double PeakPower, double LowestPower)
         {
             double AF = ((PeakPower - LowestPower) / (PeakPower)) * 100;
             return AF.ToString();
         }
 
         //RAST Anaerobic Capacity: - Unit = ?
-        public static string RastAnaerobicCapacity(double peakPowerOne, double peakPowerTwo, double peakPowerThree, double peakPowerFour, double peakPowerFive, double peakPowerSix)
+        public string RastAnaerobicCapacity(double peakPowerOne, double peakPowerTwo, double peakPowerThree, double peakPowerFour, double peakPowerFive, double peakPowerSix)
         {
             double AC = peakPowerOne + peakPowerTwo + peakPowerThree + peakPowerFour + peakPowerFive + peakPowerSix;
             return (AC.ToString() + "?");
@@ -71,14 +121,14 @@ namespace OMNIATHLETICS
 
 
         //Rast Fatigue Index: - Unit = index
-        public static string RastFatigueIndex(double PeakPower, double LowestPower, double time)
+        public string RastFatigueIndex(double PeakPower, double LowestPower, double time)
         {
             double FI = (PeakPower - LowestPower) / time;
             return FI.ToString();
         }
 
         //Phosphate Recovery Test Drop Off: - Unit = m
-        public static string PhosphateRecoveryTestDropOff(double firstSprintDistance, double lastSprintDistance)
+        public string PhosphateRecoveryTestDropOff(double firstSprintDistance, double lastSprintDistance)
         {
             double dropOffDistance = lastSprintDistance - firstSprintDistance;
             return (dropOffDistance.ToString() + "m");
