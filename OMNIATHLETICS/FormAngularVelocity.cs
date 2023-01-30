@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OMNIATHLETICS.ActiveDirectory;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,46 @@ namespace OMNIATHLETICS
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonCalculate_Click(object sender, EventArgs e)
+        {
+            string angleInit = textBoxAngleInit.Text;
+            string angleFinal = textBoxAngleFinal.Text;
+            string timeInit = textBoxTimeInit.Text;
+            string timeFinal = textBoxTimeFinal.Text;
+            string angularVelocity = ActiveCalculator.biomechanicsCalculator.AngularVelocity(double.Parse(angleInit), double.Parse(angleFinal), double.Parse(timeInit), double.Parse(timeFinal));
+            string labelDesc = "Angular Velocity: " + angularVelocity;
+            labelAngularVelocity.Text = (labelDesc);
+            ActiveCalculator.biomechanicsCalculator.SaveToAngularVelocityMemory(angleInit + "," + angleFinal + "," + timeInit + "," + timeFinal + "," + labelDesc);
+        }
+
+        private void buttonBack_Click(object sender, EventArgs e)
+        {
+            if (ActiveCalculator.biomechanicsCalculator.currentAngularVelocityCalcualtionLoaded > 0)
+            {
+                string calculationData = ActiveCalculator.biomechanicsCalculator.localAngularVelocityCalculationMemory[ActiveCalculator.biomechanicsCalculator.currentAngularVelocityCalcualtionLoaded - 1];
+                string[] calculationFileds = calculationData.Split(',');
+                textBoxAngleInit.Text = calculationFileds[0];
+                textBoxAngleFinal.Text = calculationFileds[1];
+                textBoxTimeInit.Text = calculationFileds[0];
+                textBoxTimeFinal.Text = calculationFileds[1];
+                labelAngularVelocity.Text = calculationFileds[2];
+                //delete it from list when gone
+                ActiveCalculator.biomechanicsCalculator.localAngularVelocityCalculationMemory.Remove(calculationData);
+                ActiveCalculator.biomechanicsCalculator.currentAngularVelocityCalcualtionLoaded--;
+            }
+        }
+
+        private void buttonAbout_Click(object sender, EventArgs e)
+        {
+            ActiveCalculator.biomechanicsCalculator.About("Angular Velocity");
+        }
+
+        private void buttonRefresh_Click(object sender, EventArgs e)
+        {
+            List<TextBox> textBoxes = new List<TextBox>() { textBoxAngleInit, textBoxAngleFinal, textBoxTimeInit, textBoxTimeFinal };
+            ActiveCalculator.calcualtor.RefreshFields(textBoxes);
         }
     }
 }

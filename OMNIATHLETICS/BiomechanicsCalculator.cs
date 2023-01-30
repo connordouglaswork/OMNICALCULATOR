@@ -8,26 +8,66 @@ namespace OMNIATHLETICS
 {
     public class BiomechanicsCalculator : Calculator
     {
-        List<string> localCalculatioMemory = new List<string>();
+        public List<string> localHorizontalProjectionVelocityCalculationMemory = new List<string>();
 
-        public int currentCalcualtionLoaded = -1;
+        public int currentHorizontalProjectionVelocityCalcualtionLoaded = -1;
 
-        public void SaveToMemory(string calculation)
+        public void SaveToHorizontalProjectionVelocityMemory(string calculation)
         {
-            localCalculatioMemory.Add(calculation);
-            currentCalcualtionLoaded++;
+            localHorizontalProjectionVelocityCalculationMemory.Add(calculation);
+            currentHorizontalProjectionVelocityCalcualtionLoaded++;
         }
 
+        public List<string> localAngularVelocityCalculationMemory = new List<string>();
+
+        public int currentAngularVelocityCalcualtionLoaded = -1;
+
+        public void SaveToAngularVelocityMemory(string calculation)
+        {
+            localAngularVelocityCalculationMemory.Add(calculation);
+            currentAngularVelocityCalcualtionLoaded++;
+        }
+
+        public List<string> localAngularAccelerationCalculationMemory = new List<string>();
+
+        public int currentAngularAccelerationCalcualtionLoaded = -1;
+
+        public void SaveToAngularAccelerationMemory(string calculation)
+        {
+            localAngularAccelerationCalculationMemory.Add(calculation);
+            currentAngularAccelerationCalcualtionLoaded++;
+        }
+
+        public List<string> localInertiaCalculationMemory = new List<string>();
+
+        public int currentInertiaCalcualtionLoaded = -1;
+
+        public void SaveInertiaToMemory(string calculation)
+        {
+            localInertiaCalculationMemory.Add(calculation);
+            currentInertiaCalcualtionLoaded++;
+        }
+
+        public List<string> localTorqueCalculationMemory = new List<string>();
+
+        public int currentTorqueCalcualtionLoaded = -1;
+
+        public void SaveToTorqueMemory(string calculation)
+        {
+            localTorqueCalculationMemory.Add(calculation);
+            currentTorqueCalcualtionLoaded++;
+        }
+      
         public BiomechanicsCalculator() { }
 
-        public static string About(string calcualtion)
+        public string About(string calcualtion)
         {
             string aboutMSG = "";
             if (calcualtion == "Horizontal Projection Velocity")
             {
                 aboutMSG = "The horizontal component of the projection velocity = projection velocity COS * projection degrees";
             }
-            else if (calcualtion == "Angular Velocity ")
+            else if (calcualtion == "Angular Velocity")
             {
                 aboutMSG = "w = anglef -anglei / tf - ti";
             }
@@ -47,14 +87,14 @@ namespace OMNIATHLETICS
         }
 
         //Horizontal Projection Velocity - Unit = m/s
-        public static string HorizontalProjectionVelocity(double velocity, double angle)
+        public string HorizontalProjectionVelocity(double velocity, double angle)
         {
             double horizontalVelocity = velocity * Math.Cos(angle);
             return (horizontalVelocity.ToString() + "m/s");
         }
 
         //Angular Velocity  - Unit = rad/s
-        public static string AngularVelocity(double angleInitial, double angleFinal, double timeInitial, double timeFinal)
+        public string AngularVelocity(double angleInitial, double angleFinal, double timeInitial, double timeFinal)
         {
             double w = (angleFinal - angleInitial) / (timeFinal - timeInitial);
             double wRads = w * 57.2958;
@@ -62,7 +102,7 @@ namespace OMNIATHLETICS
         }
 
         //Angular Acceleration  - Unit = rad/s^2
-        public static string AngularAcceleration(double velocityInitial, double velocityFinal, double timeInitial, double timeFinal)
+        public string AngularAcceleration(double velocityInitial, double velocityFinal, double timeInitial, double timeFinal)
         {
             double a = (velocityInitial - velocityFinal) / (timeFinal - timeInitial);
             double aRads = a * 57.2958;
@@ -70,14 +110,14 @@ namespace OMNIATHLETICS
         }
 
         //inertia - Unit = kgm^2
-        public static string Inertia(double mass, double radius)
+        public string Inertia(double mass, double radius)
         {
             double inertia = mass * (radius * radius);
             return (inertia.ToString() + "kgm^2");
         }
 
         //torque - Unit = N.m
-        public static string Torque(double force, double radius)
+        public string Torque(double force, double radius)
         {
             double torque = force * radius;
             return (torque.ToString() + "N.m");

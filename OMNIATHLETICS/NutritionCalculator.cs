@@ -8,22 +8,52 @@ namespace OMNIATHLETICS
 {
     public class NutritionCalculator : Calculator
     {
-        List<string> localCalculatioMemory = new List<string>();
+        public List<string> localFFMICalculationMemory = new List<string>();
 
-        public int currentCalcualtionLoaded = -1;
+        public int currentFFMICalcualtionLoaded = -1;
 
-        public void SaveToMemory(string calculation)
+        public void SaveToFFMIMemory(string calculation)
         {
-            localCalculatioMemory.Add(calculation);
-            currentCalcualtionLoaded++;
+            localFFMICalculationMemory.Add(calculation);
+            currentFFMICalcualtionLoaded++;
+        }
+
+        public List<string> localBMICalculationMemory = new List<string>();
+
+        public int currentBMICalcualtionLoaded = -1;
+
+        public void SaveToBMIMemory(string calculation)
+        {
+            localBMICalculationMemory.Add(calculation);
+            currentBMICalcualtionLoaded++;
+        }
+
+        public List<string> localProteinIndexCalculationMemory = new List<string>();
+
+        public int currentProteinIndexCalcualtionLoaded = -1;
+
+        public void SaveToProteinIndexMemory(string calculation)
+        {
+            localProteinIndexCalculationMemory.Add(calculation);
+            currentProteinIndexCalcualtionLoaded++;
+        }
+
+        public List<string> localMetabolicRateCalculationMemory = new List<string>();
+
+        public int currentMetabolicRateCalcualtionLoaded = -1;
+
+        public void SaveToMetabolicRateMemory(string calculation)
+        {
+            localMetabolicRateCalculationMemory.Add(calculation);
+            currentMetabolicRateCalcualtionLoaded++;
         }
 
         public NutritionCalculator() { }
 
-        public static string About(string calcualtion)
+        public string About(string calcualtion)
         {
             string aboutMSG = "";
-            if (calcualtion == "FFMI ")
+            if (calcualtion == "FFMI")
             {
                 aboutMSG = "FFMI (Fat-free mass index) is a body composition measure capable of quantifying the" +
                     " amount of muscle mass on your body relative to height and accounting for exclusion of body fat.";
@@ -45,7 +75,7 @@ namespace OMNIATHLETICS
         }
 
         //FFMI: - Unit = rating
-        public static string FFMI(double bodyFat, double mass, double height)
+        public string FFMI(double bodyFat, double mass, double height)
         {
             double leanWeight = (mass * ((100 - bodyFat) / 100));
             double index = (leanWeight / 2.2) * 2.20462 / (height * height);
@@ -53,14 +83,14 @@ namespace OMNIATHLETICS
         }
 
         //BMI: - Unit = rating
-        public static string BMI(double mass, double height)
+        public string BMI(double mass, double height)
         {
             double index = mass / height;
             return index.ToString();
         }
 
         //Protein Index: - Unit = g.kg.d
-        public static string ProteinIndex(double mass, string goal)
+        public string ProteinIndex(double mass, string goal)
         {
             string proteinRec = "";
             if(goal == "RDA")
@@ -71,7 +101,7 @@ namespace OMNIATHLETICS
             {
                 proteinRec = "1.2 – 2.0 g.kg.d";
             }
-            else if (goal == "Weight loss")
+            else if (goal == "Weight Loss")
             {
                 proteinRec = "2.3 – 3.1 g.kg.d";
             }
@@ -79,10 +109,10 @@ namespace OMNIATHLETICS
         }
 
         //Metabolic Rate: - Unit = rate
-        public static string MetabolicRate(double mass, double height, int age, string sex)
+        public string MetabolicRate(double mass, double height, int age, string sex)
         {
             double BMR = 0;
-            if(sex == "male")
+            if(sex == "Male")
             {
                 BMR = 66 + (13.7 * mass) + (5 * height) - (6.8 * age);
             }

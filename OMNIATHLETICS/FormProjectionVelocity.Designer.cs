@@ -30,8 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProjectionVelocity));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonRefresh = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1RM = new System.Windows.Forms.Label();
+            this.labelVel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -43,7 +44,6 @@
             this.buttonCalculate = new System.Windows.Forms.Button();
             this.textBoxVelocity = new System.Windows.Forms.TextBox();
             this.textBoxAngle = new System.Windows.Forms.TextBox();
-            this.buttonRefresh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +53,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
             this.panel1.Controls.Add(this.buttonRefresh);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label1RM);
+            this.panel1.Controls.Add(this.labelVel);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.panel3);
@@ -70,6 +70,19 @@
             this.panel1.Size = new System.Drawing.Size(350, 548);
             this.panel1.TabIndex = 12;
             // 
+            // buttonRefresh
+            // 
+            this.buttonRefresh.BackColor = System.Drawing.Color.White;
+            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRefresh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRefresh.Location = new System.Drawing.Point(141, 491);
+            this.buttonRefresh.Name = "buttonRefresh";
+            this.buttonRefresh.Size = new System.Drawing.Size(66, 31);
+            this.buttonRefresh.TabIndex = 25;
+            this.buttonRefresh.Text = "Refresh";
+            this.buttonRefresh.UseVisualStyleBackColor = false;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
@@ -80,16 +93,16 @@
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
-            // label1RM
+            // labelVel
             // 
-            this.label1RM.AutoSize = true;
-            this.label1RM.Font = new System.Drawing.Font("Arial", 16F);
-            this.label1RM.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1RM.Location = new System.Drawing.Point(52, 311);
-            this.label1RM.Name = "label1RM";
-            this.label1RM.Size = new System.Drawing.Size(100, 25);
-            this.label1RM.TabIndex = 21;
-            this.label1RM.Text = "Velocity: ";
+            this.labelVel.AutoSize = true;
+            this.labelVel.Font = new System.Drawing.Font("Arial", 16F);
+            this.labelVel.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelVel.Location = new System.Drawing.Point(52, 311);
+            this.labelVel.Name = "labelVel";
+            this.labelVel.Size = new System.Drawing.Size(100, 25);
+            this.labelVel.TabIndex = 21;
+            this.labelVel.Text = "Velocity: ";
             // 
             // label3
             // 
@@ -133,6 +146,7 @@
             this.buttonAbout.TabIndex = 2;
             this.buttonAbout.Text = "About";
             this.buttonAbout.UseVisualStyleBackColor = false;
+            this.buttonAbout.Click += new System.EventHandler(this.buttonAbout_Click);
             // 
             // panel2
             // 
@@ -153,6 +167,7 @@
             this.buttonBack.TabIndex = 15;
             this.buttonBack.Text = "Back";
             this.buttonBack.UseVisualStyleBackColor = false;
+            this.buttonBack.Click += new System.EventHandler(this.buttonBack_Click);
             // 
             // label1
             // 
@@ -190,6 +205,7 @@
             this.buttonCalculate.TabIndex = 3;
             this.buttonCalculate.Text = "Calculate";
             this.buttonCalculate.UseVisualStyleBackColor = false;
+            this.buttonCalculate.Click += new System.EventHandler(this.buttonCalculate_Click);
             // 
             // textBoxVelocity
             // 
@@ -213,18 +229,6 @@
             this.textBoxAngle.Size = new System.Drawing.Size(119, 15);
             this.textBoxAngle.TabIndex = 5;
             // 
-            // buttonRefresh
-            // 
-            this.buttonRefresh.BackColor = System.Drawing.Color.White;
-            this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonRefresh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRefresh.Location = new System.Drawing.Point(141, 491);
-            this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(66, 31);
-            this.buttonRefresh.TabIndex = 25;
-            this.buttonRefresh.Text = "Refresh";
-            this.buttonRefresh.UseVisualStyleBackColor = false;
-            // 
             // FormProjectionVelocity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,7 +250,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1RM;
+        private System.Windows.Forms.Label labelVel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel3;
