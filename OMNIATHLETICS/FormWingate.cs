@@ -102,7 +102,7 @@ namespace OMNIATHLETICS
             string FI = ActiveCalculator.anaerobicthCalculator.WingateFatigueIndex(double.Parse(peakPower), double.Parse(lowestPower));
             string labelDesc = "FI: " + FI;
             labelFatigue.Text = (labelDesc);
-            ActiveCalculator.anaerobicthCalculator.SaveToWingatePeakPowerMemory(peakPower + "," + lowestPower + "," + labelDesc);
+            ActiveCalculator.anaerobicthCalculator.SaveToWingateFIMemory(peakPower + "," + lowestPower + "," + labelDesc);
         }
 
         private void buttonFIback_Click(object sender, EventArgs e)

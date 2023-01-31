@@ -67,9 +67,9 @@
             this.panel1.Controls.Add(this.buttonExit);
             this.panel1.Controls.Add(this.buttonCalculate);
             this.panel1.Controls.Add(this.textBox1RM);
-            this.panel1.Location = new System.Drawing.Point(310, 95);
+            this.panel1.Location = new System.Drawing.Point(290, 94);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(350, 508);
+            this.panel1.Size = new System.Drawing.Size(394, 508);
             this.panel1.TabIndex = 12;
             // 
             // buttonRefresh
@@ -77,7 +77,7 @@
             this.buttonRefresh.BackColor = System.Drawing.Color.White;
             this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRefresh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRefresh.Location = new System.Drawing.Point(141, 452);
+            this.buttonRefresh.Location = new System.Drawing.Point(161, 448);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(66, 31);
             this.buttonRefresh.TabIndex = 28;
@@ -88,7 +88,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(45, 268);
+            this.panel3.Location = new System.Drawing.Point(65, 264);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(255, 1);
             this.panel3.TabIndex = 27;
@@ -98,7 +98,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F);
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(42, 223);
+            this.label3.Location = new System.Drawing.Point(62, 219);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(101, 16);
             this.label3.TabIndex = 26;
@@ -109,7 +109,7 @@
             this.radioButton3.AutoSize = true;
             this.radioButton3.Font = new System.Drawing.Font("Arial", 9.75F);
             this.radioButton3.ForeColor = System.Drawing.SystemColors.Control;
-            this.radioButton3.Location = new System.Drawing.Point(158, 221);
+            this.radioButton3.Location = new System.Drawing.Point(178, 217);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(93, 20);
             this.radioButton3.TabIndex = 25;
@@ -122,7 +122,7 @@
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Arial", 9.75F);
             this.radioButton2.ForeColor = System.Drawing.SystemColors.Control;
-            this.radioButton2.Location = new System.Drawing.Point(158, 242);
+            this.radioButton2.Location = new System.Drawing.Point(178, 238);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(93, 20);
             this.radioButton2.TabIndex = 24;
@@ -134,7 +134,7 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(130, 68);
+            this.pictureBox1.Location = new System.Drawing.Point(150, 64);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(97, 93);
             this.pictureBox1.TabIndex = 22;
@@ -145,7 +145,7 @@
             this.labelPeakPowerZone.AutoSize = true;
             this.labelPeakPowerZone.Font = new System.Drawing.Font("Arial", 16F);
             this.labelPeakPowerZone.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelPeakPowerZone.Location = new System.Drawing.Point(40, 284);
+            this.labelPeakPowerZone.Location = new System.Drawing.Point(60, 280);
             this.labelPeakPowerZone.Name = "labelPeakPowerZone";
             this.labelPeakPowerZone.Size = new System.Drawing.Size(196, 25);
             this.labelPeakPowerZone.TabIndex = 21;
@@ -156,7 +156,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(42, 179);
+            this.label2.Location = new System.Drawing.Point(62, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(64, 16);
             this.label2.TabIndex = 19;
@@ -168,7 +168,7 @@
             this.buttonAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAbout.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAbout.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonAbout.Location = new System.Drawing.Point(45, 375);
+            this.buttonAbout.Location = new System.Drawing.Point(65, 371);
             this.buttonAbout.Name = "buttonAbout";
             this.buttonAbout.Size = new System.Drawing.Size(255, 39);
             this.buttonAbout.TabIndex = 2;
@@ -179,7 +179,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(45, 201);
+            this.panel2.Location = new System.Drawing.Point(65, 197);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(255, 1);
             this.panel2.TabIndex = 16;
@@ -189,7 +189,7 @@
             this.buttonBack.BackColor = System.Drawing.Color.White;
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBack.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBack.Location = new System.Drawing.Point(45, 452);
+            this.buttonBack.Location = new System.Drawing.Point(65, 448);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(66, 31);
             this.buttonBack.TabIndex = 15;
@@ -203,7 +203,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(39, 20);
+            this.label1.Location = new System.Drawing.Point(59, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(282, 35);
             this.label1.TabIndex = 13;
@@ -214,7 +214,7 @@
             this.buttonExit.BackColor = System.Drawing.Color.Red;
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExit.Location = new System.Drawing.Point(234, 452);
+            this.buttonExit.Location = new System.Drawing.Point(254, 448);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(66, 31);
             this.buttonExit.TabIndex = 0;
@@ -227,7 +227,7 @@
             this.buttonCalculate.BackColor = System.Drawing.Color.White;
             this.buttonCalculate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCalculate.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCalculate.Location = new System.Drawing.Point(45, 321);
+            this.buttonCalculate.Location = new System.Drawing.Point(65, 317);
             this.buttonCalculate.Name = "buttonCalculate";
             this.buttonCalculate.Size = new System.Drawing.Size(255, 39);
             this.buttonCalculate.TabIndex = 3;
@@ -241,7 +241,7 @@
             this.textBox1RM.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1RM.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1RM.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBox1RM.Location = new System.Drawing.Point(112, 180);
+            this.textBox1RM.Location = new System.Drawing.Point(132, 176);
             this.textBox1RM.Name = "textBox1RM";
             this.textBox1RM.Size = new System.Drawing.Size(188, 15);
             this.textBox1RM.TabIndex = 4;

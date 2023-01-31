@@ -28,9 +28,9 @@ namespace OMNIATHLETICS
             string mass = textBoxJumpHeight.Text;
             string height = textBoxMass.Text;
             string lbPower = ActiveCalculator.powerCalculator.LowerBodyPeakPowerPredictor(double.Parse(height), double.Parse(mass));
-            string labelDesc = "ROFD: " + lbPower;
+            string labelDesc = "Peak Power: " + lbPower;
             labelPower.Text = (labelDesc);
-            ActiveCalculator.powerCalculator.SaveToROFDMemory(mass + "," + height + "," + labelDesc);
+            ActiveCalculator.powerCalculator.SaveToPeakMemory(mass + "," + height + "," + labelDesc);
         }
 
         private void buttonBack_Click(object sender, EventArgs e)

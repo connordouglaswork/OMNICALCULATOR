@@ -43,9 +43,9 @@ namespace OMNIATHLETICS
                 string[] calculationFileds = calculationData.Split(',');
                 textBoxAngleInit.Text = calculationFileds[0];
                 textBoxAngleFinal.Text = calculationFileds[1];
-                textBoxTimeInit.Text = calculationFileds[0];
-                textBoxTimeFinal.Text = calculationFileds[1];
-                labelAngularVelocity.Text = calculationFileds[2];
+                textBoxTimeInit.Text = calculationFileds[2];
+                textBoxTimeFinal.Text = calculationFileds[3];
+                labelAngularVelocity.Text = calculationFileds[4];
                 //delete it from list when gone
                 ActiveCalculator.biomechanicsCalculator.localAngularVelocityCalculationMemory.Remove(calculationData);
                 ActiveCalculator.biomechanicsCalculator.currentAngularVelocityCalcualtionLoaded--;

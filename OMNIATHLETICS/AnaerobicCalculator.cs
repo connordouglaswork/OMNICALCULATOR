@@ -70,7 +70,7 @@ namespace OMNIATHLETICS
 
         public AnaerobicCalculator() { }
 
-        public string About(string calcualtion)
+        public void About(string calcualtion)
         {
             string aboutMSG = "";
             if(calcualtion == "Wingate")
@@ -88,35 +88,35 @@ namespace OMNIATHLETICS
                 aboutMSG = "The Phosphate Recovery Test is an anaerobic fitness test, assessing the ability to recover between" +
                     " sprints and produce the same level of power repeatedly. ";
             }
-            return aboutMSG;
+            System.Windows.Forms.MessageBox.Show(aboutMSG);
         }
 
         //Wingate Peak Power Output: - Unit = W
         public string WingatePeakPowerOutput(double force, double distance, double time)
         {
             double PPO = force * distance / time;
-            return (PPO.ToString() + "W");
+            return (PPO.ToString("0.00") + "W");
         }
 
         //Wingate Anaerobic Capacity: - Unit = ?
         public string WingateAnaerobicCapacity(double peakPowerOne, double peakPowerTwo, double peakPowerThree, double peakPowerFour, double peakPowerFive, double peakPowerSix)
         {
             double AC = peakPowerOne + peakPowerTwo + peakPowerThree + peakPowerFour + peakPowerFive + peakPowerSix;
-            return (AC.ToString() + "?");
+            return (AC.ToString("0.00") + "W·kg^−1");
         }
 
         //Wingate Fatigue Index: - Unit = index
         public string WingateFatigueIndex(double PeakPower, double LowestPower)
         {
             double AF = ((PeakPower - LowestPower) / (PeakPower)) * 100;
-            return AF.ToString();
+            return AF.ToString("0.00");
         }
 
         //RAST Anaerobic Capacity: - Unit = ?
         public string RastAnaerobicCapacity(double peakPowerOne, double peakPowerTwo, double peakPowerThree, double peakPowerFour, double peakPowerFive, double peakPowerSix)
         {
             double AC = peakPowerOne + peakPowerTwo + peakPowerThree + peakPowerFour + peakPowerFive + peakPowerSix;
-            return (AC.ToString() + "?");
+            return (AC.ToString("0.00") + "W·kg^−1");
         }
 
 
@@ -124,14 +124,14 @@ namespace OMNIATHLETICS
         public string RastFatigueIndex(double PeakPower, double LowestPower, double time)
         {
             double FI = (PeakPower - LowestPower) / time;
-            return FI.ToString();
+            return FI.ToString("0.00");
         }
 
         //Phosphate Recovery Test Drop Off: - Unit = m
         public string PhosphateRecoveryTestDropOff(double firstSprintDistance, double lastSprintDistance)
         {
             double dropOffDistance = lastSprintDistance - firstSprintDistance;
-            return (dropOffDistance.ToString() + "m");
+            return (dropOffDistance.ToString("0.00") + "m");
         }
 
     }

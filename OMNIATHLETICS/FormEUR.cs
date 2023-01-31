@@ -30,7 +30,7 @@ namespace OMNIATHLETICS
             string EUR = ActiveCalculator.strengthCalculator.EccentricUtilisationRatio(Double.Parse(CMJ), int.Parse(SJ));
             string labelDesc = "EUR: " + EUR;
             labelEUR.Text = (labelDesc);
-            ActiveCalculator.strengthCalculator.SaveToACSMMemory(CMJ + "," + SJ + "," + labelDesc);
+            ActiveCalculator.strengthCalculator.SaveToEURMemory(CMJ + "," + SJ + "," + labelDesc);
         }
 
         private void buttonBack_Click(object sender, EventArgs e)

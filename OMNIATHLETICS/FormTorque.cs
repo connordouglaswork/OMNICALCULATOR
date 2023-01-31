@@ -28,7 +28,7 @@ namespace OMNIATHLETICS
             string force = textBoxForce.Text;
             string radius = textBoxRadius.Text;
             string torque = ActiveCalculator.biomechanicsCalculator.Torque(double.Parse(force), double.Parse(radius));
-            string labelDesc = "Inertia: " + torque;
+            string labelDesc = "Torque: " + torque;
             labelTorque.Text = (labelDesc);
             ActiveCalculator.biomechanicsCalculator.SaveToTorqueMemory(force + "," + radius + "," + labelDesc);
         }

@@ -27,11 +27,11 @@ namespace OMNIATHLETICS
         {
             string max = textBox1RM.Text;
             string type = "";
-            if (radioButton2.Checked)
+            if (radioButton3.Checked)
             {
                 type = "Upper Body";
             }
-            else if (radioButton3.Checked)
+            else if (radioButton2.Checked)
             {
                 type = "Lower Body";
             }
@@ -50,13 +50,13 @@ namespace OMNIATHLETICS
                 textBox1RM.Text = calculationFileds[0];
                 if(calculationFileds[1] == "Upper Body")
                 {
-                    radioButton2.Checked = true;
-                    radioButton3.Checked = false;
+                    radioButton3.Checked = true;
+                    radioButton2.Checked = false;
                 }
                 else
                 {
-                    radioButton2.Checked = false;
-                    radioButton3.Checked = true;
+                    radioButton3.Checked = false;
+                    radioButton2.Checked = true;
                 }
 
                 labelPeakPowerZone.Text = calculationFileds[2];

@@ -30,7 +30,7 @@ namespace OMNIATHLETICS
 
         public AerobicCalculator() { }
 
-        public string About(string calcualtion)
+        public void About(string calcualtion)
         {
             string aboutMSG = "";
             if (calcualtion == "Yoyo Intermittent Recovery Test Level 1")
@@ -46,7 +46,7 @@ namespace OMNIATHLETICS
                     " blood lactate (La) >8mmol/L, a respiratory exchange ratio (RER) >1.15, a rating of perceived exertion (RPE) > 17," +
                     " and an age-predicted maximal heart rate (APMHR) ±10 beats/min from predicted using 220-age. ";
             }
-            return aboutMSG;
+            System.Windows.Forms.MessageBox.Show(aboutMSG);
         }
 
         //Yoyo Intermittent Recovery Test Level 1: - Unit = Rating

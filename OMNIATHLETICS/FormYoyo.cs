@@ -32,7 +32,7 @@ namespace OMNIATHLETICS
             {
                 type = "meters";
             }
-            string rating = ActiveCalculator.aerobicCalculator.YoyoIntermittentRecoveryTest(double.Parse(level), double.Parse(type), type);
+            string rating = ActiveCalculator.aerobicCalculator.YoyoIntermittentRecoveryTest(double.Parse(distance), double.Parse(level), type);
             string labelDesc = "Rating: " + rating;
             labelRating.Text = (labelDesc);
             ActiveCalculator.aerobicCalculator.SaveToYoYoMemory(level + "," + distance + "," + labelDesc);

@@ -65,9 +65,9 @@
             this.panel1.Controls.Add(this.buttonExit);
             this.panel1.Controls.Add(this.buttonCalculate);
             this.panel1.Controls.Add(this.textBoxMass);
-            this.panel1.Location = new System.Drawing.Point(310, 95);
+            this.panel1.Location = new System.Drawing.Point(213, 100);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(350, 508);
+            this.panel1.Size = new System.Drawing.Size(512, 508);
             this.panel1.TabIndex = 12;
             // 
             // buttonRefresh
@@ -75,7 +75,7 @@
             this.buttonRefresh.BackColor = System.Drawing.Color.White;
             this.buttonRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRefresh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRefresh.Location = new System.Drawing.Point(135, 452);
+            this.buttonRefresh.Location = new System.Drawing.Point(214, 454);
             this.buttonRefresh.Name = "buttonRefresh";
             this.buttonRefresh.Size = new System.Drawing.Size(66, 31);
             this.buttonRefresh.TabIndex = 24;
@@ -91,7 +91,7 @@
             "RDA",
             "Athlete",
             "Weight Loss"});
-            this.comboBoxType.Location = new System.Drawing.Point(135, 219);
+            this.comboBoxType.Location = new System.Drawing.Point(214, 221);
             this.comboBoxType.Name = "comboBoxType";
             this.comboBoxType.Size = new System.Drawing.Size(165, 21);
             this.comboBoxType.TabIndex = 23;
@@ -100,7 +100,7 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(130, 68);
+            this.pictureBox1.Location = new System.Drawing.Point(209, 70);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(97, 93);
             this.pictureBox1.TabIndex = 22;
@@ -111,7 +111,7 @@
             this.labelProtein.AutoSize = true;
             this.labelProtein.Font = new System.Drawing.Font("Arial", 16F);
             this.labelProtein.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelProtein.Location = new System.Drawing.Point(47, 272);
+            this.labelProtein.Location = new System.Drawing.Point(126, 274);
             this.labelProtein.Name = "labelProtein";
             this.labelProtein.Size = new System.Drawing.Size(226, 25);
             this.labelProtein.TabIndex = 21;
@@ -122,7 +122,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(42, 220);
+            this.label3.Location = new System.Drawing.Point(121, 222);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 16);
             this.label3.TabIndex = 20;
@@ -133,7 +133,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(42, 179);
+            this.label2.Location = new System.Drawing.Point(121, 181);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 16);
             this.label2.TabIndex = 19;
@@ -142,7 +142,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(45, 242);
+            this.panel3.Location = new System.Drawing.Point(124, 244);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(255, 1);
             this.panel3.TabIndex = 17;
@@ -153,7 +153,7 @@
             this.buttonAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAbout.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAbout.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonAbout.Location = new System.Drawing.Point(45, 375);
+            this.buttonAbout.Location = new System.Drawing.Point(124, 377);
             this.buttonAbout.Name = "buttonAbout";
             this.buttonAbout.Size = new System.Drawing.Size(255, 39);
             this.buttonAbout.TabIndex = 2;
@@ -164,7 +164,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(45, 201);
+            this.panel2.Location = new System.Drawing.Point(124, 203);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(255, 1);
             this.panel2.TabIndex = 16;
@@ -174,7 +174,7 @@
             this.buttonBack.BackColor = System.Drawing.Color.White;
             this.buttonBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonBack.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBack.Location = new System.Drawing.Point(45, 452);
+            this.buttonBack.Location = new System.Drawing.Point(124, 454);
             this.buttonBack.Name = "buttonBack";
             this.buttonBack.Size = new System.Drawing.Size(66, 31);
             this.buttonBack.TabIndex = 15;
@@ -188,7 +188,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(73, 18);
+            this.label1.Location = new System.Drawing.Point(152, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(204, 35);
             this.label1.TabIndex = 13;
@@ -199,7 +199,7 @@
             this.buttonExit.BackColor = System.Drawing.Color.Red;
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExit.Location = new System.Drawing.Point(234, 452);
+            this.buttonExit.Location = new System.Drawing.Point(313, 454);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(66, 31);
             this.buttonExit.TabIndex = 0;
@@ -212,7 +212,7 @@
             this.buttonCalculate.BackColor = System.Drawing.Color.White;
             this.buttonCalculate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCalculate.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCalculate.Location = new System.Drawing.Point(45, 321);
+            this.buttonCalculate.Location = new System.Drawing.Point(124, 323);
             this.buttonCalculate.Name = "buttonCalculate";
             this.buttonCalculate.Size = new System.Drawing.Size(255, 39);
             this.buttonCalculate.TabIndex = 3;
@@ -226,7 +226,7 @@
             this.textBoxMass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxMass.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxMass.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBoxMass.Location = new System.Drawing.Point(151, 180);
+            this.textBoxMass.Location = new System.Drawing.Point(230, 182);
             this.textBoxMass.Name = "textBoxMass";
             this.textBoxMass.Size = new System.Drawing.Size(149, 15);
             this.textBoxMass.TabIndex = 4;

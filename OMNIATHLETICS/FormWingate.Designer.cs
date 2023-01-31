@@ -134,9 +134,9 @@
             this.panel1.Controls.Add(this.buttonCalculatePPO);
             this.panel1.Controls.Add(this.textBoxForce);
             this.panel1.Controls.Add(this.textBoxDistance);
-            this.panel1.Location = new System.Drawing.Point(96, 86);
+            this.panel1.Location = new System.Drawing.Point(31, 91);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(763, 508);
+            this.panel1.Size = new System.Drawing.Size(901, 508);
             this.panel1.TabIndex = 12;
             // 
             // buttonRefresh
@@ -146,7 +146,7 @@
             this.buttonRefresh.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonRefresh.Location = new System.Drawing.Point(3, 3);
             this.buttonRefresh.Name = "buttonRefresh";
-            this.buttonRefresh.Size = new System.Drawing.Size(66, 31);
+            this.buttonRefresh.Size = new System.Drawing.Size(83, 31);
             this.buttonRefresh.TabIndex = 59;
             this.buttonRefresh.Text = "Refresh";
             this.buttonRefresh.UseVisualStyleBackColor = false;
@@ -157,7 +157,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.SystemColors.Control;
-            this.label15.Location = new System.Drawing.Point(291, 326);
+            this.label15.Location = new System.Drawing.Point(342, 326);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(90, 16);
             this.label15.TabIndex = 58;
@@ -166,7 +166,7 @@
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.Location = new System.Drawing.Point(294, 348);
+            this.panel10.Location = new System.Drawing.Point(345, 348);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(185, 1);
             this.panel10.TabIndex = 57;
@@ -177,7 +177,7 @@
             this.textBoxPPO6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPPO6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPPO6.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBoxPPO6.Location = new System.Drawing.Point(387, 327);
+            this.textBoxPPO6.Location = new System.Drawing.Point(438, 327);
             this.textBoxPPO6.Name = "textBoxPPO6";
             this.textBoxPPO6.Size = new System.Drawing.Size(92, 15);
             this.textBoxPPO6.TabIndex = 56;
@@ -187,7 +187,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.SystemColors.Control;
-            this.label16.Location = new System.Drawing.Point(291, 287);
+            this.label16.Location = new System.Drawing.Point(342, 287);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(90, 16);
             this.label16.TabIndex = 55;
@@ -198,7 +198,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.SystemColors.Control;
-            this.label17.Location = new System.Drawing.Point(291, 246);
+            this.label17.Location = new System.Drawing.Point(342, 246);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(90, 16);
             this.label17.TabIndex = 54;
@@ -207,7 +207,7 @@
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.White;
-            this.panel11.Location = new System.Drawing.Point(294, 309);
+            this.panel11.Location = new System.Drawing.Point(345, 309);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(185, 1);
             this.panel11.TabIndex = 53;
@@ -215,7 +215,7 @@
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.White;
-            this.panel12.Location = new System.Drawing.Point(294, 268);
+            this.panel12.Location = new System.Drawing.Point(345, 268);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(185, 1);
             this.panel12.TabIndex = 52;
@@ -226,7 +226,7 @@
             this.textBoxPPO4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPPO4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPPO4.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBoxPPO4.Location = new System.Drawing.Point(387, 247);
+            this.textBoxPPO4.Location = new System.Drawing.Point(438, 247);
             this.textBoxPPO4.Name = "textBoxPPO4";
             this.textBoxPPO4.Size = new System.Drawing.Size(92, 15);
             this.textBoxPPO4.TabIndex = 50;
@@ -237,7 +237,7 @@
             this.textBoxPPO5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPPO5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPPO5.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBoxPPO5.Location = new System.Drawing.Point(387, 288);
+            this.textBoxPPO5.Location = new System.Drawing.Point(438, 288);
             this.textBoxPPO5.Name = "textBoxPPO5";
             this.textBoxPPO5.Size = new System.Drawing.Size(92, 15);
             this.textBoxPPO5.TabIndex = 51;
@@ -247,7 +247,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.SystemColors.Control;
-            this.label12.Location = new System.Drawing.Point(291, 208);
+            this.label12.Location = new System.Drawing.Point(342, 208);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(90, 16);
             this.label12.TabIndex = 49;
@@ -256,7 +256,7 @@
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Location = new System.Drawing.Point(294, 230);
+            this.panel7.Location = new System.Drawing.Point(345, 230);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(185, 1);
             this.panel7.TabIndex = 48;
@@ -267,7 +267,7 @@
             this.textBoxPPO3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPPO3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPPO3.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBoxPPO3.Location = new System.Drawing.Point(387, 209);
+            this.textBoxPPO3.Location = new System.Drawing.Point(438, 209);
             this.textBoxPPO3.Name = "textBoxPPO3";
             this.textBoxPPO3.Size = new System.Drawing.Size(92, 15);
             this.textBoxPPO3.TabIndex = 47;
@@ -277,7 +277,7 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.SystemColors.Control;
-            this.label13.Location = new System.Drawing.Point(291, 169);
+            this.label13.Location = new System.Drawing.Point(342, 169);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(83, 16);
             this.label13.TabIndex = 46;
@@ -288,7 +288,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.SystemColors.Control;
-            this.label14.Location = new System.Drawing.Point(291, 128);
+            this.label14.Location = new System.Drawing.Point(342, 128);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(76, 16);
             this.label14.TabIndex = 45;
@@ -297,7 +297,7 @@
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(294, 191);
+            this.panel8.Location = new System.Drawing.Point(345, 191);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(185, 1);
             this.panel8.TabIndex = 44;
@@ -305,7 +305,7 @@
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.Location = new System.Drawing.Point(294, 150);
+            this.panel9.Location = new System.Drawing.Point(345, 150);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(185, 1);
             this.panel9.TabIndex = 43;
@@ -316,7 +316,7 @@
             this.textBoxPPO1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPPO1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPPO1.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBoxPPO1.Location = new System.Drawing.Point(373, 129);
+            this.textBoxPPO1.Location = new System.Drawing.Point(424, 129);
             this.textBoxPPO1.Name = "textBoxPPO1";
             this.textBoxPPO1.Size = new System.Drawing.Size(106, 15);
             this.textBoxPPO1.TabIndex = 41;
@@ -327,7 +327,7 @@
             this.textBoxPPO2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPPO2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPPO2.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBoxPPO2.Location = new System.Drawing.Point(379, 170);
+            this.textBoxPPO2.Location = new System.Drawing.Point(430, 170);
             this.textBoxPPO2.Name = "textBoxPPO2";
             this.textBoxPPO2.Size = new System.Drawing.Size(100, 15);
             this.textBoxPPO2.TabIndex = 42;
@@ -337,37 +337,37 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.SystemColors.Control;
-            this.label10.Location = new System.Drawing.Point(537, 169);
+            this.label10.Location = new System.Drawing.Point(629, 169);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(126, 16);
+            this.label10.Size = new System.Drawing.Size(147, 16);
             this.label10.TabIndex = 40;
-            this.label10.Text = "Lowest Peak Power:";
+            this.label10.Text = "Lowest Peak Power(W):";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.SystemColors.Control;
-            this.label11.Location = new System.Drawing.Point(537, 128);
+            this.label11.Location = new System.Drawing.Point(629, 128);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(81, 16);
+            this.label11.Size = new System.Drawing.Size(102, 16);
             this.label11.TabIndex = 39;
-            this.label11.Text = "Peak Power:";
+            this.label11.Text = "Peak Power(W):";
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(540, 191);
+            this.panel5.Location = new System.Drawing.Point(632, 191);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(185, 1);
+            this.panel5.Size = new System.Drawing.Size(198, 1);
             this.panel5.TabIndex = 38;
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(540, 150);
+            this.panel6.Location = new System.Drawing.Point(632, 150);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(185, 1);
+            this.panel6.Size = new System.Drawing.Size(198, 1);
             this.panel6.TabIndex = 37;
             // 
             // textBoxPeakPower
@@ -376,9 +376,9 @@
             this.textBoxPeakPower.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPeakPower.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPeakPower.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBoxPeakPower.Location = new System.Drawing.Point(624, 129);
+            this.textBoxPeakPower.Location = new System.Drawing.Point(728, 129);
             this.textBoxPeakPower.Name = "textBoxPeakPower";
-            this.textBoxPeakPower.Size = new System.Drawing.Size(101, 15);
+            this.textBoxPeakPower.Size = new System.Drawing.Size(102, 15);
             this.textBoxPeakPower.TabIndex = 35;
             // 
             // textBoxLowestPeakPower
@@ -387,9 +387,9 @@
             this.textBoxLowestPeakPower.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxLowestPeakPower.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxLowestPeakPower.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBoxLowestPeakPower.Location = new System.Drawing.Point(669, 170);
+            this.textBoxLowestPeakPower.Location = new System.Drawing.Point(782, 170);
             this.textBoxLowestPeakPower.Name = "textBoxLowestPeakPower";
-            this.textBoxLowestPeakPower.Size = new System.Drawing.Size(56, 15);
+            this.textBoxLowestPeakPower.Size = new System.Drawing.Size(48, 15);
             this.textBoxLowestPeakPower.TabIndex = 36;
             // 
             // label9
@@ -427,7 +427,7 @@
             this.labelFatigue.AutoSize = true;
             this.labelFatigue.Font = new System.Drawing.Font("Arial", 16F);
             this.labelFatigue.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelFatigue.Location = new System.Drawing.Point(631, 458);
+            this.labelFatigue.Location = new System.Drawing.Point(723, 458);
             this.labelFatigue.Name = "labelFatigue";
             this.labelFatigue.Size = new System.Drawing.Size(43, 25);
             this.labelFatigue.TabIndex = 31;
@@ -438,7 +438,7 @@
             this.labelAnaerobicCapacity.AutoSize = true;
             this.labelAnaerobicCapacity.Font = new System.Drawing.Font("Arial", 16F);
             this.labelAnaerobicCapacity.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelAnaerobicCapacity.Location = new System.Drawing.Point(374, 452);
+            this.labelAnaerobicCapacity.Location = new System.Drawing.Point(425, 452);
             this.labelAnaerobicCapacity.Name = "labelAnaerobicCapacity";
             this.labelAnaerobicCapacity.Size = new System.Drawing.Size(55, 25);
             this.labelAnaerobicCapacity.TabIndex = 30;
@@ -449,7 +449,7 @@
             this.buttonCalcualateFatigue.BackColor = System.Drawing.Color.White;
             this.buttonCalcualateFatigue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCalcualateFatigue.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCalcualateFatigue.Location = new System.Drawing.Point(540, 369);
+            this.buttonCalcualateFatigue.Location = new System.Drawing.Point(632, 369);
             this.buttonCalcualateFatigue.Name = "buttonCalcualateFatigue";
             this.buttonCalcualateFatigue.Size = new System.Drawing.Size(185, 39);
             this.buttonCalcualateFatigue.TabIndex = 29;
@@ -462,7 +462,7 @@
             this.buttonCalculateAnaerboicCapcity.BackColor = System.Drawing.Color.White;
             this.buttonCalculateAnaerboicCapcity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCalculateAnaerboicCapcity.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCalculateAnaerboicCapcity.Location = new System.Drawing.Point(294, 369);
+            this.buttonCalculateAnaerboicCapcity.Location = new System.Drawing.Point(345, 369);
             this.buttonCalculateAnaerboicCapcity.Name = "buttonCalculateAnaerboicCapcity";
             this.buttonCalculateAnaerboicCapcity.Size = new System.Drawing.Size(185, 39);
             this.buttonCalculateAnaerboicCapcity.TabIndex = 28;
@@ -475,7 +475,7 @@
             this.buttonFIback.BackColor = System.Drawing.Color.White;
             this.buttonFIback.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonFIback.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonFIback.Location = new System.Drawing.Point(540, 452);
+            this.buttonFIback.Location = new System.Drawing.Point(632, 452);
             this.buttonFIback.Name = "buttonFIback";
             this.buttonFIback.Size = new System.Drawing.Size(66, 31);
             this.buttonFIback.TabIndex = 27;
@@ -488,7 +488,7 @@
             this.button1.BackColor = System.Drawing.Color.White;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(294, 452);
+            this.button1.Location = new System.Drawing.Point(345, 452);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(66, 31);
             this.button1.TabIndex = 26;
@@ -514,7 +514,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(535, 68);
+            this.label5.Location = new System.Drawing.Point(627, 68);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(148, 26);
             this.label5.TabIndex = 24;
@@ -526,7 +526,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial", 16F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(289, 68);
+            this.label4.Location = new System.Drawing.Point(340, 68);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(209, 26);
             this.label4.TabIndex = 23;
@@ -561,9 +561,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(42, 128);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
+            this.label2.Size = new System.Drawing.Size(61, 16);
             this.label2.TabIndex = 19;
-            this.label2.Text = "Force:";
+            this.label2.Text = "Force(N):";
             // 
             // panel3
             // 
@@ -579,7 +579,7 @@
             this.buttonAbout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAbout.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAbout.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonAbout.Location = new System.Drawing.Point(578, 3);
+            this.buttonAbout.Location = new System.Drawing.Point(719, 3);
             this.buttonAbout.Name = "buttonAbout";
             this.buttonAbout.Size = new System.Drawing.Size(88, 31);
             this.buttonAbout.TabIndex = 2;
@@ -614,7 +614,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(277, 11);
+            this.label1.Location = new System.Drawing.Point(381, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(200, 35);
             this.label1.TabIndex = 13;
@@ -625,7 +625,7 @@
             this.buttonExit.BackColor = System.Drawing.Color.Red;
             this.buttonExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonExit.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonExit.Location = new System.Drawing.Point(672, 3);
+            this.buttonExit.Location = new System.Drawing.Point(813, 3);
             this.buttonExit.Name = "buttonExit";
             this.buttonExit.Size = new System.Drawing.Size(88, 31);
             this.buttonExit.TabIndex = 0;
@@ -652,9 +652,9 @@
             this.textBoxForce.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxForce.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxForce.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBoxForce.Location = new System.Drawing.Point(92, 129);
+            this.textBoxForce.Location = new System.Drawing.Point(106, 129);
             this.textBoxForce.Name = "textBoxForce";
-            this.textBoxForce.Size = new System.Drawing.Size(138, 15);
+            this.textBoxForce.Size = new System.Drawing.Size(124, 15);
             this.textBoxForce.TabIndex = 4;
             // 
             // textBoxDistance

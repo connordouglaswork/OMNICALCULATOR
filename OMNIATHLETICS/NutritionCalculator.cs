@@ -50,7 +50,7 @@ namespace OMNIATHLETICS
 
         public NutritionCalculator() { }
 
-        public string About(string calcualtion)
+        public void About(string calcualtion)
         {
             string aboutMSG = "";
             if (calcualtion == "FFMI")
@@ -71,7 +71,7 @@ namespace OMNIATHLETICS
                 aboutMSG = "The caloric demand (also known as the calorie requirement or kcal requirement) is the number of calories that must be supplied daily through food. The energy provided" +
                     " in meals must be adequate for energy expenditures caused by basic metabolic processes, such as respiration and digestion. ";
             }
-            return aboutMSG;
+            System.Windows.Forms.MessageBox.Show(aboutMSG);
         }
 
         //FFMI: - Unit = rating
@@ -79,14 +79,14 @@ namespace OMNIATHLETICS
         {
             double leanWeight = (mass * ((100 - bodyFat) / 100));
             double index = (leanWeight / 2.2) * 2.20462 / (height * height);
-            return index.ToString();
+            return index.ToString("0.00");
         }
 
         //BMI: - Unit = rating
         public string BMI(double mass, double height)
         {
             double index = mass / height;
-            return index.ToString();
+            return index.ToString("0.00");
         }
 
         //Protein Index: - Unit = g.kg.d
@@ -120,7 +120,7 @@ namespace OMNIATHLETICS
             {
                 BMR = 65 + (9.6 * mass) + (1.8 * height) - (4.7 * age);
             }
-            return BMR.ToString();
+            return BMR.ToString("0.00");
         }
 
     }

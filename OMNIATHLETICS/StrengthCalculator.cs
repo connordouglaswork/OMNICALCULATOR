@@ -75,7 +75,7 @@ namespace OMNIATHLETICS
                     "ballistic movements. An example of a ballistic peak force test is a maximal force production counter movement" +
                     " jump and a dynamic peak force test could be a 1RM squat." +
                     "1.Perform and measure dynamic peak force test (eg 1RM)" +
-                    "2.\tPerform and measure ballistic peak force test (eg Counter movement jump using a force plate)";
+                    "2.Perform and measure ballistic peak force test (eg Counter movement jump using a force plate)";
             }
             else if (calcualtion == "Loading Tool")
             {
@@ -108,7 +108,7 @@ namespace OMNIATHLETICS
         }
 
         //Loading Tool - Unit = kg
-        public string LoadingTool(int percent, double oneRepMax)
+        public string LoadingTool(double percent, double oneRepMax)
         {
             double loading = (percent / 100) * oneRepMax;
             return (loading.ToString("0.00") + "kg");

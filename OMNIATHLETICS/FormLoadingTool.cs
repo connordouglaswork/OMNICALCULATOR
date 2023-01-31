@@ -27,7 +27,7 @@ namespace OMNIATHLETICS
         {
             string max = textBox1RM.Text;
             string percent = textBoxPercentage.Text;
-            string AcsmPrediction = ActiveCalculator.strengthCalculator.LoadingTool(int.Parse(percent), Double.Parse(max));
+            string AcsmPrediction = ActiveCalculator.strengthCalculator.LoadingTool(Double.Parse(percent), Double.Parse(max));
             string labelDesc = "Loading: " + AcsmPrediction;
             labelLoading.Text = (labelDesc);
             ActiveCalculator.strengthCalculator.SaveToLoadingMemory(max + "," + percent + "," + labelDesc);

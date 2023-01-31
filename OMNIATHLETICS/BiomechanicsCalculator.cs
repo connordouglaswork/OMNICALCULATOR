@@ -60,7 +60,7 @@ namespace OMNIATHLETICS
       
         public BiomechanicsCalculator() { }
 
-        public string About(string calcualtion)
+        public void About(string calcualtion)
         {
             string aboutMSG = "";
             if (calcualtion == "Horizontal Projection Velocity")
@@ -83,14 +83,15 @@ namespace OMNIATHLETICS
             {
                 aboutMSG = "Torque = F x r";
             }
-            return aboutMSG;
+            System.Windows.Forms.MessageBox.Show(aboutMSG);
         }
 
         //Horizontal Projection Velocity - Unit = m/s
         public string HorizontalProjectionVelocity(double velocity, double angle)
         {
-            double horizontalVelocity = velocity * Math.Cos(angle);
-            return (horizontalVelocity.ToString() + "m/s");
+            double angleComponenet = Math.Cos(angle);
+            double horizontalVelocity = velocity * angleComponenet;
+            return (horizontalVelocity.ToString("0.00") + "m/s");
         }
 
         //Angular Velocity  - Unit = rad/s
@@ -98,29 +99,29 @@ namespace OMNIATHLETICS
         {
             double w = (angleFinal - angleInitial) / (timeFinal - timeInitial);
             double wRads = w * 57.2958;
-            return (wRads.ToString() + "rad/s");
+            return (wRads.ToString("0.00") + "rad/s");
         }
 
         //Angular Acceleration  - Unit = rad/s^2
         public string AngularAcceleration(double velocityInitial, double velocityFinal, double timeInitial, double timeFinal)
         {
-            double a = (velocityInitial - velocityFinal) / (timeFinal - timeInitial);
+            double a = (velocityFinal - velocityInitial) / (timeFinal - timeInitial);
             double aRads = a * 57.2958;
-            return (aRads.ToString() + "rad/s^2");
+            return (aRads.ToString("0.00") + "rad/s^2");
         }
 
         //inertia - Unit = kgm^2
         public string Inertia(double mass, double radius)
         {
             double inertia = mass * (radius * radius);
-            return (inertia.ToString() + "kgm^2");
+            return (inertia.ToString("0.00") + "kgm^2");
         }
 
         //torque - Unit = N.m
         public string Torque(double force, double radius)
         {
             double torque = force * radius;
-            return (torque.ToString() + "N.m");
+            return (torque.ToString("0.00") + "N.m");
         }
 
     }
