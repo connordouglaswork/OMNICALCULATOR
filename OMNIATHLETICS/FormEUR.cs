@@ -25,12 +25,19 @@ namespace OMNIATHLETICS
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-            string CMJ = textBoxCMJ.Text;
-            string SJ = textBoxSJ.Text;
-            string EUR = ActiveCalculator.strengthCalculator.EccentricUtilisationRatio(Double.Parse(CMJ), int.Parse(SJ));
-            string labelDesc = "EUR: " + EUR;
-            labelEUR.Text = (labelDesc);
-            ActiveCalculator.strengthCalculator.SaveToEURMemory(CMJ + "," + SJ + "," + labelDesc);
+            try
+            {
+                string CMJ = textBoxCMJ.Text;
+                string SJ = textBoxSJ.Text;
+                string EUR = ActiveCalculator.strengthCalculator.EccentricUtilisationRatio(Double.Parse(CMJ), int.Parse(SJ));
+                string labelDesc = "EUR: " + EUR;
+                labelEUR.Text = (labelDesc);
+                ActiveCalculator.strengthCalculator.SaveToEURMemory(CMJ + "," + SJ + "," + labelDesc);
+            }
+            catch
+            {
+                System.Windows.Forms.MessageBox.Show("Invalid Input");
+            }
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -43,7 +50,7 @@ namespace OMNIATHLETICS
                 textBoxSJ.Text = calculationFileds[1];
                 labelEUR.Text = calculationFileds[2];
                 //delete it from list when gone
-                ActiveCalculator.strengthCalculator.localEURCalculatioMemory.Remove(calculationData);
+                ActiveCalculator.strengthCalculator.localEURCalculatioMemory.Remove(ActiveCalculator.strengthCalculator.localEURCalculatioMemory[ActiveCalculator.strengthCalculator.currentEURCalcualtionLoaded]);
                 ActiveCalculator.strengthCalculator.currentEURCalcualtionLoaded--;
             }
         }

@@ -26,13 +26,20 @@ namespace OMNIATHLETICS
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-            string mass = textBoxMass.Text;
-            string bodyfat = textBoxBodyfat.Text;
-            string height = textBoxHeight.Text;
-            string ffmi = ActiveCalculator.nutritionCalculator.FFMI(double.Parse(bodyfat), double.Parse(mass), double.Parse(height));
-            string labelDesc = "FFMI: " + ffmi;
-            labelFFMI.Text = (labelDesc);
-            ActiveCalculator.nutritionCalculator.SaveToFFMIMemory(mass + "," + bodyfat + "," + height + "," + labelDesc);
+            try
+            {
+                string mass = textBoxMass.Text;
+                string bodyfat = textBoxBodyfat.Text;
+                string height = textBoxHeight.Text;
+                string ffmi = ActiveCalculator.nutritionCalculator.FFMI(double.Parse(bodyfat), double.Parse(mass), double.Parse(height));
+                string labelDesc = "FFMI: " + ffmi;
+                labelFFMI.Text = (labelDesc);
+                ActiveCalculator.nutritionCalculator.SaveToFFMIMemory(mass + "," + bodyfat + "," + height + "," + labelDesc);
+            }
+            catch
+            {
+                System.Windows.Forms.MessageBox.Show("Invalid Input");
+            }
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -46,7 +53,7 @@ namespace OMNIATHLETICS
                 textBoxHeight.Text = calculationFileds[2];
                 labelFFMI.Text = calculationFileds[3];
                 //delete it from list when gone
-                ActiveCalculator.nutritionCalculator.localFFMICalculationMemory.Remove(calculationData);
+                ActiveCalculator.nutritionCalculator.localFFMICalculationMemory.Remove(ActiveCalculator.nutritionCalculator.localFFMICalculationMemory[ActiveCalculator.nutritionCalculator.currentFFMICalcualtionLoaded]);
                 ActiveCalculator.nutritionCalculator.currentFFMICalcualtionLoaded--;
             }
         }

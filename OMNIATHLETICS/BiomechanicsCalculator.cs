@@ -89,7 +89,7 @@ namespace OMNIATHLETICS
         //Horizontal Projection Velocity - Unit = m/s
         public string HorizontalProjectionVelocity(double velocity, double angle)
         {
-            double angleComponenet = Math.Cos(angle);
+            double angleComponenet = Math.Cos(angle * Math.PI / 180);
             double horizontalVelocity = velocity * angleComponenet;
             return (horizontalVelocity.ToString("0.00") + "m/s");
         }

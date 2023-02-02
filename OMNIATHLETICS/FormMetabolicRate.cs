@@ -25,18 +25,25 @@ namespace OMNIATHLETICS
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-            string mass = textBoxMass.Text;
-            string height = textBoxHeight.Text;
-            string age = textBoxAge.Text;
-            string sex = "Female";
-            if(radioButton1.Checked == true)
+            try
             {
-                sex = "Male";
+                string mass = textBoxMass.Text;
+                string height = textBoxHeight.Text;
+                string age = textBoxAge.Text;
+                string sex = "Female";
+                if (radioButton1.Checked == true)
+                {
+                    sex = "Male";
+                }
+                string metabolicRate = ActiveCalculator.nutritionCalculator.MetabolicRate(double.Parse(mass), double.Parse(height), int.Parse(age), sex);
+                string labelDesc = "MBR: " + metabolicRate;
+                labelMBR.Text = (labelDesc);
+                ActiveCalculator.nutritionCalculator.SaveToMetabolicRateMemory(mass + "," + height + "," + age + "," + sex + "," + labelDesc);
+            }           
+            catch
+            {
+                System.Windows.Forms.MessageBox.Show("Invalid Input");
             }
-            string metabolicRate = ActiveCalculator.nutritionCalculator.MetabolicRate(double.Parse(mass), double.Parse(height), int.Parse(age), sex);
-            string labelDesc = "MBR: " + metabolicRate;
-            labelMBR.Text = (labelDesc);
-            ActiveCalculator.nutritionCalculator.SaveToMetabolicRateMemory(mass + "," + height + "," + age + "," + sex + "," + labelDesc);
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -61,7 +68,7 @@ namespace OMNIATHLETICS
 
                 labelMBR.Text = calculationFileds[4];
                 //delete it from list when gone
-                ActiveCalculator.nutritionCalculator.localMetabolicRateCalculationMemory.Remove(calculationData);
+                ActiveCalculator.nutritionCalculator.localMetabolicRateCalculationMemory.Remove(ActiveCalculator.nutritionCalculator.localMetabolicRateCalculationMemory[ActiveCalculator.nutritionCalculator.currentMetabolicRateCalcualtionLoaded]);
                 ActiveCalculator.nutritionCalculator.currentMetabolicRateCalcualtionLoaded--;
             }
         }

@@ -25,12 +25,19 @@ namespace OMNIATHLETICS
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-            string BPF = textBoxBPF.Text;
-            string DPF = textBoxDPF.Text;
-            string DSI = ActiveCalculator.strengthCalculator.DynamicStrengthIndex(Double.Parse(BPF), Double.Parse(DPF));
-            string labelDesc = "DSI: " + DSI;
-            labelDSI.Text = (labelDesc);
-            ActiveCalculator.strengthCalculator.SaveToDSIMemory(BPF + "," + DPF + "," + labelDesc);
+            try
+            {
+                string BPF = textBoxBPF.Text;
+                string DPF = textBoxDPF.Text;
+                string DSI = ActiveCalculator.strengthCalculator.DynamicStrengthIndex(Double.Parse(BPF), Double.Parse(DPF));
+                string labelDesc = "DSI: " + DSI;
+                labelDSI.Text = (labelDesc);
+                ActiveCalculator.strengthCalculator.SaveToDSIMemory(BPF + "," + DPF + "," + labelDesc);
+            }           
+            catch
+            {
+                System.Windows.Forms.MessageBox.Show("Invalid Input");
+            }
         }
 
         private void buttonAbout_Click(object sender, EventArgs e)
@@ -48,7 +55,7 @@ namespace OMNIATHLETICS
                 textBoxDPF.Text = calculationFileds[1];
                 labelDSI.Text = calculationFileds[2];
                 //delete it from list when gone
-                ActiveCalculator.strengthCalculator.localDSICalculatioMemory.Remove(calculationData);
+                ActiveCalculator.strengthCalculator.localDSICalculatioMemory.Remove(ActiveCalculator.strengthCalculator.localDSICalculatioMemory[ActiveCalculator.strengthCalculator.currentDSICalcualtionLoaded]);
                 ActiveCalculator.strengthCalculator.currentDSICalcualtionLoaded--;
             }
         }

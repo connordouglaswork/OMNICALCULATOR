@@ -25,12 +25,20 @@ namespace OMNIATHLETICS
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-            string loading = textBoxLoading.Text;
-            string reps = textBoxRepetitions.Text;
-            string AcsmPrediction = ActiveCalculator.strengthCalculator.Acsm1rmPredictor(Double.Parse(loading), int.Parse(reps));
-            string labelDesc = "1RM: " + AcsmPrediction;
-            label1RM.Text = (labelDesc);
-            ActiveCalculator.strengthCalculator.SaveToACSMMemory(loading + "," + reps + "," + labelDesc);
+            try
+            {
+                string loading = textBoxLoading.Text;
+                string reps = textBoxRepetitions.Text;
+                string AcsmPrediction = ActiveCalculator.strengthCalculator.Acsm1rmPredictor(Double.Parse(loading), int.Parse(reps));
+                string labelDesc = "1RM: " + AcsmPrediction;
+                label1RM.Text = (labelDesc);
+                ActiveCalculator.strengthCalculator.SaveToACSMMemory(loading + "," + reps + "," + labelDesc);
+            }
+            catch
+            {
+                System.Windows.Forms.MessageBox.Show("Invalid Input");
+            }
+
         }
 
         private void buttonRefresh_Click(object sender, EventArgs e)
@@ -48,8 +56,8 @@ namespace OMNIATHLETICS
                 textBoxLoading.Text = calculationFileds[0];
                 textBoxRepetitions.Text = calculationFileds[1];
                 label1RM.Text = calculationFileds[2];
-                //delete it from list when gone
-                ActiveCalculator.strengthCalculator.localACSMCalculatioMemory.Remove(calculationData);
+                //remove current one its on
+                ActiveCalculator.strengthCalculator.localACSMCalculatioMemory.Remove(ActiveCalculator.strengthCalculator.localACSMCalculatioMemory[ActiveCalculator.strengthCalculator.currentACSMCalcualtionLoaded]);
                 ActiveCalculator.strengthCalculator.currentACSMCalcualtionLoaded--;
             }
         }

@@ -26,12 +26,19 @@ namespace OMNIATHLETICS
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-            string force = textBoxPeakForce.Text;
-            string time = textBoxTime.Text;
-            string rofd = ActiveCalculator.powerCalculator.RateOfForceDevelopment(double.Parse(force), double.Parse(time));
-            string labelDesc = "ROFD: " + rofd;
-            labelROFD.Text = (labelDesc);
-            ActiveCalculator.powerCalculator.SaveToROFDMemory(force + "," + time + "," + labelDesc);
+            try
+            {
+                string force = textBoxPeakForce.Text;
+                string time = textBoxTime.Text;
+                string rofd = ActiveCalculator.powerCalculator.RateOfForceDevelopment(double.Parse(force), double.Parse(time));
+                string labelDesc = "ROFD: " + rofd;
+                labelROFD.Text = (labelDesc);
+                ActiveCalculator.powerCalculator.SaveToROFDMemory(force + "," + time + "," + labelDesc);
+            }           
+            catch
+            {
+                System.Windows.Forms.MessageBox.Show("Invalid Input");
+            }
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -44,7 +51,7 @@ namespace OMNIATHLETICS
                 textBoxTime.Text = calculationFileds[1];
                 labelROFD.Text = calculationFileds[2];
                 //delete it from list when gone
-                ActiveCalculator.powerCalculator.localROFDCalculationMemory.Remove(calculationData);
+                ActiveCalculator.powerCalculator.localROFDCalculationMemory.Remove(ActiveCalculator.powerCalculator.localROFDCalculationMemory[ActiveCalculator.powerCalculator.currentROFDCalcualtionLoaded]);
                 ActiveCalculator.powerCalculator.currentROFDCalcualtionLoaded--;
             }
         }

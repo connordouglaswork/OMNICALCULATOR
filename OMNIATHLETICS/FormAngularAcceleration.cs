@@ -25,14 +25,21 @@ namespace OMNIATHLETICS
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-            string velocityInit = textBoxVelocityInit.Text;
-            string velocityFinal = textBoxVelocityFinal.Text;
-            string timeInit = textBoxTimeInit.Text;
-            string timeFinal = textBoxTimeFinal.Text;
-            string angularAcceleration = ActiveCalculator.biomechanicsCalculator.AngularAcceleration(double.Parse(velocityInit), double.Parse(velocityFinal), double.Parse(timeInit), double.Parse(timeFinal));
-            string labelDesc = "Angular Acceleration: " + angularAcceleration;
-            labelAngularAcceleration.Text = (labelDesc);
-            ActiveCalculator.biomechanicsCalculator.SaveToAngularAccelerationMemory(velocityInit + "," + velocityFinal + "," + timeInit + "," + timeFinal + "," + labelDesc);
+            try
+            {
+                string velocityInit = textBoxVelocityInit.Text;
+                string velocityFinal = textBoxVelocityFinal.Text;
+                string timeInit = textBoxTimeInit.Text;
+                string timeFinal = textBoxTimeFinal.Text;
+                string angularAcceleration = ActiveCalculator.biomechanicsCalculator.AngularAcceleration(double.Parse(velocityInit), double.Parse(velocityFinal), double.Parse(timeInit), double.Parse(timeFinal));
+                string labelDesc = "Angular Acceleration: " + angularAcceleration;
+                labelAngularAcceleration.Text = (labelDesc);
+                ActiveCalculator.biomechanicsCalculator.SaveToAngularAccelerationMemory(velocityInit + "," + velocityFinal + "," + timeInit + "," + timeFinal + "," + labelDesc);
+            }            
+            catch
+            {
+                System.Windows.Forms.MessageBox.Show("Invalid Input");
+            }
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -47,7 +54,7 @@ namespace OMNIATHLETICS
                 textBoxTimeFinal.Text = calculationFileds[1];
                 labelAngularAcceleration.Text = calculationFileds[2];
                 //delete it from list when gone
-                ActiveCalculator.biomechanicsCalculator.localAngularAccelerationCalculationMemory.Remove(calculationData);
+                ActiveCalculator.biomechanicsCalculator.localAngularAccelerationCalculationMemory.Remove(ActiveCalculator.biomechanicsCalculator.localAngularAccelerationCalculationMemory[ActiveCalculator.biomechanicsCalculator.currentAngularAccelerationCalcualtionLoaded]);
                 ActiveCalculator.biomechanicsCalculator.currentAngularAccelerationCalcualtionLoaded--;
             }
         }

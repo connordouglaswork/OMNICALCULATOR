@@ -25,20 +25,27 @@ namespace OMNIATHLETICS
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-            string max = textBox1RM.Text;
-            string type = "";
-            if (radioButton3.Checked)
+            try
             {
-                type = "Upper Body";
-            }
-            else if (radioButton2.Checked)
+                string max = textBox1RM.Text;
+                string type = "";
+                if (radioButton3.Checked)
+                {
+                    type = "Upper Body";
+                }
+                else if (radioButton2.Checked)
+                {
+                    type = "Lower Body";
+                }
+                string zone = ActiveCalculator.powerCalculator.PowerZones(type, double.Parse(max));
+                string labelDesc = "Peak Power Zone: " + zone;
+                labelPeakPowerZone.Text = (labelDesc);
+                ActiveCalculator.powerCalculator.SaveToZonesMemory(max + "," + type + "," + labelDesc);
+            }           
+            catch
             {
-                type = "Lower Body";
+                System.Windows.Forms.MessageBox.Show("Invalid Input");
             }
-            string zone = ActiveCalculator.powerCalculator.PowerZones(type, double.Parse(max));
-            string labelDesc = "Peak Power Zone: " + zone;
-            labelPeakPowerZone.Text = (labelDesc);
-            ActiveCalculator.powerCalculator.SaveToZonesMemory(max + "," + type + "," + labelDesc);
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -61,7 +68,7 @@ namespace OMNIATHLETICS
 
                 labelPeakPowerZone.Text = calculationFileds[2];
                 //delete it from list when gone
-                ActiveCalculator.powerCalculator.localZonesCalculationMemory.Remove(calculationData);
+                ActiveCalculator.powerCalculator.localZonesCalculationMemory.Remove(ActiveCalculator.powerCalculator.localZonesCalculationMemory[ActiveCalculator.powerCalculator.currentZonesCalcualtionLoaded]);
                 ActiveCalculator.powerCalculator.currentZonesCalcualtionLoaded--;
             }
         }

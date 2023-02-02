@@ -25,12 +25,19 @@ namespace OMNIATHLETICS
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-            string firstSprint = textBoxFirstSprint.Text;
-            string lastSprint = textBoxLastSprint.Text;
-            string dropOff = ActiveCalculator.anaerobicthCalculator.PhosphateRecoveryTestDropOff(double.Parse(firstSprint), double.Parse(lastSprint));
-            string labelDesc = "Drop Off: " + dropOff;
-            labelDropOff.Text = (labelDesc);
-            ActiveCalculator.anaerobicthCalculator.SaveToPRTMemory(firstSprint + "," + lastSprint + "," + labelDesc);
+            try
+            {
+                string firstSprint = textBoxFirstSprint.Text;
+                string lastSprint = textBoxLastSprint.Text;
+                string dropOff = ActiveCalculator.anaerobicthCalculator.PhosphateRecoveryTestDropOff(double.Parse(firstSprint), double.Parse(lastSprint));
+                string labelDesc = "Drop Off: " + dropOff;
+                labelDropOff.Text = (labelDesc);
+                ActiveCalculator.anaerobicthCalculator.SaveToPRTMemory(firstSprint + "," + lastSprint + "," + labelDesc);
+            }         
+            catch
+            {
+                System.Windows.Forms.MessageBox.Show("Invalid Input");
+            }
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -43,7 +50,7 @@ namespace OMNIATHLETICS
                 textBoxLastSprint.Text = calculationFileds[1];
                 labelDropOff.Text = calculationFileds[2];
                 //delete it from list when gone
-                ActiveCalculator.anaerobicthCalculator.localPRTCalculationMemory.Remove(calculationData);
+                ActiveCalculator.anaerobicthCalculator.localPRTCalculationMemory.Remove(ActiveCalculator.anaerobicthCalculator.localPRTCalculationMemory[ActiveCalculator.anaerobicthCalculator.currentPRTCalcualtionLoaded]);
                 ActiveCalculator.anaerobicthCalculator.currentPRTCalcualtionLoaded--;
             }
         }

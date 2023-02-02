@@ -37,13 +37,20 @@ namespace OMNIATHLETICS
 
         private void buttonCalcualateFatigue_Click(object sender, EventArgs e)
         {
-            string peakPower = textBoxPeakPower.Text;
-            string LowestPower = textBoxLowestPeakPower.Text;
-            string time = textBoxTime.Text;
-            string FI = ActiveCalculator.anaerobicthCalculator.RastFatigueIndex(double.Parse(peakPower), double.Parse(LowestPower), double.Parse(time));
-            string labelDesc = "FI: " + FI;
-            labelFatigue.Text = (labelDesc);
-            ActiveCalculator.anaerobicthCalculator.SaveToRASTFIMemory(peakPower + "," + LowestPower + "," + time + "," + labelDesc);
+            try
+            {
+                string peakPower = textBoxPeakPower.Text;
+                string LowestPower = textBoxLowestPeakPower.Text;
+                string time = textBoxTime.Text;
+                string FI = ActiveCalculator.anaerobicthCalculator.RastFatigueIndex(double.Parse(peakPower), double.Parse(LowestPower), double.Parse(time));
+                string labelDesc = "FI: " + FI;
+                labelFatigue.Text = (labelDesc);
+                ActiveCalculator.anaerobicthCalculator.SaveToRASTFIMemory(peakPower + "," + LowestPower + "," + time + "," + labelDesc);
+            }          
+            catch
+            {
+                System.Windows.Forms.MessageBox.Show("Invalid Input");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -57,23 +64,30 @@ namespace OMNIATHLETICS
                 textBoxTime.Text = calculationFileds[2];
                 labelFatigue.Text = calculationFileds[3];
                 //delete it from list when gone
-                ActiveCalculator.anaerobicthCalculator.localRASTFICalculationMemory.Remove(calculationData);
+                ActiveCalculator.anaerobicthCalculator.localRASTFICalculationMemory.Remove(ActiveCalculator.anaerobicthCalculator.localRASTFICalculationMemory[ActiveCalculator.anaerobicthCalculator.currentRASTFICalcualtionLoaded]);
                 ActiveCalculator.anaerobicthCalculator.currentRASTFICalcualtionLoaded--;
             }
         }
 
         private void buttonCalculateAnaerboicCapcity_Click(object sender, EventArgs e)
         {
-            string ppo1 = textBoxPPO1.Text;
-            string ppo2 = textBoxPPO2.Text;
-            string ppo3 = textBoxPPO3.Text;
-            string ppo4 = textBoxPPO4.Text;
-            string ppo5 = textBoxPPO5.Text;
-            string ppo6 = textBoxPPO6.Text;
-            string AC = ActiveCalculator.anaerobicthCalculator.RastAnaerobicCapacity(double.Parse(ppo1), double.Parse(ppo2), double.Parse(ppo3), double.Parse(ppo4), double.Parse(ppo5), double.Parse(ppo6));
-            string labelDesc = "AC: " + AC;
-            labelAnaerobicCapacity.Text = (labelDesc);
-            ActiveCalculator.anaerobicthCalculator.SaveToRASTACMemory(ppo1 + "," + ppo2 + "," + ppo3 + "," + ppo4 + "," + ppo5 + "," + ppo6 + "," + labelDesc);
+            try
+            {
+                string ppo1 = textBoxPPO1.Text;
+                string ppo2 = textBoxPPO2.Text;
+                string ppo3 = textBoxPPO3.Text;
+                string ppo4 = textBoxPPO4.Text;
+                string ppo5 = textBoxPPO5.Text;
+                string ppo6 = textBoxPPO6.Text;
+                string AC = ActiveCalculator.anaerobicthCalculator.RastAnaerobicCapacity(double.Parse(ppo1), double.Parse(ppo2), double.Parse(ppo3), double.Parse(ppo4), double.Parse(ppo5), double.Parse(ppo6));
+                string labelDesc = "AC: " + AC;
+                labelAnaerobicCapacity.Text = (labelDesc);
+                ActiveCalculator.anaerobicthCalculator.SaveToRASTACMemory(ppo1 + "," + ppo2 + "," + ppo3 + "," + ppo4 + "," + ppo5 + "," + ppo6 + "," + labelDesc);
+            }
+            catch
+            {
+                System.Windows.Forms.MessageBox.Show("Invalid Input");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -90,7 +104,7 @@ namespace OMNIATHLETICS
                 textBoxPPO6.Text = calculationFileds[5];
                 labelAnaerobicCapacity.Text = calculationFileds[6];
                 //delete it from list when gone
-                ActiveCalculator.anaerobicthCalculator.localRASTACCalculationMemory.Remove(calculationData);
+                ActiveCalculator.anaerobicthCalculator.localRASTACCalculationMemory.Remove(ActiveCalculator.anaerobicthCalculator.localRASTACCalculationMemory[ActiveCalculator.anaerobicthCalculator.currentRASTACCalcualtionLoaded]);
                 ActiveCalculator.anaerobicthCalculator.currentRASTACCalcualtionLoaded--;
             }
         }

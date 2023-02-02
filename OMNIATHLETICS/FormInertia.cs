@@ -25,12 +25,19 @@ namespace OMNIATHLETICS
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-            string mass = textBoxMass.Text;
-            string radius = textBoxRadius.Text;
-            string inertia = ActiveCalculator.biomechanicsCalculator.Inertia(double.Parse(mass), double.Parse(radius));
-            string labelDesc = "Inertia: " + inertia;
-            labelInertia.Text = (labelDesc);
-            ActiveCalculator.biomechanicsCalculator.SaveInertiaToMemory(mass + "," + radius + "," + labelDesc);
+            try
+            {
+                string mass = textBoxMass.Text;
+                string radius = textBoxRadius.Text;
+                string inertia = ActiveCalculator.biomechanicsCalculator.Inertia(double.Parse(mass), double.Parse(radius));
+                string labelDesc = "Inertia: " + inertia;
+                labelInertia.Text = (labelDesc);
+                ActiveCalculator.biomechanicsCalculator.SaveInertiaToMemory(mass + "," + radius + "," + labelDesc);
+            }           
+            catch
+            {
+                System.Windows.Forms.MessageBox.Show("Invalid Input");
+            }
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -43,7 +50,7 @@ namespace OMNIATHLETICS
                 textBoxRadius.Text = calculationFileds[1];
                 labelInertia.Text = calculationFileds[2];
                 //delete it from list when gone
-                ActiveCalculator.biomechanicsCalculator.localInertiaCalculationMemory.Remove(calculationData);
+                ActiveCalculator.biomechanicsCalculator.localInertiaCalculationMemory.Remove(ActiveCalculator.biomechanicsCalculator.localInertiaCalculationMemory[ActiveCalculator.biomechanicsCalculator.currentInertiaCalcualtionLoaded]);
                 ActiveCalculator.biomechanicsCalculator.currentInertiaCalcualtionLoaded--;
             }
         }

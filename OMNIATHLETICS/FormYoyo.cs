@@ -25,17 +25,24 @@ namespace OMNIATHLETICS
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-            string level = textBoxLevel.Text;
-            string distance = textBoxDistance.Text;
-            string type = "";
-            if(distance != "")
+            try
             {
-                type = "meters";
+                string level = textBoxLevel.Text;
+                string distance = textBoxDistance.Text;
+                string type = "";
+                if (distance != "")
+                {
+                    type = "meters";
+                }
+                string rating = ActiveCalculator.aerobicCalculator.YoyoIntermittentRecoveryTest(double.Parse(distance), double.Parse(level), type);
+                string labelDesc = "Rating: " + rating;
+                labelRating.Text = (labelDesc);
+                ActiveCalculator.aerobicCalculator.SaveToYoYoMemory(level + "," + distance + "," + labelDesc);
+            }          
+            catch
+            {
+                System.Windows.Forms.MessageBox.Show("Invalid Input");
             }
-            string rating = ActiveCalculator.aerobicCalculator.YoyoIntermittentRecoveryTest(double.Parse(distance), double.Parse(level), type);
-            string labelDesc = "Rating: " + rating;
-            labelRating.Text = (labelDesc);
-            ActiveCalculator.aerobicCalculator.SaveToYoYoMemory(level + "," + distance + "," + labelDesc);
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -48,7 +55,7 @@ namespace OMNIATHLETICS
                 textBoxDistance.Text = calculationFileds[1];
                 labelRating.Text = calculationFileds[2];
                 //delete it from list when gone
-                ActiveCalculator.aerobicCalculator.localYoYoCalculationMemory.Remove(calculationData);
+                ActiveCalculator.aerobicCalculator.localYoYoCalculationMemory.Remove(ActiveCalculator.aerobicCalculator.localYoYoCalculationMemory[ActiveCalculator.aerobicCalculator.currentYoYoCalcualtionLoaded]);
                 ActiveCalculator.aerobicCalculator.currentYoYoCalcualtionLoaded--;
             }
         }

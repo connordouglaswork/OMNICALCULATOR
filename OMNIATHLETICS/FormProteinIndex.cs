@@ -25,13 +25,20 @@ namespace OMNIATHLETICS
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-            string mass = textBoxMass.Text;
-            string trainingType = comboBoxType.Text;
+            try
+            {
+                string mass = textBoxMass.Text;
+                string trainingType = comboBoxType.Text;
 
-            string protein = ActiveCalculator.nutritionCalculator.ProteinIndex(double.Parse(mass), trainingType);
-            string labelDesc = "Protein Requirements: " + protein;
-            labelProtein.Text = (labelDesc);
-            ActiveCalculator.nutritionCalculator.SaveToProteinIndexMemory(mass + "," + trainingType + "," + labelDesc);
+                string protein = ActiveCalculator.nutritionCalculator.ProteinIndex(double.Parse(mass), trainingType);
+                string labelDesc = "Protein Requirements: " + protein;
+                labelProtein.Text = (labelDesc);
+                ActiveCalculator.nutritionCalculator.SaveToProteinIndexMemory(mass + "," + trainingType + "," + labelDesc);
+            }
+            catch
+            {
+                System.Windows.Forms.MessageBox.Show("Invalid Input");
+            }
 
         }
 
@@ -45,7 +52,7 @@ namespace OMNIATHLETICS
                 comboBoxType.Text = calculationFileds[1];
                 labelProtein.Text = calculationFileds[2];
                 //delete it from list when gone
-                ActiveCalculator.nutritionCalculator.localProteinIndexCalculationMemory.Remove(calculationData);
+                ActiveCalculator.nutritionCalculator.localProteinIndexCalculationMemory.Remove(ActiveCalculator.nutritionCalculator.localProteinIndexCalculationMemory[ActiveCalculator.nutritionCalculator.currentProteinIndexCalcualtionLoaded]);
                 ActiveCalculator.nutritionCalculator.currentProteinIndexCalcualtionLoaded--;
             }
         }

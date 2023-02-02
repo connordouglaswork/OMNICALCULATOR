@@ -25,12 +25,19 @@ namespace OMNIATHLETICS
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-            string max = textBox1RM.Text;
-            string percent = textBoxPercentage.Text;
-            string AcsmPrediction = ActiveCalculator.strengthCalculator.LoadingTool(Double.Parse(percent), Double.Parse(max));
-            string labelDesc = "Loading: " + AcsmPrediction;
-            labelLoading.Text = (labelDesc);
-            ActiveCalculator.strengthCalculator.SaveToLoadingMemory(max + "," + percent + "," + labelDesc);
+            try
+            {
+                string max = textBox1RM.Text;
+                string percent = textBoxPercentage.Text;
+                string AcsmPrediction = ActiveCalculator.strengthCalculator.LoadingTool(Double.Parse(percent), Double.Parse(max));
+                string labelDesc = "Loading: " + AcsmPrediction;
+                labelLoading.Text = (labelDesc);
+                ActiveCalculator.strengthCalculator.SaveToLoadingMemory(max + "," + percent + "," + labelDesc);
+            }
+            catch
+            {
+                System.Windows.Forms.MessageBox.Show("Invalid Input");
+            }
 
         }
 
@@ -44,7 +51,7 @@ namespace OMNIATHLETICS
                 textBoxPercentage.Text = calculationFileds[1];
                 labelLoading.Text = calculationFileds[2];
                 //delete it from list when gone
-                ActiveCalculator.strengthCalculator.localLoadingCalculatioMemory.Remove(calculationData);
+                ActiveCalculator.strengthCalculator.localLoadingCalculatioMemory.Remove(ActiveCalculator.strengthCalculator.localLoadingCalculatioMemory[ActiveCalculator.strengthCalculator.currentLoadingCalcualtionLoaded]);
                 ActiveCalculator.strengthCalculator.currentLoadingCalcualtionLoaded--;
             }
         }

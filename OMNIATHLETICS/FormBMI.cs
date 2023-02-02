@@ -25,12 +25,19 @@ namespace OMNIATHLETICS
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-            string mass = textBoxMass.Text;
-            string height = textBoxHeight.Text;
-            string bmi = ActiveCalculator.nutritionCalculator.BMI(double.Parse(mass), double.Parse(height));
-            string labelDesc = "BMI: " + bmi;
-            labelBMI.Text = (labelDesc);
-            ActiveCalculator.nutritionCalculator.SaveToBMIMemory(mass + "," + height + "," + labelDesc);
+            try
+            {
+                string mass = textBoxMass.Text;
+                string height = textBoxHeight.Text;
+                string bmi = ActiveCalculator.nutritionCalculator.BMI(double.Parse(mass), double.Parse(height));
+                string labelDesc = "BMI: " + bmi;
+                labelBMI.Text = (labelDesc);
+                ActiveCalculator.nutritionCalculator.SaveToBMIMemory(mass + "," + height + "," + labelDesc);
+            }           
+            catch
+            {
+                System.Windows.Forms.MessageBox.Show("Invalid Input");
+            }
 
         }
 
@@ -44,7 +51,7 @@ namespace OMNIATHLETICS
                 textBoxHeight.Text = calculationFileds[1];
                 labelBMI.Text = calculationFileds[2];
                 //delete it from list when gone
-                ActiveCalculator.nutritionCalculator.localBMICalculationMemory.Remove(calculationData);
+                ActiveCalculator.nutritionCalculator.localBMICalculationMemory.Remove(ActiveCalculator.nutritionCalculator.localBMICalculationMemory[ActiveCalculator.nutritionCalculator.currentBMICalcualtionLoaded]);
                 ActiveCalculator.nutritionCalculator.currentBMICalcualtionLoaded--;
             }
         }

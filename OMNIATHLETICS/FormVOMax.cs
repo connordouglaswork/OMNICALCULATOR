@@ -26,20 +26,27 @@ namespace OMNIATHLETICS
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-            bool platau = false;
-            if (checkBoxPlatau.Checked)
+            try
             {
-                platau = true;
+                bool platau = false;
+                if (checkBoxPlatau.Checked)
+                {
+                    platau = true;
+                }
+                string blood = textBoxBloodLactate.Text;
+                string rer = textBoxRER.Text;
+                string rpe = textRPE.Text;
+                string hr = textBoxHeartRate.Text;
+                string age = textBoxAge.Text;
+                string valid = ActiveCalculator.aerobicCalculator.VOMaxValidator(platau, double.Parse(blood), double.Parse(rer), double.Parse(rpe), double.Parse(hr), int.Parse(age));
+                string labelDesc = "Valid VO2 Max: " + valid;
+                labelValid.Text = (labelDesc);
+                ActiveCalculator.aerobicCalculator.SaveToVOMemory(platau.ToString() + "," + blood + "," + rer + "," + rpe + "," + hr + "," + age + "," + labelDesc);
+            }          
+            catch
+            {
+                System.Windows.Forms.MessageBox.Show("Invalid Input");
             }
-            string blood = textBoxBloodLactate.Text;
-            string rer = textBoxRER.Text;
-            string rpe = textRPE.Text;
-            string hr = textBoxHeartRate.Text;
-            string age = textBoxAge.Text;
-            string valid = ActiveCalculator.aerobicCalculator.VOMaxValidator(platau, double.Parse(blood), double.Parse(rer), double.Parse(rpe), double.Parse(hr), int.Parse(age));
-            string labelDesc = "Valid VO2 Max: " + valid;
-            labelValid.Text = (labelDesc);
-            ActiveCalculator.aerobicCalculator.SaveToVOMemory(platau.ToString() + "," + blood + "," + rer + "," + rpe + "," + hr + "," + age + "," + labelDesc);
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -63,7 +70,7 @@ namespace OMNIATHLETICS
                 textBoxAge.Text = calculationFileds[5];
                 labelValid.Text = calculationFileds[6];
                 //delete it from list when gone
-                ActiveCalculator.aerobicCalculator.localVOCalculationMemory.Remove(calculationData);
+                ActiveCalculator.aerobicCalculator.localVOCalculationMemory.Remove(ActiveCalculator.aerobicCalculator.localVOCalculationMemory[ActiveCalculator.aerobicCalculator.currentVOCalcualtionLoaded]);
                 ActiveCalculator.aerobicCalculator.currentVOCalcualtionLoaded--;
             }
         }

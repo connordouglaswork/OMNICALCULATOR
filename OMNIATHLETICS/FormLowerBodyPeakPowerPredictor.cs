@@ -25,12 +25,19 @@ namespace OMNIATHLETICS
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-            string mass = textBoxJumpHeight.Text;
-            string height = textBoxMass.Text;
-            string lbPower = ActiveCalculator.powerCalculator.LowerBodyPeakPowerPredictor(double.Parse(height), double.Parse(mass));
-            string labelDesc = "Peak Power: " + lbPower;
-            labelPower.Text = (labelDesc);
-            ActiveCalculator.powerCalculator.SaveToPeakMemory(mass + "," + height + "," + labelDesc);
+            try
+            {
+                string mass = textBoxJumpHeight.Text;
+                string height = textBoxMass.Text;
+                string lbPower = ActiveCalculator.powerCalculator.LowerBodyPeakPowerPredictor(double.Parse(height), double.Parse(mass));
+                string labelDesc = "Peak Power: " + lbPower;
+                labelPower.Text = (labelDesc);
+                ActiveCalculator.powerCalculator.SaveToPeakMemory(mass + "," + height + "," + labelDesc);
+            }          
+            catch
+            {
+                System.Windows.Forms.MessageBox.Show("Invalid Input");
+            }
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -43,7 +50,7 @@ namespace OMNIATHLETICS
                 textBoxMass.Text = calculationFileds[1];
                 labelPower.Text = calculationFileds[2];
                 //delete it from list when gone
-                ActiveCalculator.powerCalculator.localPeakCalculationMemory.Remove(calculationData);
+                ActiveCalculator.powerCalculator.localPeakCalculationMemory.Remove(ActiveCalculator.powerCalculator.localPeakCalculationMemory[ActiveCalculator.powerCalculator.currentPeakCalcualtionLoaded]);
                 ActiveCalculator.powerCalculator.currentPeakCalcualtionLoaded--;
             }
         }

@@ -25,12 +25,19 @@ namespace OMNIATHLETICS
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-            string velocity = textBoxVelocity.Text;
-            string angle = textBoxAngle.Text;
-            string horVelocity = ActiveCalculator.biomechanicsCalculator.HorizontalProjectionVelocity(double.Parse(velocity), double.Parse(angle));
-            string labelDesc = "Velocity: " + horVelocity;
-            labelVel.Text = (labelDesc);
-            ActiveCalculator.biomechanicsCalculator.SaveToHorizontalProjectionVelocityMemory(velocity + "," + angle + "," + labelDesc);
+            try
+            {
+                string velocity = textBoxVelocity.Text;
+                string angle = textBoxAngle.Text;
+                string horVelocity = ActiveCalculator.biomechanicsCalculator.HorizontalProjectionVelocity(double.Parse(velocity), double.Parse(angle));
+                string labelDesc = "Velocity: " + horVelocity;
+                labelVel.Text = (labelDesc);
+                ActiveCalculator.biomechanicsCalculator.SaveToHorizontalProjectionVelocityMemory(velocity + "," + angle + "," + labelDesc);
+            }           
+            catch
+            {
+                System.Windows.Forms.MessageBox.Show("Invalid Input");
+            }
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -43,7 +50,7 @@ namespace OMNIATHLETICS
                 textBoxAngle.Text = calculationFileds[1];
                 labelVel.Text = calculationFileds[2];
                 //delete it from list when gone
-                ActiveCalculator.biomechanicsCalculator.localHorizontalProjectionVelocityCalculationMemory.Remove(calculationData);
+                ActiveCalculator.biomechanicsCalculator.localHorizontalProjectionVelocityCalculationMemory.Remove(ActiveCalculator.biomechanicsCalculator.localHorizontalProjectionVelocityCalculationMemory[ActiveCalculator.biomechanicsCalculator.currentHorizontalProjectionVelocityCalcualtionLoaded]);
                 ActiveCalculator.biomechanicsCalculator.currentHorizontalProjectionVelocityCalcualtionLoaded--;
             }
         }

@@ -25,12 +25,19 @@ namespace OMNIATHLETICS
 
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
-            string force = textBoxForce.Text;
-            string radius = textBoxRadius.Text;
-            string torque = ActiveCalculator.biomechanicsCalculator.Torque(double.Parse(force), double.Parse(radius));
-            string labelDesc = "Torque: " + torque;
-            labelTorque.Text = (labelDesc);
-            ActiveCalculator.biomechanicsCalculator.SaveToTorqueMemory(force + "," + radius + "," + labelDesc);
+            try
+            {
+                string force = textBoxForce.Text;
+                string radius = textBoxRadius.Text;
+                string torque = ActiveCalculator.biomechanicsCalculator.Torque(double.Parse(force), double.Parse(radius));
+                string labelDesc = "Torque: " + torque;
+                labelTorque.Text = (labelDesc);
+                ActiveCalculator.biomechanicsCalculator.SaveToTorqueMemory(force + "," + radius + "," + labelDesc);
+            }           
+            catch
+            {
+                System.Windows.Forms.MessageBox.Show("Invalid Input");
+            }
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -43,7 +50,7 @@ namespace OMNIATHLETICS
                 textBoxRadius.Text = calculationFileds[1];
                 labelTorque.Text = calculationFileds[2];
                 //delete it from list when gone
-                ActiveCalculator.biomechanicsCalculator.localTorqueCalculationMemory.Remove(calculationData);
+                ActiveCalculator.biomechanicsCalculator.localTorqueCalculationMemory.Remove(ActiveCalculator.biomechanicsCalculator.localTorqueCalculationMemory[ActiveCalculator.biomechanicsCalculator.currentTorqueCalcualtionLoaded]);
                 ActiveCalculator.biomechanicsCalculator.currentTorqueCalcualtionLoaded--;
             }
         }

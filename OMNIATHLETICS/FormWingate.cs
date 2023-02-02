@@ -37,13 +37,20 @@ namespace OMNIATHLETICS
 
         private void buttonCalculatePPO_Click(object sender, EventArgs e)
         {
-            string force = textBoxForce.Text;
-            string distance = textBoxDistance.Text;
-            string time = textBoxTime.Text;
-            string rofd = ActiveCalculator.anaerobicthCalculator.WingatePeakPowerOutput(double.Parse(force), double.Parse(distance), double.Parse(time));
-            string labelDesc = "PPO: " + rofd;
-            labelPPO.Text = (labelDesc);
-            ActiveCalculator.anaerobicthCalculator.SaveToWingatePeakPowerMemory(force + "," + distance + "," + time + "," + labelDesc);
+            try
+            {
+                string force = textBoxForce.Text;
+                string distance = textBoxDistance.Text;
+                string time = textBoxTime.Text;
+                string rofd = ActiveCalculator.anaerobicthCalculator.WingatePeakPowerOutput(double.Parse(force), double.Parse(distance), double.Parse(time));
+                string labelDesc = "PPO: " + rofd;
+                labelPPO.Text = (labelDesc);
+                ActiveCalculator.anaerobicthCalculator.SaveToWingatePeakPowerMemory(force + "," + distance + "," + time + "," + labelDesc);
+            }          
+            catch
+            {
+                System.Windows.Forms.MessageBox.Show("Invalid Input");
+            }
         }
 
         private void buttonBack_Click(object sender, EventArgs e)
@@ -57,23 +64,30 @@ namespace OMNIATHLETICS
                 textBoxTime.Text = calculationFileds[2];
                 labelPPO.Text = calculationFileds[3];
                 //delete it from list when gone
-                ActiveCalculator.anaerobicthCalculator.localWingatePeakPowerCalculationMemory.Remove(calculationData);
+                ActiveCalculator.anaerobicthCalculator.localWingatePeakPowerCalculationMemory.Remove(ActiveCalculator.anaerobicthCalculator.localWingatePeakPowerCalculationMemory[ActiveCalculator.anaerobicthCalculator.currentWingatePeakPowerCalcualtionLoaded]);
                 ActiveCalculator.anaerobicthCalculator.currentWingatePeakPowerCalcualtionLoaded--;
             }
         }
 
         private void buttonCalculateAnaerboicCapcity_Click(object sender, EventArgs e)
         {
-            string ppo1 = textBoxPPO1.Text;
-            string ppo2 = textBoxPPO2.Text;
-            string ppo3 = textBoxPPO3.Text;
-            string ppo4 = textBoxPPO4.Text;
-            string ppo5 = textBoxPPO5.Text;
-            string ppo6 = textBoxPPO6.Text;
-            string ac = ActiveCalculator.anaerobicthCalculator.WingateAnaerobicCapacity(double.Parse(ppo1), double.Parse(ppo2), double.Parse(ppo3), double.Parse(ppo4), double.Parse(ppo5), double.Parse(ppo6));
-            string labelDesc = "AC: " + ac;
-            labelAnaerobicCapacity.Text = (labelDesc);
-            ActiveCalculator.anaerobicthCalculator.SaveToWingatACMemory(ppo1 + "," + ppo2 + "," + ppo3 + "," + ppo4 + "," + ppo5 + "," + ppo6 + "," + labelDesc);
+            try
+            {
+                string ppo1 = textBoxPPO1.Text;
+                string ppo2 = textBoxPPO2.Text;
+                string ppo3 = textBoxPPO3.Text;
+                string ppo4 = textBoxPPO4.Text;
+                string ppo5 = textBoxPPO5.Text;
+                string ppo6 = textBoxPPO6.Text;
+                string ac = ActiveCalculator.anaerobicthCalculator.WingateAnaerobicCapacity(double.Parse(ppo1), double.Parse(ppo2), double.Parse(ppo3), double.Parse(ppo4), double.Parse(ppo5), double.Parse(ppo6));
+                string labelDesc = "AC: " + ac;
+                labelAnaerobicCapacity.Text = (labelDesc);
+                ActiveCalculator.anaerobicthCalculator.SaveToWingatACMemory(ppo1 + "," + ppo2 + "," + ppo3 + "," + ppo4 + "," + ppo5 + "," + ppo6 + "," + labelDesc);
+            }            
+            catch
+            {
+                System.Windows.Forms.MessageBox.Show("Invalid Input");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -90,19 +104,26 @@ namespace OMNIATHLETICS
                 textBoxPPO6.Text = calculationFileds[5];
                 labelAnaerobicCapacity.Text = calculationFileds[6];
                 //delete it from list when gone
-                ActiveCalculator.anaerobicthCalculator.localWingatACCalculationMemory.Remove(calculationData);
+                ActiveCalculator.anaerobicthCalculator.localWingatACCalculationMemory.Remove(ActiveCalculator.anaerobicthCalculator.localWingatACCalculationMemory[ActiveCalculator.anaerobicthCalculator.currentWingatACCalcualtionLoaded]);
                 ActiveCalculator.anaerobicthCalculator.currentWingatACCalcualtionLoaded--;
             }
         }
 
         private void buttonCalcualateFatigue_Click(object sender, EventArgs e)
         {
-            string peakPower = textBoxPeakPower.Text;
-            string lowestPower = textBoxLowestPeakPower.Text;        
-            string FI = ActiveCalculator.anaerobicthCalculator.WingateFatigueIndex(double.Parse(peakPower), double.Parse(lowestPower));
-            string labelDesc = "FI: " + FI;
-            labelFatigue.Text = (labelDesc);
-            ActiveCalculator.anaerobicthCalculator.SaveToWingateFIMemory(peakPower + "," + lowestPower + "," + labelDesc);
+            try
+            {
+                string peakPower = textBoxPeakPower.Text;
+                string lowestPower = textBoxLowestPeakPower.Text;
+                string FI = ActiveCalculator.anaerobicthCalculator.WingateFatigueIndex(double.Parse(peakPower), double.Parse(lowestPower));
+                string labelDesc = "FI: " + FI;
+                labelFatigue.Text = (labelDesc);
+                ActiveCalculator.anaerobicthCalculator.SaveToWingateFIMemory(peakPower + "," + lowestPower + "," + labelDesc);
+            }          
+            catch
+            {
+                System.Windows.Forms.MessageBox.Show("Invalid Input");
+            }
         }
 
         private void buttonFIback_Click(object sender, EventArgs e)
@@ -115,7 +136,7 @@ namespace OMNIATHLETICS
                 textBoxLowestPeakPower.Text = calculationFileds[1];
                 labelFatigue.Text = calculationFileds[2];
                 //delete it from list when gone
-                ActiveCalculator.anaerobicthCalculator.localWingateFICalculationMemory.Remove(calculationData);
+                ActiveCalculator.anaerobicthCalculator.localWingateFICalculationMemory.Remove(ActiveCalculator.anaerobicthCalculator.localWingateFICalculationMemory[ActiveCalculator.anaerobicthCalculator.currentWingateFICalcualtionLoaded]);
                 ActiveCalculator.anaerobicthCalculator.currentWingateFICalcualtionLoaded--;
             }
         }
