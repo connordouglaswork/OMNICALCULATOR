@@ -376,9 +376,9 @@
             this.textBoxPeakPower.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPeakPower.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxPeakPower.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBoxPeakPower.Location = new System.Drawing.Point(728, 129);
+            this.textBoxPeakPower.Location = new System.Drawing.Point(737, 129);
             this.textBoxPeakPower.Name = "textBoxPeakPower";
-            this.textBoxPeakPower.Size = new System.Drawing.Size(102, 15);
+            this.textBoxPeakPower.Size = new System.Drawing.Size(93, 15);
             this.textBoxPeakPower.TabIndex = 35;
             // 
             // textBoxLowestPeakPower
@@ -614,7 +614,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(381, 3);
+            this.label1.Location = new System.Drawing.Point(349, 3);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(200, 35);
             this.label1.TabIndex = 13;

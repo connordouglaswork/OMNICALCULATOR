@@ -14,6 +14,7 @@ namespace OMNIATHLETICS
     {
         public Form1()
         {
+            DoubleBuffered = true;
             InitializeComponent();
             customizeDesign();
         }

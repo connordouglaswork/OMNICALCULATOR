@@ -17,6 +17,7 @@ namespace OMNIATHLETICS
         public FormROFD()
         {
             InitializeComponent();
+            DoubleBuffered = true;
         }
 
         private void buttonExit_Click(object sender, EventArgs e)

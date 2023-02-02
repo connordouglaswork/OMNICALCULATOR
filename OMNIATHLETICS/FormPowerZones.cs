@@ -16,6 +16,7 @@ namespace OMNIATHLETICS
         public FormPowerZones()
         {
             InitializeComponent();
+            DoubleBuffered = true;
         }
 
         private void buttonExit_Click(object sender, EventArgs e)

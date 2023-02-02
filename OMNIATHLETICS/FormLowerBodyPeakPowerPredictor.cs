@@ -16,6 +16,7 @@ namespace OMNIATHLETICS
         public FormLowerBodyPeakPowerPredictor()
         {
             InitializeComponent();
+            DoubleBuffered = true;
         }
 
         private void buttonExit_Click(object sender, EventArgs e)

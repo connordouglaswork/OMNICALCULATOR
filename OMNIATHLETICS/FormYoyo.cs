@@ -16,10 +16,12 @@ namespace OMNIATHLETICS
         public FormYoyo()
         {
             InitializeComponent();
+            DoubleBuffered = true;
         }
 
         private void buttonExit_Click(object sender, EventArgs e)
         {
+            DoubleBuffered = true;
             this.Close();
         }
 
