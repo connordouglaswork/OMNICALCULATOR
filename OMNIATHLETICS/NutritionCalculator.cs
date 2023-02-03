@@ -77,15 +77,16 @@ namespace OMNIATHLETICS
         //FFMI: - Unit = rating
         public string FFMI(double bodyFat, double mass, double height)
         {
-            double leanWeight = (mass * ((100 - bodyFat) / 100));
-            double index = (leanWeight / 2.2) * 2.20462 / (height * height);
+            double bodyFatPercent = bodyFat / 100;
+            double leanWeight = mass - (mass * bodyFatPercent);
+            double index = leanWeight  / (height * height);
             return index.ToString("0.00");
         }
 
         //BMI: - Unit = rating
         public string BMI(double mass, double height)
         {
-            double index = mass / height;
+            double index = mass / (height * height);
             return index.ToString("0.00");
         }
 
@@ -93,18 +94,28 @@ namespace OMNIATHLETICS
         public string ProteinIndex(double mass, string goal)
         {
             string proteinRec = "";
-            if(goal == "RDA")
+            double maxprotein = 0;
+            double minprotein = 0;
+            if (goal == "RDA")
             {
                 proteinRec = "0.8 g.kg.d";
+                maxprotein = mass * 0.8;
+                minprotein = mass * 0.8;
             }
             else if (goal == "Athlete")
             {
                 proteinRec = "1.2 – 2.0 g.kg.d";
+                maxprotein = mass * 2.0;
+                minprotein = mass * 1.2;
             }
             else if (goal == "Weight Loss")
             {
                 proteinRec = "2.3 – 3.1 g.kg.d";
+                maxprotein = mass * 3.1;
+                minprotein = mass * 2.3;
             }
+            proteinRec = proteinRec + "\n" + minprotein.ToString("0.00") + "g - " + maxprotein.ToString("0.00") + "g";
+
             return proteinRec;
         }
 

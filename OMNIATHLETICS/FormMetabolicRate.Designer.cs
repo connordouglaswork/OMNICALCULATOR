@@ -200,9 +200,9 @@
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
             this.label3.Location = new System.Drawing.Point(42, 220);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 16);
+            this.label3.Size = new System.Drawing.Size(78, 16);
             this.label3.TabIndex = 20;
-            this.label3.Text = "Height (m):";
+            this.label3.Text = "Height (cm):";
             // 
             // label2
             // 
@@ -313,9 +313,9 @@
             this.textBoxHeight.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxHeight.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxHeight.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBoxHeight.Location = new System.Drawing.Point(119, 221);
+            this.textBoxHeight.Location = new System.Drawing.Point(126, 221);
             this.textBoxHeight.Name = "textBoxHeight";
-            this.textBoxHeight.Size = new System.Drawing.Size(181, 15);
+            this.textBoxHeight.Size = new System.Drawing.Size(174, 15);
             this.textBoxHeight.TabIndex = 5;
             // 
             // FormMetabolicRate

@@ -33,7 +33,7 @@ namespace OMNIATHLETICS
                 string timeInit = textBoxTimeInit.Text;
                 string timeFinal = textBoxTimeFinal.Text;
                 string angularAcceleration = ActiveCalculator.biomechanicsCalculator.AngularAcceleration(double.Parse(velocityInit), double.Parse(velocityFinal), double.Parse(timeInit), double.Parse(timeFinal));
-                string labelDesc = "Angular Acceleration: " + angularAcceleration;
+                string labelDesc = "Angular Acceleration: \n" + angularAcceleration;
                 labelAngularAcceleration.Text = (labelDesc);
                 ActiveCalculator.biomechanicsCalculator.SaveToAngularAccelerationMemory(velocityInit + "," + velocityFinal + "," + timeInit + "," + timeFinal + "," + labelDesc);
             }            

@@ -66,6 +66,7 @@
             this.buttonHistory = new System.Windows.Forms.Button();
             this.buttonHome = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.labelATHLEICS = new System.Windows.Forms.Label();
             this.labelOMNI = new System.Windows.Forms.Label();
             this.panelHomePage = new System.Windows.Forms.Panel();
@@ -77,6 +78,7 @@
             this.panelPowerSubMenu.SuspendLayout();
             this.panelStrengthSubMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -675,6 +677,7 @@
             // 
             // buttonStrength
             // 
+            this.buttonStrength.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.buttonStrength.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonStrength.FlatAppearance.BorderSize = 0;
             this.buttonStrength.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
@@ -682,6 +685,7 @@
             this.buttonStrength.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonStrength.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonStrength.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonStrength.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonStrength.Location = new System.Drawing.Point(0, 160);
             this.buttonStrength.Name = "buttonStrength";
             this.buttonStrength.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -732,6 +736,7 @@
             // 
             // panelLogo
             // 
+            this.panelLogo.Controls.Add(this.pictureBoxLogo);
             this.panelLogo.Controls.Add(this.labelATHLEICS);
             this.panelLogo.Controls.Add(this.labelOMNI);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -739,6 +744,16 @@
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(223, 80);
             this.panelLogo.TabIndex = 0;
+            // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.BackgroundImage")));
+            this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(129, 3);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(42, 60);
+            this.pictureBoxLogo.TabIndex = 23;
+            this.pictureBoxLogo.TabStop = false;
             // 
             // labelATHLEICS
             // 
@@ -781,7 +796,7 @@
             this.Controls.Add(this.panelHomePage);
             this.Controls.Add(this.panelSideMenu);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "OMNI CALCULATOR Version 1.0.0";
             this.panelSideMenu.ResumeLayout(false);
             this.panelBiomechanicsSubMenu.ResumeLayout(false);
             this.panelNutritionSubMenu.ResumeLayout(false);
@@ -791,6 +806,7 @@
             this.panelStrengthSubMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -837,6 +853,7 @@
         private System.Windows.Forms.Label labelATHLEICS;
         private System.Windows.Forms.Label labelOMNI;
         private System.Windows.Forms.Panel panelHomePage;
+        private System.Windows.Forms.PictureBox pictureBoxLogo;
     }
 }
 

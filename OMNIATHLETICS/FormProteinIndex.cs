@@ -32,7 +32,7 @@ namespace OMNIATHLETICS
                 string trainingType = comboBoxType.Text;
 
                 string protein = ActiveCalculator.nutritionCalculator.ProteinIndex(double.Parse(mass), trainingType);
-                string labelDesc = "Protein Requirements: " + protein;
+                string labelDesc = "Protein Requirements: \n" + protein;
                 labelProtein.Text = (labelDesc);
                 ActiveCalculator.nutritionCalculator.SaveToProteinIndexMemory(mass + "," + trainingType + "," + labelDesc);
             }
