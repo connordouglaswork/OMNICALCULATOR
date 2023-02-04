@@ -27,7 +27,6 @@ namespace OMNIATHLETICS
                 string q = "insert into CalculationData(id,Calculator,Calculation,Equation,Result)values('" + currentCalcualtionID + "','" + calculator + "','" + calculation + "','" + equation + "','" + result + "')";
                 SqlCommand cmd = new SqlCommand(q, con);
                 cmd.ExecuteNonQuery();
-                MessageBox.Show("conn made");
                 currentCalcualtionID++;
             }
         }

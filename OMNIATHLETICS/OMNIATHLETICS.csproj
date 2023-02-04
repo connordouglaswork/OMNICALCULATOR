@@ -47,14 +47,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActiveDirectory\ActiveCalculator.cs" />
-    <Compile Include="AerobicCalculator.cs" />
-    <Compile Include="AnaerobicCalculator.cs" />
-    <Compile Include="BiomechanicsCalculator.cs" />
-    <Compile Include="Calculator.cs" />
-    <Compile Include="HistoryForm.cs">
+    <Compile Include="Classes\AerobicCalculator.cs" />
+    <Compile Include="Classes\AnaerobicCalculator.cs" />
+    <Compile Include="Classes\BiomechanicsCalculator.cs" />
+    <Compile Include="Classes\Calculator.cs" />
+    <Compile Include="Forms\HistoryForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HistoryForm.Designer.cs">
+    <Compile Include="Forms\HistoryForm.Designer.cs">
       <DependentUpon>HistoryForm.cs</DependentUpon>
     </Compile>
     <Compile Include="OMNI CALCULATOR Version 1.0.0.cs">
@@ -63,209 +63,209 @@
     <Compile Include="OMNI CALCULATOR Version 1.0.0.Designer.cs">
       <DependentUpon>OMNI CALCULATOR Version 1.0.0.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormACSMPredictor.cs">
+    <Compile Include="Forms\FormACSMPredictor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormACSMPredictor.Designer.cs">
+    <Compile Include="Forms\FormACSMPredictor.Designer.cs">
       <DependentUpon>FormACSMPredictor.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAngularAcceleration.cs">
+    <Compile Include="Forms\FormAngularAcceleration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAngularAcceleration.Designer.cs">
+    <Compile Include="Forms\FormAngularAcceleration.Designer.cs">
       <DependentUpon>FormAngularAcceleration.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAngularVelocity.cs">
+    <Compile Include="Forms\FormAngularVelocity.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAngularVelocity.Designer.cs">
+    <Compile Include="Forms\FormAngularVelocity.Designer.cs">
       <DependentUpon>FormAngularVelocity.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormBMI.cs">
+    <Compile Include="Forms\FormBMI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormBMI.Designer.cs">
+    <Compile Include="Forms\FormBMI.Designer.cs">
       <DependentUpon>FormBMI.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDSI.cs">
+    <Compile Include="Forms\FormDSI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDSI.Designer.cs">
+    <Compile Include="Forms\FormDSI.Designer.cs">
       <DependentUpon>FormDSI.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormEUR.cs">
+    <Compile Include="Forms\FormEUR.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormEUR.Designer.cs">
+    <Compile Include="Forms\FormEUR.Designer.cs">
       <DependentUpon>FormEUR.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormFFMI.cs">
+    <Compile Include="Forms\FormFFMI.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormFFMI.Designer.cs">
+    <Compile Include="Forms\FormFFMI.Designer.cs">
       <DependentUpon>FormFFMI.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormInertia.cs">
+    <Compile Include="Forms\FormInertia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormInertia.Designer.cs">
+    <Compile Include="Forms\FormInertia.Designer.cs">
       <DependentUpon>FormInertia.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLoadingTool.cs">
+    <Compile Include="Forms\FormLoadingTool.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLoadingTool.Designer.cs">
+    <Compile Include="Forms\FormLoadingTool.Designer.cs">
       <DependentUpon>FormLoadingTool.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLowerBodyPeakPowerPredictor.cs">
+    <Compile Include="Forms\FormLowerBodyPeakPowerPredictor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLowerBodyPeakPowerPredictor.Designer.cs">
+    <Compile Include="Forms\FormLowerBodyPeakPowerPredictor.Designer.cs">
       <DependentUpon>FormLowerBodyPeakPowerPredictor.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMetabolicRate.cs">
+    <Compile Include="Forms\FormMetabolicRate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMetabolicRate.Designer.cs">
+    <Compile Include="Forms\FormMetabolicRate.Designer.cs">
       <DependentUpon>FormMetabolicRate.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPhosphateRecovery.cs">
+    <Compile Include="Forms\FormPhosphateRecovery.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPhosphateRecovery.Designer.cs">
+    <Compile Include="Forms\FormPhosphateRecovery.Designer.cs">
       <DependentUpon>FormPhosphateRecovery.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormPowerZones.cs">
+    <Compile Include="Forms\FormPowerZones.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormPowerZones.Designer.cs">
+    <Compile Include="Forms\FormPowerZones.Designer.cs">
       <DependentUpon>FormPowerZones.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProjectionVelocity.cs">
+    <Compile Include="Forms\FormProjectionVelocity.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormProjectionVelocity.Designer.cs">
+    <Compile Include="Forms\FormProjectionVelocity.Designer.cs">
       <DependentUpon>FormProjectionVelocity.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProteinIndex.cs">
+    <Compile Include="Forms\FormProteinIndex.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormProteinIndex.Designer.cs">
+    <Compile Include="Forms\FormProteinIndex.Designer.cs">
       <DependentUpon>FormProteinIndex.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRAST.cs">
+    <Compile Include="Forms\FormRAST.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRAST.Designer.cs">
+    <Compile Include="Forms\FormRAST.Designer.cs">
       <DependentUpon>FormRAST.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormROFD.cs">
+    <Compile Include="Forms\FormROFD.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormROFD.Designer.cs">
+    <Compile Include="Forms\FormROFD.Designer.cs">
       <DependentUpon>FormROFD.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormTorque.cs">
+    <Compile Include="Forms\FormTorque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormTorque.Designer.cs">
+    <Compile Include="Forms\FormTorque.Designer.cs">
       <DependentUpon>FormTorque.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormVOMax.cs">
+    <Compile Include="Forms\FormVOMax.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormVOMax.Designer.cs">
+    <Compile Include="Forms\FormVOMax.Designer.cs">
       <DependentUpon>FormVOMax.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormWingate.cs">
+    <Compile Include="Forms\FormWingate.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormWingate.Designer.cs">
+    <Compile Include="Forms\FormWingate.Designer.cs">
       <DependentUpon>FormWingate.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormYoyo.cs">
+    <Compile Include="Forms\FormYoyo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormYoyo.Designer.cs">
+    <Compile Include="Forms\FormYoyo.Designer.cs">
       <DependentUpon>FormYoyo.cs</DependentUpon>
     </Compile>
-    <Compile Include="NutritionCalculator.cs" />
+    <Compile Include="Classes\NutritionCalculator.cs" />
     <Compile Include="OmniCalculationsDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OmniCalculationsDBDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="PowerCalculator.cs" />
+    <Compile Include="Classes\PowerCalculator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StrengthCalculator.cs" />
-    <EmbeddedResource Include="HistoryForm.resx">
+    <Compile Include="Classes\StrengthCalculator.cs" />
+    <EmbeddedResource Include="Forms\HistoryForm.resx">
       <DependentUpon>HistoryForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OMNI CALCULATOR Version 1.0.0.resx">
       <DependentUpon>OMNI CALCULATOR Version 1.0.0.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormACSMPredictor.resx">
+    <EmbeddedResource Include="Forms\FormACSMPredictor.resx">
       <DependentUpon>FormACSMPredictor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAngularAcceleration.resx">
+    <EmbeddedResource Include="Forms\FormAngularAcceleration.resx">
       <DependentUpon>FormAngularAcceleration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAngularVelocity.resx">
+    <EmbeddedResource Include="Forms\FormAngularVelocity.resx">
       <DependentUpon>FormAngularVelocity.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBMI.resx">
+    <EmbeddedResource Include="Forms\FormBMI.resx">
       <DependentUpon>FormBMI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDSI.resx">
+    <EmbeddedResource Include="Forms\FormDSI.resx">
       <DependentUpon>FormDSI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormEUR.resx">
+    <EmbeddedResource Include="Forms\FormEUR.resx">
       <DependentUpon>FormEUR.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormFFMI.resx">
+    <EmbeddedResource Include="Forms\FormFFMI.resx">
       <DependentUpon>FormFFMI.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormInertia.resx">
+    <EmbeddedResource Include="Forms\FormInertia.resx">
       <DependentUpon>FormInertia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLoadingTool.resx">
+    <EmbeddedResource Include="Forms\FormLoadingTool.resx">
       <DependentUpon>FormLoadingTool.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLowerBodyPeakPowerPredictor.resx">
+    <EmbeddedResource Include="Forms\FormLowerBodyPeakPowerPredictor.resx">
       <DependentUpon>FormLowerBodyPeakPowerPredictor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMetabolicRate.resx">
+    <EmbeddedResource Include="Forms\FormMetabolicRate.resx">
       <DependentUpon>FormMetabolicRate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPhosphateRecovery.resx">
+    <EmbeddedResource Include="Forms\FormPhosphateRecovery.resx">
       <DependentUpon>FormPhosphateRecovery.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormPowerZones.resx">
+    <EmbeddedResource Include="Forms\FormPowerZones.resx">
       <DependentUpon>FormPowerZones.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormProjectionVelocity.resx">
+    <EmbeddedResource Include="Forms\FormProjectionVelocity.resx">
       <DependentUpon>FormProjectionVelocity.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormProteinIndex.resx">
+    <EmbeddedResource Include="Forms\FormProteinIndex.resx">
       <DependentUpon>FormProteinIndex.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormRAST.resx">
+    <EmbeddedResource Include="Forms\FormRAST.resx">
       <DependentUpon>FormRAST.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormROFD.resx">
+    <EmbeddedResource Include="Forms\FormROFD.resx">
       <DependentUpon>FormROFD.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormTorque.resx">
+    <EmbeddedResource Include="Forms\FormTorque.resx">
       <DependentUpon>FormTorque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormVOMax.resx">
+    <EmbeddedResource Include="Forms\FormVOMax.resx">
       <DependentUpon>FormVOMax.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormWingate.resx">
+    <EmbeddedResource Include="Forms\FormWingate.resx">
       <DependentUpon>FormWingate.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormYoyo.resx">
+    <EmbeddedResource Include="Forms\FormYoyo.resx">
       <DependentUpon>FormYoyo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
