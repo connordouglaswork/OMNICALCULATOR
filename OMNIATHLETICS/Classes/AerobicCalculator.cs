@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace OMNIATHLETICS
 {
+    //class for building aerobic calculators capable of managing aerobic calculations
     public class AerobicCalculator : Calculator
     {
+        //contructs aerobic calculator for use
         public AerobicCalculator() { }
 
         public override string ToString()
@@ -15,6 +17,11 @@ namespace OMNIATHLETICS
             return ("Aerobic Calculator");
         }
 
+        #region MEMORY
+        //foreach different calculation type
+        //current memory position - currentCalcualtionLoaded
+        //local memory - localCalculatioMemory
+        //saves equation data to local memory - SaveToMemory
         public List<string> localYoYoCalculationMemory = new List<string>();
 
         public int currentYoYoCalcualtionLoaded = -1;
@@ -33,8 +40,10 @@ namespace OMNIATHLETICS
         {
             localVOCalculationMemory.Add(calculation);
             currentVOCalcualtionLoaded++;
-        }       
+        }
+        #endregion
 
+        //displays about information for a given equation
         public void About(string calcualtion)
         {
             string aboutMSG = "";

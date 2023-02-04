@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace OMNIATHLETICS
 {
+    //class for building strength calculators capable of managing strength calculations
     public class StrengthCalculator : Calculator
     {
+        //contructs strength calculator for use
         public StrengthCalculator() { }
 
         public override string ToString()
@@ -15,6 +17,11 @@ namespace OMNIATHLETICS
             return ("Strength Calculator");
         }
 
+        #region MEMORY
+        //foreach different calculation type
+        //current memory position - currentCalcualtionLoaded
+        //local memory - localCalculatioMemory
+        //saves equation data to local memory - SaveToMemory
         public int currentACSMCalcualtionLoaded = -1;
 
         public List<string> localACSMCalculatioMemory = new List<string>();
@@ -54,7 +61,9 @@ namespace OMNIATHLETICS
             localEURCalculatioMemory.Add(calculation);
             currentEURCalcualtionLoaded++;
         }
-       
+        #endregion
+
+        //displays about information for a given equation
         public void About(string calcualtion)
         {
             string aboutMSG = "";

@@ -19,6 +19,7 @@ namespace OMNIATHLETICS
             DoubleBuffered = true;
         }
 
+        //Hides submenu items on entry
         private void customizeDesign()
         {
             panelStrengthSubMenu.Visible = false;
@@ -29,6 +30,7 @@ namespace OMNIATHLETICS
             panelBiomechanicsSubMenu.Visible = false;
         }
 
+        //toggle submenus
         private void hideSubMenu()
         {
             if (panelStrengthSubMenu.Visible == true)
@@ -57,6 +59,7 @@ namespace OMNIATHLETICS
             }
         }
 
+        //display a submenu on form
         private void showSubMenu(Panel subMenu)
         {
             if (subMenu.Visible == false)
@@ -70,7 +73,7 @@ namespace OMNIATHLETICS
             }
         }
 
-        //Menu Dropdown Buttons
+        #region Menu
         private void buttonStrength_Click(object sender, EventArgs e)
         {
             showSubMenu(panelStrengthSubMenu);
@@ -100,12 +103,12 @@ namespace OMNIATHLETICS
         {
             showSubMenu(panelBiomechanicsSubMenu);
         }
+        #endregion
 
 
-        //Menu Buttons
+        #region MenuButtons       
         private void buttonHome_Click(object sender, EventArgs e)
         {
-            //null
             if (activeForm != null)
             {
                 activeForm.Close();
@@ -117,9 +120,10 @@ namespace OMNIATHLETICS
         {
             openChildForms(new HistoryForm());
         }
+        #endregion
 
-        //Sub Menu Buttons
-        //Strength sub menu
+        #region SubMenu
+        #region StrengthSubMenu
         private void button1RMPredictor_Click(object sender, EventArgs e)
         {
             //open form
@@ -143,8 +147,9 @@ namespace OMNIATHLETICS
             //open form
             openChildForms(new FormEUR());
         }
+        #endregion
 
-        //Power sub menu
+        #region PowerSubMenu
         private void buttonPowerZones_Click(object sender, EventArgs e)
         {
             //open form
@@ -162,8 +167,9 @@ namespace OMNIATHLETICS
             //open form
             openChildForms(new FormLowerBodyPeakPowerPredictor());
         }
+        #endregion
 
-        //Anaerobic sub menu
+        #region AnaerobicSubMenu
         private void buttonWingate_Click(object sender, EventArgs e)
         {
             //open form
@@ -181,8 +187,9 @@ namespace OMNIATHLETICS
             //open form
             openChildForms(new FormPhosphateRecovery());
         }
+        #endregion
 
-        //Aerobic sub menu
+        #region AerobicSubMenu
         private void buttonYoyo_Click(object sender, EventArgs e)
         {
             //open form
@@ -193,8 +200,9 @@ namespace OMNIATHLETICS
             //open form
             openChildForms(new FormVOMax());
         }
+        #endregion
 
-        //Nutrition sub menu
+        #region NutritionSubMenu
         private void buttonFFMI_Click(object sender, EventArgs e)
         {
             //open form
@@ -217,8 +225,9 @@ namespace OMNIATHLETICS
             //open form
             openChildForms(new FormMetabolicRate());
         }
+        #endregion
 
-        //Biomechanics sub menu
+        #region BiomechanicsSubMenu
         private void buttonAngularVelocity_Click(object sender, EventArgs e)
         {
             //open form
@@ -248,8 +257,12 @@ namespace OMNIATHLETICS
             //open form
             openChildForms(new FormTorque());
         }
+        #endregion
+        #endregion
 
         private Form activeForm = null;
+
+        //form opening event, set properties, close open forms
         private void openChildForms(Form childForm)
         {
             if (activeForm != null)

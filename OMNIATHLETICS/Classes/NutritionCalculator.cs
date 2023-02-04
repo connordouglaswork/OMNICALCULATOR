@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace OMNIATHLETICS
 {
+    //class for building nutrition calculators capable of managing nutrition calculations
     public class NutritionCalculator : Calculator
     {
+        //contructs nutrition calculator for use
         public NutritionCalculator() { }
 
         public override string ToString()
@@ -15,6 +17,11 @@ namespace OMNIATHLETICS
             return ("Nutrition Calculator");
         }
 
+        #region MEMORY
+        //foreach different calculation type
+        //current memory position - currentCalcualtionLoaded
+        //local memory - localCalculatioMemory
+        //saves equation data to local memory - SaveToMemory
         public List<string> localFFMICalculationMemory = new List<string>();
 
         public int currentFFMICalcualtionLoaded = -1;
@@ -54,7 +61,9 @@ namespace OMNIATHLETICS
             localMetabolicRateCalculationMemory.Add(calculation);
             currentMetabolicRateCalcualtionLoaded++;
         }
-      
+        #endregion
+
+        //displays about information for a given equation
         public void About(string calcualtion)
         {
             string aboutMSG = "";

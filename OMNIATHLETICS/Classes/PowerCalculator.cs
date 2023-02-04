@@ -7,8 +7,10 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace OMNIATHLETICS
 {
+    //class for building power calculators capable of managing power calculations
     public class PowerCalculator : Calculator
     {
+        //contructs power calculator for use
         public PowerCalculator() { }
 
         public override string ToString()
@@ -16,6 +18,11 @@ namespace OMNIATHLETICS
             return ("Power Calculator");
         }
 
+        #region MEMORY
+        //foreach different calculation type
+        //current memory position - currentCalcualtionLoaded
+        //local memory - localCalculatioMemory
+        //saves equation data to local memory - SaveToMemory
         public List<string> localZonesCalculationMemory = new List<string>();
 
         public int currentZonesCalcualtionLoaded = -1;
@@ -45,7 +52,9 @@ namespace OMNIATHLETICS
             localPeakCalculationMemory.Add(calculation);
             currentPeakCalcualtionLoaded++;
         }
-       
+        #endregion
+
+        //displays about information for a given equation
         public void About(string calcualtion)
         {
             string aboutMSG = "";

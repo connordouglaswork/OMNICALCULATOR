@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace OMNIATHLETICS
 {
+    //class for building anaerobic calculators capable of managing anaerobic calculations
     public class AnaerobicCalculator : Calculator
     {
+        //contructs anaerobic calculator for use
         public AnaerobicCalculator() { }
 
         public override string ToString()
@@ -15,6 +17,11 @@ namespace OMNIATHLETICS
             return ("Anaerobic Calculator");
         }
 
+        #region MEMORY
+        //foreach different calculation type
+        //current memory position - currentCalcualtionLoaded
+        //local memory - localCalculatioMemory
+        //saves equation data to local memory - SaveToMemory
         public List<string> localWingatePeakPowerCalculationMemory = new List<string>();
 
         public int currentWingatePeakPowerCalcualtionLoaded = -1;
@@ -73,8 +80,10 @@ namespace OMNIATHLETICS
         {
             localPRTCalculationMemory.Add(calculation);
             currentPRTCalcualtionLoaded++;
-        }       
+        }
+        #endregion
 
+        //displays about information for a given equation
         public void About(string calcualtion)
         {
             string aboutMSG = "";

@@ -9,14 +9,16 @@ using System.Windows.Forms;
 
 namespace OMNIATHLETICS
 {
+    //Parent Class for unique sports calculators that contains base calculator functions 
     public class Calculator
     {
-        //HISTORY Database
-        public string conString = "Data Source=DESKTOP-PGJPJK2\\MSSQLSERVER01;Initial Catalog=OmniCalculationsDB;Integrated Security=True";
+        //Databse connection string for calcualtion history
+        private string conString = "Data Source=DESKTOP-PGJPJK2\\MSSQLSERVER01;Initial Catalog=OmniCalculationsDB;Integrated Security=True";
 
+        //Current insert ID for primary key reference
         private int currentCalcualtionID = 1;
 
-        //Save to history
+        //Save to calcualtion history table in OmniCalculationsDB
         public void SaveToCalculatorHistory(string calculator, string calculation, string equation, string result)
         {
             SqlConnection con = new SqlConnection(conString);
@@ -30,7 +32,7 @@ namespace OMNIATHLETICS
             }
         }
 
-        //help function
+        //help/naming ToString override
         public override string ToString()
         {
             return ("Omni Athletics Calculator is a sports science ccalculator for athletes, " +
@@ -39,7 +41,7 @@ namespace OMNIATHLETICS
                 "Implementation of this calculator will allow optimsed training protocols.");
         }
 
-        //Reset Feilds
+        //Reset calculator Feilds
         public void RefreshFields(List<TextBox> feilds)
         {
             foreach(TextBox feild in feilds)

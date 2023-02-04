@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace OMNIATHLETICS.ActiveDirectory
 {
+    //class that stores the active calculator objects for form contorl access
     public class ActiveCalculator
     {
         public static Calculator calcualtor = new Calculator();

@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace OMNIATHLETICS
 {
+    //class for building biomechanics calculators capable of managing biomechanics calculations
     public class BiomechanicsCalculator : Calculator
     {
+        //contructs biomechanics calculator for use
         public BiomechanicsCalculator() { }
 
         public override string ToString()
@@ -15,6 +17,11 @@ namespace OMNIATHLETICS
             return ("Biomechanics Calculator");
         }
 
+        #region MEMORY
+        //foreach different calculation type
+        //current memory position - currentCalcualtionLoaded
+        //local memory - localCalculatioMemory
+        //saves equation data to local memory - SaveToMemory
         public List<string> localHorizontalProjectionVelocityCalculationMemory = new List<string>();
 
         public int currentHorizontalProjectionVelocityCalcualtionLoaded = -1;
@@ -63,8 +70,10 @@ namespace OMNIATHLETICS
         {
             localTorqueCalculationMemory.Add(calculation);
             currentTorqueCalcualtionLoaded++;
-        }            
+        }
+        #endregion
 
+        //displays about information for a given equation
         public void About(string calcualtion)
         {
             string aboutMSG = "";
