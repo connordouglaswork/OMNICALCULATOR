@@ -276,6 +276,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="OmniCalculationsDBDataSet.xsc">
       <DependentUpon>OmniCalculationsDBDataSet.xsd</DependentUpon>
@@ -300,6 +301,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\strengthimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nutritionimage_35x35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biomechanicsimage_35x35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aerobiciamge_35x35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anaerobicimage_35x35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\poweriamge_35x35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\strengthimage_35x35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homepagebackground.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
