@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormProteinIndex));
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.comboBoxType = new System.Windows.Forms.ComboBox();
@@ -98,7 +97,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImage = global::OMNIATHLETICS.Properties.Resources.nutritionimage;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(152, 67);
             this.pictureBox1.Name = "pictureBox1";

@@ -326,5 +326,20 @@
   <ItemGroup>
     <None Include="Resources\homepagebackground.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\strengthimage1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biomechanicsimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\biomechanicsimage1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nutritionimage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\poweriamge.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

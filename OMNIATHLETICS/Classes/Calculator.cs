@@ -14,7 +14,6 @@ namespace OMNIATHLETICS
         //HISTORY Database
         public string conString = "Data Source=DESKTOP-PGJPJK2\\MSSQLSERVER01;Initial Catalog=OmniCalculationsDB;Integrated Security=True";
 
-        //needs to run a script to get current primary key
         private int currentCalcualtionID = 1;
 
         //Save to history
@@ -39,7 +38,6 @@ namespace OMNIATHLETICS
                 "calculations strength, power, anaerobic, aerobic, nutirion and biomechanics. " +
                 "Implementation of this calculator will allow optimsed training protocols.");
         }
-
 
         //Reset Feilds
         public void RefreshFields(List<TextBox> feilds)

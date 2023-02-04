@@ -36,7 +36,6 @@ namespace OMNIATHLETICS
                 labelDSI.Text = (labelDesc);
                 ActiveCalculator.strengthCalculator.SaveToDSIMemory(BPF + "," + DPF + "," + labelDesc);
                 ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.strengthCalculator.ToString(), "Dynamic Strength Index", "DSI = " + BPF + " / " + DPF, labelDesc);
-
             }
             catch
             {

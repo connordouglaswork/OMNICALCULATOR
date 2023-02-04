@@ -8,6 +8,8 @@ namespace OMNIATHLETICS
 {
     public class AnaerobicCalculator : Calculator
     {
+        public AnaerobicCalculator() { }
+
         public override string ToString()
         {
             return ("Anaerobic Calculator");
@@ -71,9 +73,7 @@ namespace OMNIATHLETICS
         {
             localPRTCalculationMemory.Add(calculation);
             currentPRTCalcualtionLoaded++;
-        }
-
-        public AnaerobicCalculator() { }
+        }       
 
         public void About(string calcualtion)
         {
@@ -138,6 +138,5 @@ namespace OMNIATHLETICS
             double dropOffDistance = lastSprintDistance - firstSprintDistance;
             return (dropOffDistance.ToString("0.00") + "m");
         }
-
     }
 }

@@ -8,6 +8,8 @@ namespace OMNIATHLETICS
 {
     public class StrengthCalculator : Calculator
     {
+        public StrengthCalculator() { }
+
         public override string ToString()
         {
             return ("Strength Calculator");
@@ -22,7 +24,6 @@ namespace OMNIATHLETICS
             localACSMCalculatioMemory.Add(calculation);
             currentACSMCalcualtionLoaded++;
         }
-
 
         public int currentDSICalcualtionLoaded = -1;
 
@@ -53,10 +54,7 @@ namespace OMNIATHLETICS
             localEURCalculatioMemory.Add(calculation);
             currentEURCalcualtionLoaded++;
         }
-
-
-        public StrengthCalculator() { }
-
+       
         public void About(string calcualtion)
         {
             string aboutMSG = "";
@@ -125,6 +123,5 @@ namespace OMNIATHLETICS
             double EUR = CMJ / SJ;
             return EUR.ToString("0.00");
         }
-
     }
 }

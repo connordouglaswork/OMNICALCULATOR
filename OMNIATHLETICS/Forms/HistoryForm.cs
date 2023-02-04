@@ -21,7 +21,6 @@ namespace OMNIATHLETICS
         {
             // TODO: This line of code loads data into the 'omniCalculationsDBDataSet.CalculationData' table. You can move, or remove it, as needed.
             this.calculationDataTableAdapter.Fill(this.omniCalculationsDBDataSet.CalculationData);
-
         }
     }
 }

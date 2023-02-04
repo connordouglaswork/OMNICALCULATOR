@@ -8,6 +8,8 @@ namespace OMNIATHLETICS
 {
     public class BiomechanicsCalculator : Calculator
     {
+        public BiomechanicsCalculator() { }
+
         public override string ToString()
         {
             return ("Biomechanics Calculator");
@@ -61,9 +63,7 @@ namespace OMNIATHLETICS
         {
             localTorqueCalculationMemory.Add(calculation);
             currentTorqueCalcualtionLoaded++;
-        }
-      
-        public BiomechanicsCalculator() { }
+        }            
 
         public void About(string calcualtion)
         {
@@ -128,6 +128,5 @@ namespace OMNIATHLETICS
             double torque = force * radius;
             return (torque.ToString("0.00") + "N.m");
         }
-
     }
 }

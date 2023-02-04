@@ -8,6 +8,8 @@ namespace OMNIATHLETICS
 {
     public class NutritionCalculator : Calculator
     {
+        public NutritionCalculator() { }
+
         public override string ToString()
         {
             return ("Nutrition Calculator");
@@ -52,9 +54,7 @@ namespace OMNIATHLETICS
             localMetabolicRateCalculationMemory.Add(calculation);
             currentMetabolicRateCalcualtionLoaded++;
         }
-
-        public NutritionCalculator() { }
-
+      
         public void About(string calcualtion)
         {
             string aboutMSG = "";
@@ -138,6 +138,5 @@ namespace OMNIATHLETICS
             }
             return BMR.ToString("0.00");
         }
-
     }
 }

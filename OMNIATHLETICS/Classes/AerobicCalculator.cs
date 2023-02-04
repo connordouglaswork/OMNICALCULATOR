@@ -8,6 +8,8 @@ namespace OMNIATHLETICS
 {
     public class AerobicCalculator : Calculator
     {
+        public AerobicCalculator() { }
+
         public override string ToString()
         {
             return ("Aerobic Calculator");
@@ -31,9 +33,7 @@ namespace OMNIATHLETICS
         {
             localVOCalculationMemory.Add(calculation);
             currentVOCalcualtionLoaded++;
-        }
-
-        public AerobicCalculator() { }
+        }       
 
         public void About(string calcualtion)
         {

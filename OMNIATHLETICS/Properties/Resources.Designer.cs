@@ -83,9 +83,29 @@ namespace OMNIATHLETICS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap biomechanicsimage {
+            get {
+                object obj = ResourceManager.GetObject("biomechanicsimage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap biomechanicsimage_35x35 {
             get {
                 object obj = ResourceManager.GetObject("biomechanicsimage_35x35", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap biomechanicsimage1 {
+            get {
+                object obj = ResourceManager.GetObject("biomechanicsimage1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +123,29 @@ namespace OMNIATHLETICS.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap nutritionimage {
+            get {
+                object obj = ResourceManager.GetObject("nutritionimage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap nutritionimage_35x35 {
             get {
                 object obj = ResourceManager.GetObject("nutritionimage_35x35", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap poweriamge {
+            get {
+                object obj = ResourceManager.GetObject("poweriamge", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +176,16 @@ namespace OMNIATHLETICS.Properties {
         internal static System.Drawing.Bitmap strengthimage_35x35 {
             get {
                 object obj = ResourceManager.GetObject("strengthimage_35x35", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap strengthimage1 {
+            get {
+                object obj = ResourceManager.GetObject("strengthimage1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

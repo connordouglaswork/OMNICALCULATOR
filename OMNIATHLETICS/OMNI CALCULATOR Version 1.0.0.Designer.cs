@@ -36,40 +36,40 @@
             this.buttonProjectionVelocity = new System.Windows.Forms.Button();
             this.buttonAngularAcceleration = new System.Windows.Forms.Button();
             this.buttonAngularVelocity = new System.Windows.Forms.Button();
+            this.buttonBiomechanics = new System.Windows.Forms.Button();
             this.panelNutritionSubMenu = new System.Windows.Forms.Panel();
             this.buttonMetabolicRate = new System.Windows.Forms.Button();
             this.buttonProteinIndex = new System.Windows.Forms.Button();
             this.buttonBMI = new System.Windows.Forms.Button();
             this.buttonFFMI = new System.Windows.Forms.Button();
+            this.buttonNutrition = new System.Windows.Forms.Button();
             this.panelAerobicSubMenu = new System.Windows.Forms.Panel();
             this.buttonVO2Max = new System.Windows.Forms.Button();
             this.buttonYoyo = new System.Windows.Forms.Button();
+            this.buttonAerobic = new System.Windows.Forms.Button();
             this.panelAnaerobicSubMenu = new System.Windows.Forms.Panel();
             this.buttonPRT = new System.Windows.Forms.Button();
             this.buttonRAST = new System.Windows.Forms.Button();
             this.buttonWingate = new System.Windows.Forms.Button();
+            this.buttonAnaerobic = new System.Windows.Forms.Button();
             this.panelPowerSubMenu = new System.Windows.Forms.Panel();
             this.buttonLowerBodyPeakPowerPredictor = new System.Windows.Forms.Button();
             this.buttonROFD = new System.Windows.Forms.Button();
             this.buttonPowerZones = new System.Windows.Forms.Button();
+            this.buttonPower = new System.Windows.Forms.Button();
             this.panelStrengthSubMenu = new System.Windows.Forms.Panel();
             this.buttonEUR = new System.Windows.Forms.Button();
             this.buttonLoadingTool = new System.Windows.Forms.Button();
             this.buttonDSI = new System.Windows.Forms.Button();
             this.button1RMPredictor = new System.Windows.Forms.Button();
+            this.buttonStrength = new System.Windows.Forms.Button();
             this.buttonHistory = new System.Windows.Forms.Button();
             this.buttonHome = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.labelATHLEICS = new System.Windows.Forms.Label();
             this.labelOMNI = new System.Windows.Forms.Label();
             this.panelHomePage = new System.Windows.Forms.Panel();
-            this.buttonBiomechanics = new System.Windows.Forms.Button();
-            this.buttonNutrition = new System.Windows.Forms.Button();
-            this.buttonAerobic = new System.Windows.Forms.Button();
-            this.buttonAnaerobic = new System.Windows.Forms.Button();
-            this.buttonPower = new System.Windows.Forms.Button();
-            this.buttonStrength = new System.Windows.Forms.Button();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
             this.panelSideMenu.SuspendLayout();
             this.panelBiomechanicsSubMenu.SuspendLayout();
             this.panelNutritionSubMenu.SuspendLayout();
@@ -215,6 +215,28 @@
             this.buttonAngularVelocity.UseVisualStyleBackColor = true;
             this.buttonAngularVelocity.Click += new System.EventHandler(this.buttonAngularVelocity_Click);
             // 
+            // buttonBiomechanics
+            // 
+            this.buttonBiomechanics.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonBiomechanics.FlatAppearance.BorderSize = 0;
+            this.buttonBiomechanics.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.buttonBiomechanics.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.buttonBiomechanics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonBiomechanics.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBiomechanics.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonBiomechanics.Image = global::OMNIATHLETICS.Properties.Resources.biomechanicsimage_35x35;
+            this.buttonBiomechanics.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonBiomechanics.Location = new System.Drawing.Point(0, 840);
+            this.buttonBiomechanics.Name = "buttonBiomechanics";
+            this.buttonBiomechanics.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.buttonBiomechanics.Size = new System.Drawing.Size(223, 40);
+            this.buttonBiomechanics.TabIndex = 13;
+            this.buttonBiomechanics.Text = "Biomechanics Calculator";
+            this.buttonBiomechanics.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonBiomechanics.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonBiomechanics.UseVisualStyleBackColor = true;
+            this.buttonBiomechanics.Click += new System.EventHandler(this.buttonBiomechanics_Click);
+            // 
             // panelNutritionSubMenu
             // 
             this.panelNutritionSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
@@ -304,6 +326,28 @@
             this.buttonFFMI.UseVisualStyleBackColor = true;
             this.buttonFFMI.Click += new System.EventHandler(this.buttonFFMI_Click);
             // 
+            // buttonNutrition
+            // 
+            this.buttonNutrition.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonNutrition.FlatAppearance.BorderSize = 0;
+            this.buttonNutrition.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.buttonNutrition.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.buttonNutrition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonNutrition.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonNutrition.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonNutrition.Image = global::OMNIATHLETICS.Properties.Resources.nutritionimage_35x35;
+            this.buttonNutrition.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonNutrition.Location = new System.Drawing.Point(0, 680);
+            this.buttonNutrition.Name = "buttonNutrition";
+            this.buttonNutrition.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.buttonNutrition.Size = new System.Drawing.Size(223, 40);
+            this.buttonNutrition.TabIndex = 11;
+            this.buttonNutrition.Text = "Nutrition Calculator";
+            this.buttonNutrition.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonNutrition.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonNutrition.UseVisualStyleBackColor = true;
+            this.buttonNutrition.Click += new System.EventHandler(this.buttonNutrition_Click);
+            // 
             // panelAerobicSubMenu
             // 
             this.panelAerobicSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
@@ -352,6 +396,28 @@
             this.buttonYoyo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonYoyo.UseVisualStyleBackColor = true;
             this.buttonYoyo.Click += new System.EventHandler(this.buttonYoyo_Click);
+            // 
+            // buttonAerobic
+            // 
+            this.buttonAerobic.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonAerobic.FlatAppearance.BorderSize = 0;
+            this.buttonAerobic.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.buttonAerobic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.buttonAerobic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAerobic.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAerobic.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonAerobic.Image = global::OMNIATHLETICS.Properties.Resources.aerobiciamge_35x35;
+            this.buttonAerobic.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAerobic.Location = new System.Drawing.Point(0, 580);
+            this.buttonAerobic.Name = "buttonAerobic";
+            this.buttonAerobic.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.buttonAerobic.Size = new System.Drawing.Size(223, 40);
+            this.buttonAerobic.TabIndex = 9;
+            this.buttonAerobic.Text = "Aerobic Calculator";
+            this.buttonAerobic.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAerobic.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonAerobic.UseVisualStyleBackColor = true;
+            this.buttonAerobic.Click += new System.EventHandler(this.buttonAerobic_Click);
             // 
             // panelAnaerobicSubMenu
             // 
@@ -422,6 +488,28 @@
             this.buttonWingate.UseVisualStyleBackColor = true;
             this.buttonWingate.Click += new System.EventHandler(this.buttonWingate_Click);
             // 
+            // buttonAnaerobic
+            // 
+            this.buttonAnaerobic.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonAnaerobic.FlatAppearance.BorderSize = 0;
+            this.buttonAnaerobic.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.buttonAnaerobic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.buttonAnaerobic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonAnaerobic.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAnaerobic.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonAnaerobic.Image = global::OMNIATHLETICS.Properties.Resources.anaerobicimage_35x35;
+            this.buttonAnaerobic.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAnaerobic.Location = new System.Drawing.Point(0, 450);
+            this.buttonAnaerobic.Name = "buttonAnaerobic";
+            this.buttonAnaerobic.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.buttonAnaerobic.Size = new System.Drawing.Size(223, 40);
+            this.buttonAnaerobic.TabIndex = 7;
+            this.buttonAnaerobic.Text = "Anaerobic Calculator";
+            this.buttonAnaerobic.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonAnaerobic.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonAnaerobic.UseVisualStyleBackColor = true;
+            this.buttonAnaerobic.Click += new System.EventHandler(this.buttonAnaerobic_Click);
+            // 
             // panelPowerSubMenu
             // 
             this.panelPowerSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
@@ -490,6 +578,28 @@
             this.buttonPowerZones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonPowerZones.UseVisualStyleBackColor = true;
             this.buttonPowerZones.Click += new System.EventHandler(this.buttonPowerZones_Click);
+            // 
+            // buttonPower
+            // 
+            this.buttonPower.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonPower.FlatAppearance.BorderSize = 0;
+            this.buttonPower.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.buttonPower.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.buttonPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonPower.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonPower.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonPower.Image = global::OMNIATHLETICS.Properties.Resources.poweriamge_35x35;
+            this.buttonPower.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPower.Location = new System.Drawing.Point(0, 320);
+            this.buttonPower.Name = "buttonPower";
+            this.buttonPower.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.buttonPower.Size = new System.Drawing.Size(223, 40);
+            this.buttonPower.TabIndex = 5;
+            this.buttonPower.Text = "Power Calculator";
+            this.buttonPower.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonPower.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonPower.UseVisualStyleBackColor = true;
+            this.buttonPower.Click += new System.EventHandler(this.buttonPower_Click);
             // 
             // panelStrengthSubMenu
             // 
@@ -580,6 +690,29 @@
             this.button1RMPredictor.UseVisualStyleBackColor = true;
             this.button1RMPredictor.Click += new System.EventHandler(this.button1RMPredictor_Click);
             // 
+            // buttonStrength
+            // 
+            this.buttonStrength.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.buttonStrength.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonStrength.FlatAppearance.BorderSize = 0;
+            this.buttonStrength.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.buttonStrength.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.buttonStrength.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonStrength.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonStrength.ForeColor = System.Drawing.SystemColors.Control;
+            this.buttonStrength.Image = global::OMNIATHLETICS.Properties.Resources.strengthimage_35x35;
+            this.buttonStrength.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonStrength.Location = new System.Drawing.Point(0, 160);
+            this.buttonStrength.Name = "buttonStrength";
+            this.buttonStrength.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.buttonStrength.Size = new System.Drawing.Size(223, 40);
+            this.buttonStrength.TabIndex = 3;
+            this.buttonStrength.Text = "Strength Calculator";
+            this.buttonStrength.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonStrength.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonStrength.UseVisualStyleBackColor = true;
+            this.buttonStrength.Click += new System.EventHandler(this.buttonStrength_Click);
+            // 
             // buttonHistory
             // 
             this.buttonHistory.Dock = System.Windows.Forms.DockStyle.Top;
@@ -629,6 +762,16 @@
             this.panelLogo.Size = new System.Drawing.Size(223, 80);
             this.panelLogo.TabIndex = 0;
             // 
+            // pictureBoxLogo
+            // 
+            this.pictureBoxLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.BackgroundImage")));
+            this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBoxLogo.Location = new System.Drawing.Point(129, 3);
+            this.pictureBoxLogo.Name = "pictureBoxLogo";
+            this.pictureBoxLogo.Size = new System.Drawing.Size(42, 60);
+            this.pictureBoxLogo.TabIndex = 23;
+            this.pictureBoxLogo.TabStop = false;
+            // 
             // labelATHLEICS
             // 
             this.labelATHLEICS.AutoSize = true;
@@ -661,149 +804,6 @@
             this.panelHomePage.Name = "panelHomePage";
             this.panelHomePage.Size = new System.Drawing.Size(970, 699);
             this.panelHomePage.TabIndex = 1;
-            // 
-            // buttonBiomechanics
-            // 
-            this.buttonBiomechanics.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonBiomechanics.FlatAppearance.BorderSize = 0;
-            this.buttonBiomechanics.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.buttonBiomechanics.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.buttonBiomechanics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonBiomechanics.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBiomechanics.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonBiomechanics.Image = global::OMNIATHLETICS.Properties.Resources.biomechanicsimage_35x35;
-            this.buttonBiomechanics.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBiomechanics.Location = new System.Drawing.Point(0, 840);
-            this.buttonBiomechanics.Name = "buttonBiomechanics";
-            this.buttonBiomechanics.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonBiomechanics.Size = new System.Drawing.Size(223, 40);
-            this.buttonBiomechanics.TabIndex = 13;
-            this.buttonBiomechanics.Text = "Biomechanics Calculator";
-            this.buttonBiomechanics.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonBiomechanics.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonBiomechanics.UseVisualStyleBackColor = true;
-            this.buttonBiomechanics.Click += new System.EventHandler(this.buttonBiomechanics_Click);
-            // 
-            // buttonNutrition
-            // 
-            this.buttonNutrition.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonNutrition.FlatAppearance.BorderSize = 0;
-            this.buttonNutrition.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.buttonNutrition.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.buttonNutrition.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonNutrition.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonNutrition.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonNutrition.Image = global::OMNIATHLETICS.Properties.Resources.nutritionimage_35x35;
-            this.buttonNutrition.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNutrition.Location = new System.Drawing.Point(0, 680);
-            this.buttonNutrition.Name = "buttonNutrition";
-            this.buttonNutrition.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonNutrition.Size = new System.Drawing.Size(223, 40);
-            this.buttonNutrition.TabIndex = 11;
-            this.buttonNutrition.Text = "Nutrition Calculator";
-            this.buttonNutrition.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonNutrition.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonNutrition.UseVisualStyleBackColor = true;
-            this.buttonNutrition.Click += new System.EventHandler(this.buttonNutrition_Click);
-            // 
-            // buttonAerobic
-            // 
-            this.buttonAerobic.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonAerobic.FlatAppearance.BorderSize = 0;
-            this.buttonAerobic.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.buttonAerobic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.buttonAerobic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAerobic.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAerobic.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonAerobic.Image = global::OMNIATHLETICS.Properties.Resources.aerobiciamge_35x35;
-            this.buttonAerobic.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAerobic.Location = new System.Drawing.Point(0, 580);
-            this.buttonAerobic.Name = "buttonAerobic";
-            this.buttonAerobic.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonAerobic.Size = new System.Drawing.Size(223, 40);
-            this.buttonAerobic.TabIndex = 9;
-            this.buttonAerobic.Text = "Aerobic Calculator";
-            this.buttonAerobic.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAerobic.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonAerobic.UseVisualStyleBackColor = true;
-            this.buttonAerobic.Click += new System.EventHandler(this.buttonAerobic_Click);
-            // 
-            // buttonAnaerobic
-            // 
-            this.buttonAnaerobic.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonAnaerobic.FlatAppearance.BorderSize = 0;
-            this.buttonAnaerobic.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.buttonAnaerobic.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.buttonAnaerobic.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonAnaerobic.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAnaerobic.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonAnaerobic.Image = global::OMNIATHLETICS.Properties.Resources.anaerobicimage_35x35;
-            this.buttonAnaerobic.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAnaerobic.Location = new System.Drawing.Point(0, 450);
-            this.buttonAnaerobic.Name = "buttonAnaerobic";
-            this.buttonAnaerobic.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonAnaerobic.Size = new System.Drawing.Size(223, 40);
-            this.buttonAnaerobic.TabIndex = 7;
-            this.buttonAnaerobic.Text = "Anaerobic Calculator";
-            this.buttonAnaerobic.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonAnaerobic.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonAnaerobic.UseVisualStyleBackColor = true;
-            this.buttonAnaerobic.Click += new System.EventHandler(this.buttonAnaerobic_Click);
-            // 
-            // buttonPower
-            // 
-            this.buttonPower.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonPower.FlatAppearance.BorderSize = 0;
-            this.buttonPower.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.buttonPower.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.buttonPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonPower.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPower.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonPower.Image = global::OMNIATHLETICS.Properties.Resources.poweriamge_35x35;
-            this.buttonPower.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPower.Location = new System.Drawing.Point(0, 320);
-            this.buttonPower.Name = "buttonPower";
-            this.buttonPower.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonPower.Size = new System.Drawing.Size(223, 40);
-            this.buttonPower.TabIndex = 5;
-            this.buttonPower.Text = "Power Calculator";
-            this.buttonPower.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPower.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonPower.UseVisualStyleBackColor = true;
-            this.buttonPower.Click += new System.EventHandler(this.buttonPower_Click);
-            // 
-            // buttonStrength
-            // 
-            this.buttonStrength.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.buttonStrength.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonStrength.FlatAppearance.BorderSize = 0;
-            this.buttonStrength.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.buttonStrength.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.buttonStrength.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonStrength.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonStrength.ForeColor = System.Drawing.SystemColors.Control;
-            this.buttonStrength.Image = global::OMNIATHLETICS.Properties.Resources.strengthimage_35x35;
-            this.buttonStrength.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonStrength.Location = new System.Drawing.Point(0, 160);
-            this.buttonStrength.Name = "buttonStrength";
-            this.buttonStrength.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonStrength.Size = new System.Drawing.Size(223, 40);
-            this.buttonStrength.TabIndex = 3;
-            this.buttonStrength.Text = "Strength Calculator";
-            this.buttonStrength.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonStrength.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonStrength.UseVisualStyleBackColor = true;
-            this.buttonStrength.Click += new System.EventHandler(this.buttonStrength_Click);
-            // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.BackgroundImage")));
-            this.pictureBoxLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBoxLogo.Location = new System.Drawing.Point(129, 3);
-            this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(42, 60);
-            this.pictureBoxLogo.TabIndex = 23;
-            this.pictureBoxLogo.TabStop = false;
             // 
             // Form1
             // 

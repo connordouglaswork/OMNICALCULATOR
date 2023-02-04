@@ -13,11 +13,12 @@ namespace OMNIATHLETICS
     public partial class Form1 : Form
     {
         public Form1()
-        {
-            DoubleBuffered = true;
+        {           
             InitializeComponent();
             customizeDesign();
+            DoubleBuffered = true;
         }
+
         private void customizeDesign()
         {
             panelStrengthSubMenu.Visible = false;
@@ -69,7 +70,6 @@ namespace OMNIATHLETICS
             }
         }
 
-
         //Menu Dropdown Buttons
         private void buttonStrength_Click(object sender, EventArgs e)
         {
@@ -103,7 +103,6 @@ namespace OMNIATHLETICS
 
 
         //Menu Buttons
-
         private void buttonHome_Click(object sender, EventArgs e)
         {
             //null
@@ -189,7 +188,6 @@ namespace OMNIATHLETICS
             //open form
             openChildForms(new FormYoyo());
         }
-
         private void buttonVO2Max_Click(object sender, EventArgs e)
         {
             //open form
@@ -214,7 +212,6 @@ namespace OMNIATHLETICS
             //open form
             openChildForms(new FormProteinIndex());
         }
-
         private void buttonMetabolicRate_Click(object sender, EventArgs e)
         {
             //open form
@@ -252,8 +249,6 @@ namespace OMNIATHLETICS
             openChildForms(new FormTorque());
         }
 
-
-
         private Form activeForm = null;
         private void openChildForms(Form childForm)
         {
@@ -261,6 +256,7 @@ namespace OMNIATHLETICS
             {
                 activeForm.Close();
             }
+            DoubleBuffered = true;
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -270,6 +266,5 @@ namespace OMNIATHLETICS
             childForm.BringToFront();
             childForm.Show();
         }
-
     }
 }

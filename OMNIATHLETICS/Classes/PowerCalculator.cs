@@ -9,6 +9,8 @@ namespace OMNIATHLETICS
 {
     public class PowerCalculator : Calculator
     {
+        public PowerCalculator() { }
+
         public override string ToString()
         {
             return ("Power Calculator");
@@ -43,9 +45,7 @@ namespace OMNIATHLETICS
             localPeakCalculationMemory.Add(calculation);
             currentPeakCalcualtionLoaded++;
         }
-
-        public PowerCalculator() { }
-
+       
         public void About(string calcualtion)
         {
             string aboutMSG = "";

@@ -15,6 +15,5 @@ namespace OMNIATHLETICS.ActiveDirectory
         public static AerobicCalculator aerobicCalculator = new AerobicCalculator();
         public static NutritionCalculator nutritionCalculator = new NutritionCalculator();
         public static BiomechanicsCalculator biomechanicsCalculator = new BiomechanicsCalculator();
-
     }
 }

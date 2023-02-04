@@ -18,7 +18,6 @@ namespace OMNIATHLETICS
             InitializeComponent();
             DoubleBuffered = true;
         }
-
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -37,14 +36,12 @@ namespace OMNIATHLETICS
                 labelAngularAcceleration.Text = (labelDesc);
                 ActiveCalculator.biomechanicsCalculator.SaveToAngularAccelerationMemory(velocityInit + "," + velocityFinal + "," + timeInit + "," + timeFinal + "," + labelDesc);
                 ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.biomechanicsCalculator.ToString(), "Angular Acceleration", "w = " + velocityFinal + " - " + velocityInit + " / " + timeFinal + "-" + timeInit, labelDesc);
-
             }
             catch
             {
                 System.Windows.Forms.MessageBox.Show("Invalid Input");
             }
         }
-
         private void buttonBack_Click(object sender, EventArgs e)
         {
             if (ActiveCalculator.biomechanicsCalculator.currentAngularAccelerationCalcualtionLoaded > 0)
@@ -61,7 +58,6 @@ namespace OMNIATHLETICS
                 ActiveCalculator.biomechanicsCalculator.currentAngularAccelerationCalcualtionLoaded--;
             }
         }
-
         private void buttonAbout_Click(object sender, EventArgs e)
         {
             ActiveCalculator.biomechanicsCalculator.About("Angular Acceleration");

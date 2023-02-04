@@ -43,7 +43,6 @@ namespace OMNIATHLETICS
             }
 
         }
-
         private void buttonBack_Click(object sender, EventArgs e)
         {
             if (ActiveCalculator.nutritionCalculator.currentBMICalcualtionLoaded > 0)

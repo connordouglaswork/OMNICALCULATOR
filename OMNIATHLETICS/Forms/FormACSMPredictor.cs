@@ -44,7 +44,6 @@ namespace OMNIATHLETICS
             {
                 System.Windows.Forms.MessageBox.Show("Invalid Input");
             }
-
         }
 
         private void buttonRefresh_Click(object sender, EventArgs e)
