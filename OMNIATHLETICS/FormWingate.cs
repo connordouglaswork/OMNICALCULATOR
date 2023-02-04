@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -47,7 +48,8 @@ namespace OMNIATHLETICS
                 string labelDesc = "PPO: " + rofd;
                 labelPPO.Text = (labelDesc);
                 ActiveCalculator.anaerobicthCalculator.SaveToWingatePeakPowerMemory(force + "," + distance + "," + time + "," + labelDesc);
-            }          
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.anaerobicthCalculator.ToString(), "Wingate Peak Power", "PPO = " + force + " * " + distance + " ÷ " + time, labelDesc);
+            }
             catch
             {
                 System.Windows.Forms.MessageBox.Show("Invalid Input");
@@ -84,7 +86,9 @@ namespace OMNIATHLETICS
                 string labelDesc = "AC: " + ac;
                 labelAnaerobicCapacity.Text = (labelDesc);
                 ActiveCalculator.anaerobicthCalculator.SaveToWingatACMemory(ppo1 + "," + ppo2 + "," + ppo3 + "," + ppo4 + "," + ppo5 + "," + ppo6 + "," + labelDesc);
-            }            
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.anaerobicthCalculator.ToString(), "Wingate Anaerobic Capacity", ppo1 + " + " + ppo2 + " + " + ppo3 + " + " + ppo4 + " + " + ppo5 + " + " + ppo6, labelDesc);
+
+            }
             catch
             {
                 System.Windows.Forms.MessageBox.Show("Invalid Input");
@@ -120,7 +124,8 @@ namespace OMNIATHLETICS
                 string labelDesc = "FI: " + FI;
                 labelFatigue.Text = (labelDesc);
                 ActiveCalculator.anaerobicthCalculator.SaveToWingateFIMemory(peakPower + "," + lowestPower + "," + labelDesc);
-            }          
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.anaerobicthCalculator.ToString(), "Wingate Fatigue Index", "AF = ((" + peakPower + " – " + lowestPower + ") ÷ (" + peakPower +")) * 100", labelDesc);
+            }
             catch
             {
                 System.Windows.Forms.MessageBox.Show("Invalid Input");

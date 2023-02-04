@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -34,6 +35,8 @@ namespace OMNIATHLETICS
                 string labelDesc = "EUR: " + EUR;
                 labelEUR.Text = (labelDesc);
                 ActiveCalculator.strengthCalculator.SaveToEURMemory(CMJ + "," + SJ + "," + labelDesc);
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.strengthCalculator.ToString(), "Eccentric Utilisation Ratio","EUR = " + CMJ + " / " + SJ, labelDesc);
+
             }
             catch
             {

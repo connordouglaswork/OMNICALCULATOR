@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -34,7 +35,8 @@ namespace OMNIATHLETICS
                 string labelDesc = "BMI: " + bmi;
                 labelBMI.Text = (labelDesc);
                 ActiveCalculator.nutritionCalculator.SaveToBMIMemory(mass + "," + height + "," + labelDesc);
-            }           
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.nutritionCalculator.ToString(), "BMI", "BMI = " + mass + " / " +  height + "^2", labelDesc);
+            }
             catch
             {
                 System.Windows.Forms.MessageBox.Show("Invalid Input");

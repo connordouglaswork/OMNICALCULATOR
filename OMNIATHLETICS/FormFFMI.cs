@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -36,6 +37,8 @@ namespace OMNIATHLETICS
                 string labelDesc = "FFMI: " + ffmi;
                 labelFFMI.Text = (labelDesc);
                 ActiveCalculator.nutritionCalculator.SaveToFFMIMemory(mass + "," + bodyfat + "," + height + "," + labelDesc);
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.nutritionCalculator.ToString(), "FFMI", "FFMI=" + mass + "-(" + mass + "*(" + bodyfat + "/100))" + "/ " + height + "^2).", labelDesc);
+
             }
             catch
             {

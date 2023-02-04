@@ -34,6 +34,7 @@ namespace OMNIATHLETICS
                 string labelDesc = "Torque: " + torque;
                 labelTorque.Text = (labelDesc);
                 ActiveCalculator.biomechanicsCalculator.SaveToTorqueMemory(force + "," + radius + "," + labelDesc);
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.biomechanicsCalculator.ToString(), "Torque", "Torque = " + force + "*" + radius, labelDesc);
             }           
             catch
             {

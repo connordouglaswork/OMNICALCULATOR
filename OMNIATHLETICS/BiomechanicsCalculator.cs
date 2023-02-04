@@ -8,6 +8,11 @@ namespace OMNIATHLETICS
 {
     public class BiomechanicsCalculator : Calculator
     {
+        public override string ToString()
+        {
+            return ("Biomechanics Calculator");
+        }
+
         public List<string> localHorizontalProjectionVelocityCalculationMemory = new List<string>();
 
         public int currentHorizontalProjectionVelocityCalcualtionLoaded = -1;

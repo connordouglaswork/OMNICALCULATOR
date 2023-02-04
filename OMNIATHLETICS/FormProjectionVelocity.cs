@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -34,7 +35,9 @@ namespace OMNIATHLETICS
                 string labelDesc = "Velocity: " + horVelocity;
                 labelVel.Text = (labelDesc);
                 ActiveCalculator.biomechanicsCalculator.SaveToHorizontalProjectionVelocityMemory(velocity + "," + angle + "," + labelDesc);
-            }           
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.biomechanicsCalculator.ToString(), "Horizontal Projection Velocoty", "The horizontal component of the projection velocity = " + velocity + " COS * " + angle, labelDesc);
+
+            }
             catch
             {
                 System.Windows.Forms.MessageBox.Show("Invalid Input");

@@ -8,6 +8,11 @@ namespace OMNIATHLETICS
 {
     public class NutritionCalculator : Calculator
     {
+        public override string ToString()
+        {
+            return ("Nutrition Calculator");
+        }
+
         public List<string> localFFMICalculationMemory = new List<string>();
 
         public int currentFFMICalcualtionLoaded = -1;

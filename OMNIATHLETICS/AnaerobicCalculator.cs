@@ -8,6 +8,11 @@ namespace OMNIATHLETICS
 {
     public class AnaerobicCalculator : Calculator
     {
+        public override string ToString()
+        {
+            return ("Anaerobic Calculator");
+        }
+
         public List<string> localWingatePeakPowerCalculationMemory = new List<string>();
 
         public int currentWingatePeakPowerCalcualtionLoaded = -1;

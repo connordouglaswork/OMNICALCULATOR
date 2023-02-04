@@ -8,6 +8,11 @@ namespace OMNIATHLETICS
 {
     public class AerobicCalculator : Calculator
     {
+        public override string ToString()
+        {
+            return ("Aerobic Calculator");
+        }
+
         public List<string> localYoYoCalculationMemory = new List<string>();
 
         public int currentYoYoCalcualtionLoaded = -1;

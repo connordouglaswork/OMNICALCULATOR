@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -34,7 +35,9 @@ namespace OMNIATHLETICS
                 string labelDesc = "Drop Off: " + dropOff;
                 labelDropOff.Text = (labelDesc);
                 ActiveCalculator.anaerobicthCalculator.SaveToPRTMemory(firstSprint + "," + lastSprint + "," + labelDesc);
-            }         
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.anaerobicthCalculator.ToString(), "Phosphate Recovery Test", "Drop off distance = " + lastSprint + " – " + firstSprint, labelDesc);
+
+            }
             catch
             {
                 System.Windows.Forms.MessageBox.Show("Invalid Input");

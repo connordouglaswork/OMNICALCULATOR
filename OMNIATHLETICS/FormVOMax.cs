@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -43,7 +44,9 @@ namespace OMNIATHLETICS
                 string labelDesc = "Valid VO2 Max: " + valid;
                 labelValid.Text = (labelDesc);
                 ActiveCalculator.aerobicCalculator.SaveToVOMemory(platau.ToString() + "," + blood + "," + rer + "," + rpe + "," + hr + "," + age + "," + labelDesc);
-            }          
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.aerobicCalculator.ToString(), "VO2 Max Validator", "Platau Observed=" + platau.ToString() + "Blood Lactate=" + blood + "RER" + rer + "RPE=" + rpe + "hr=" + hr + " age=" + age, labelDesc);
+
+            }
             catch
             {
                 System.Windows.Forms.MessageBox.Show("Invalid Input");

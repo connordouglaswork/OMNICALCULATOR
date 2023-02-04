@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -34,6 +35,7 @@ namespace OMNIATHLETICS
                 string labelDesc = "Loading: " + AcsmPrediction;
                 labelLoading.Text = (labelDesc);
                 ActiveCalculator.strengthCalculator.SaveToLoadingMemory(max + "," + percent + "," + labelDesc);
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.strengthCalculator.ToString(), "Loading Tool", "Loading = % / 100 *" + max, labelDesc);
             }
             catch
             {

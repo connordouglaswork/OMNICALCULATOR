@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -35,6 +36,8 @@ namespace OMNIATHLETICS
                 string labelDesc = "Protein Requirements: \n" + protein;
                 labelProtein.Text = (labelDesc);
                 ActiveCalculator.nutritionCalculator.SaveToProteinIndexMemory(mass + "," + trainingType + "," + labelDesc);
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.nutritionCalculator.ToString(), "Protein Index", mass + "," + trainingType, labelDesc);
+
             }
             catch
             {

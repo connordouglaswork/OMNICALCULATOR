@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -42,7 +43,9 @@ namespace OMNIATHLETICS
                 string labelDesc = "Peak Power Zone: " + zone;
                 labelPeakPowerZone.Text = (labelDesc);
                 ActiveCalculator.powerCalculator.SaveToZonesMemory(max + "," + type + "," + labelDesc);
-            }           
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.powerCalculator.ToString(), "Power Zones", "1RM = " + max , labelDesc);
+
+            }
             catch
             {
                 System.Windows.Forms.MessageBox.Show("Invalid Input");

@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using OMNIATHLETICS.ActiveDirectory;
+using System.Data.SqlClient;
+using System.Security.Cryptography.X509Certificates;
 
 namespace OMNIATHLETICS
 {
@@ -36,6 +38,7 @@ namespace OMNIATHLETICS
                 string labelDesc = "1RM: " + AcsmPrediction;
                 label1RM.Text = (labelDesc);
                 ActiveCalculator.strengthCalculator.SaveToACSMMemory(loading + "," + reps + "," + labelDesc);
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.strengthCalculator.ToString(), "ACSM 1RM Predictor", "1RM = " + loading + " / ((100 – (" + reps + " x 2.5)) / 100)", labelDesc);
             }
             catch
             {

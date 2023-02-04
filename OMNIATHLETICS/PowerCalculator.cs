@@ -9,6 +9,11 @@ namespace OMNIATHLETICS
 {
     public class PowerCalculator : Calculator
     {
+        public override string ToString()
+        {
+            return ("Power Calculator");
+        }
+
         public List<string> localZonesCalculationMemory = new List<string>();
 
         public int currentZonesCalcualtionLoaded = -1;

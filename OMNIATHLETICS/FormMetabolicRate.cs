@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -40,7 +41,8 @@ namespace OMNIATHLETICS
                 string labelDesc = "MBR: " + metabolicRate;
                 labelMBR.Text = (labelDesc);
                 ActiveCalculator.nutritionCalculator.SaveToMetabolicRateMemory(mass + "," + height + "," + age + "," + sex + "," + labelDesc);
-            }           
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.nutritionCalculator.ToString(), "Metabolic Rate", mass + "," + height + "," + age + "," + sex, labelDesc);
+            }
             catch
             {
                 System.Windows.Forms.MessageBox.Show("Invalid Input");

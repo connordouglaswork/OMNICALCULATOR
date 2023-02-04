@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormVOMax));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelAge = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.textBoxAge = new System.Windows.Forms.TextBox();
+            this.checkBoxPlatau = new System.Windows.Forms.CheckBox();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,10 +53,6 @@
             this.buttonCalculate = new System.Windows.Forms.Button();
             this.textRPE = new System.Windows.Forms.TextBox();
             this.textBoxHeartRate = new System.Windows.Forms.TextBox();
-            this.checkBoxPlatau = new System.Windows.Forms.CheckBox();
-            this.labelAge = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.textBoxAge = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,6 +86,48 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(350, 541);
             this.panel1.TabIndex = 12;
+            // 
+            // labelAge
+            // 
+            this.labelAge.AutoSize = true;
+            this.labelAge.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAge.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelAge.Location = new System.Drawing.Point(46, 259);
+            this.labelAge.Name = "labelAge";
+            this.labelAge.Size = new System.Drawing.Size(34, 16);
+            this.labelAge.TabIndex = 33;
+            this.labelAge.Text = "Age:";
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Location = new System.Drawing.Point(49, 281);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(255, 1);
+            this.panel6.TabIndex = 32;
+            // 
+            // textBoxAge
+            // 
+            this.textBoxAge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
+            this.textBoxAge.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxAge.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxAge.ForeColor = System.Drawing.SystemColors.Control;
+            this.textBoxAge.Location = new System.Drawing.Point(86, 260);
+            this.textBoxAge.Name = "textBoxAge";
+            this.textBoxAge.Size = new System.Drawing.Size(218, 15);
+            this.textBoxAge.TabIndex = 31;
+            // 
+            // checkBoxPlatau
+            // 
+            this.checkBoxPlatau.AutoSize = true;
+            this.checkBoxPlatau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.checkBoxPlatau.ForeColor = System.Drawing.SystemColors.Control;
+            this.checkBoxPlatau.Location = new System.Drawing.Point(44, 76);
+            this.checkBoxPlatau.Name = "checkBoxPlatau";
+            this.checkBoxPlatau.Size = new System.Drawing.Size(156, 20);
+            this.checkBoxPlatau.TabIndex = 30;
+            this.checkBoxPlatau.Text = "VO2 Platau Observed";
+            this.checkBoxPlatau.UseVisualStyleBackColor = true;
             // 
             // buttonRefresh
             // 
@@ -242,11 +284,11 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Arial", 22F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(21, 20);
+            this.label1.Location = new System.Drawing.Point(38, 20);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(315, 35);
+            this.label1.Size = new System.Drawing.Size(283, 35);
             this.label1.TabIndex = 13;
-            this.label1.Text = "ASCM 1RM Predictor";
+            this.label1.Text = "VO2 MAX Validator";
             // 
             // buttonExit
             // 
@@ -295,48 +337,6 @@
             this.textBoxHeartRate.Name = "textBoxHeartRate";
             this.textBoxHeartRate.Size = new System.Drawing.Size(138, 15);
             this.textBoxHeartRate.TabIndex = 5;
-            // 
-            // checkBoxPlatau
-            // 
-            this.checkBoxPlatau.AutoSize = true;
-            this.checkBoxPlatau.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.checkBoxPlatau.ForeColor = System.Drawing.SystemColors.Control;
-            this.checkBoxPlatau.Location = new System.Drawing.Point(44, 76);
-            this.checkBoxPlatau.Name = "checkBoxPlatau";
-            this.checkBoxPlatau.Size = new System.Drawing.Size(156, 20);
-            this.checkBoxPlatau.TabIndex = 30;
-            this.checkBoxPlatau.Text = "VO2 Platau Observed";
-            this.checkBoxPlatau.UseVisualStyleBackColor = true;
-            // 
-            // labelAge
-            // 
-            this.labelAge.AutoSize = true;
-            this.labelAge.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAge.ForeColor = System.Drawing.SystemColors.Control;
-            this.labelAge.Location = new System.Drawing.Point(46, 259);
-            this.labelAge.Name = "labelAge";
-            this.labelAge.Size = new System.Drawing.Size(34, 16);
-            this.labelAge.TabIndex = 33;
-            this.labelAge.Text = "Age:";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(49, 281);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(255, 1);
-            this.panel6.TabIndex = 32;
-            // 
-            // textBoxAge
-            // 
-            this.textBoxAge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
-            this.textBoxAge.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxAge.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxAge.ForeColor = System.Drawing.SystemColors.Control;
-            this.textBoxAge.Location = new System.Drawing.Point(86, 260);
-            this.textBoxAge.Name = "textBoxAge";
-            this.textBoxAge.Size = new System.Drawing.Size(218, 15);
-            this.textBoxAge.TabIndex = 31;
             // 
             // FormVOMax
             // 

@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -40,7 +41,9 @@ namespace OMNIATHLETICS
                 string labelDesc = "Rating: " + rating;
                 labelRating.Text = (labelDesc);
                 ActiveCalculator.aerobicCalculator.SaveToYoYoMemory(level + "," + distance + "," + labelDesc);
-            }          
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.aerobicCalculator.ToString(), "YoYo Test", "distance = " + distance + " level = " + level, labelDesc);
+
+            }
             catch
             {
                 System.Windows.Forms.MessageBox.Show("Invalid Input");

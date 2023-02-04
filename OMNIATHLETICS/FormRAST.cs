@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -47,7 +48,9 @@ namespace OMNIATHLETICS
                 string labelDesc = "FI: " + FI;
                 labelFatigue.Text = (labelDesc);
                 ActiveCalculator.anaerobicthCalculator.SaveToRASTFIMemory(peakPower + "," + LowestPower + "," + time + "," + labelDesc);
-            }          
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.anaerobicthCalculator.ToString(), "RAST Fatigue Index", "FI = (" + peakPower +" – " + LowestPower + ") / " + time, labelDesc);
+
+            }
             catch
             {
                 System.Windows.Forms.MessageBox.Show("Invalid Input");
@@ -84,6 +87,8 @@ namespace OMNIATHLETICS
                 string labelDesc = "AC: " + AC;
                 labelAnaerobicCapacity.Text = (labelDesc);
                 ActiveCalculator.anaerobicthCalculator.SaveToRASTACMemory(ppo1 + "," + ppo2 + "," + ppo3 + "," + ppo4 + "," + ppo5 + "," + ppo6 + "," + labelDesc);
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.anaerobicthCalculator.ToString(), "RAST Anaerobic Capacity", ppo1 + " + " + ppo2 + " + " + ppo3 + " + " + ppo4 + " + " + ppo5 + " + " + ppo6, labelDesc);
+
             }
             catch
             {

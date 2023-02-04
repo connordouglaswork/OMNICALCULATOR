@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -34,7 +35,8 @@ namespace OMNIATHLETICS
                 string labelDesc = "Peak Power: " + lbPower;
                 labelPower.Text = (labelDesc);
                 ActiveCalculator.powerCalculator.SaveToPeakMemory(mass + "," + height + "," + labelDesc);
-            }          
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.powerCalculator.ToString(), "Lower Body Peak Power Predictor", "Power (W) = 60.7x " + height + " +45.3 x " + mass + "-2055.", labelDesc);
+            }
             catch
             {
                 System.Windows.Forms.MessageBox.Show("Invalid Input");

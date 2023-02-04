@@ -7,7 +7,12 @@ using System.Threading.Tasks;
 namespace OMNIATHLETICS
 {
     public class StrengthCalculator : Calculator
-    {     
+    {
+        public override string ToString()
+        {
+            return ("Strength Calculator");
+        }
+
         public int currentACSMCalcualtionLoaded = -1;
 
         public List<string> localACSMCalculatioMemory = new List<string>();

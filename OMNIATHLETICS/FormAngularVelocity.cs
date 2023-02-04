@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -36,7 +37,8 @@ namespace OMNIATHLETICS
                 string labelDesc = "Angular Velocity: " + angularVelocity;
                 labelAngularVelocity.Text = (labelDesc);
                 ActiveCalculator.biomechanicsCalculator.SaveToAngularVelocityMemory(angleInit + "," + angleFinal + "," + timeInit + "," + timeFinal + "," + labelDesc);
-            }           
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.biomechanicsCalculator.ToString(), "Angular Velocity", "w = " + angleFinal + " - " + angleInit + " / " + timeFinal + "-" + timeInit, labelDesc);
+            }
             catch
             {
                 System.Windows.Forms.MessageBox.Show("Invalid Input");

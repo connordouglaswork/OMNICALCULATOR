@@ -36,7 +36,9 @@ namespace OMNIATHLETICS
                 string labelDesc = "Angular Acceleration: \n" + angularAcceleration;
                 labelAngularAcceleration.Text = (labelDesc);
                 ActiveCalculator.biomechanicsCalculator.SaveToAngularAccelerationMemory(velocityInit + "," + velocityFinal + "," + timeInit + "," + timeFinal + "," + labelDesc);
-            }            
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.biomechanicsCalculator.ToString(), "Angular Acceleration", "w = " + velocityFinal + " - " + velocityInit + " / " + timeFinal + "-" + timeInit, labelDesc);
+
+            }
             catch
             {
                 System.Windows.Forms.MessageBox.Show("Invalid Input");
