@@ -710,7 +710,7 @@
             this.buttonHistory.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.buttonHistory.Size = new System.Drawing.Size(223, 40);
             this.buttonHistory.TabIndex = 2;
-            this.buttonHistory.Text = "Calculator History";
+            this.buttonHistory.Text = "Calculation History";
             this.buttonHistory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonHistory.UseVisualStyleBackColor = true;
             this.buttonHistory.Click += new System.EventHandler(this.buttonHistory_Click);

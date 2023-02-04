@@ -116,7 +116,7 @@ namespace OMNIATHLETICS
 
         private void buttonHistory_Click(object sender, EventArgs e)
         {
-            //null
+            openChildForms(new HistoryForm());
         }
 
         //Sub Menu Buttons
