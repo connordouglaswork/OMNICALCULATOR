@@ -20,13 +20,16 @@ namespace OMNIATHLETICS
             DoubleBuffered = true;
         }
 
+        //function to close the form
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        //calculate button press event function to get field values, calculate equation and store the result
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
+            //catch non numerical inputs
             try
             {
                 string mass = textBoxMass.Text;
@@ -34,15 +37,17 @@ namespace OMNIATHLETICS
                 string bmi = ActiveCalculator.nutritionCalculator.BMI(double.Parse(mass), double.Parse(height));
                 string labelDesc = "BMI: " + bmi;
                 labelBMI.Text = (labelDesc);
+                //store in local object memory list
                 ActiveCalculator.nutritionCalculator.SaveToBMIMemory(mass + "," + height + "," + labelDesc);
+                //add to history DB
                 ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.nutritionCalculator.ToString(), "BMI", "BMI = " + mass + " / " +  height + "^2", labelDesc);
             }
             catch
             {
                 System.Windows.Forms.MessageBox.Show("Invalid Input");
             }
-
         }
+
         private void buttonBack_Click(object sender, EventArgs e)
         {
             if (ActiveCalculator.nutritionCalculator.currentBMICalcualtionLoaded > 0)
@@ -58,11 +63,13 @@ namespace OMNIATHLETICS
             }
         }
 
+        //goes back through the objects local memory to the previous calculation
         private void buttonAbout_Click(object sender, EventArgs e)
         {
             ActiveCalculator.nutritionCalculator.About("BMI");
         }
 
+        //clears text box fields
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
             List<TextBox> textBoxes = new List<TextBox>() { textBoxHeight, textBoxMass };

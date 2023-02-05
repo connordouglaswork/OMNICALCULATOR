@@ -20,13 +20,16 @@ namespace OMNIATHLETICS
             DoubleBuffered = true;
         }
 
+        //function to close the form
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        //calculate button press event function to get field values, calculate equation and store the result
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
+            //catch non numerical inputs
             try
             {
                 string mass = textBoxMass.Text;
@@ -40,7 +43,9 @@ namespace OMNIATHLETICS
                 string metabolicRate = ActiveCalculator.nutritionCalculator.MetabolicRate(double.Parse(mass), double.Parse(height), int.Parse(age), sex);
                 string labelDesc = "MBR: " + metabolicRate;
                 labelMBR.Text = (labelDesc);
+                //store in local object memory list
                 ActiveCalculator.nutritionCalculator.SaveToMetabolicRateMemory(mass + "," + height + "," + age + "," + sex + "," + labelDesc);
+                //add to history DB
                 ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.nutritionCalculator.ToString(), "Metabolic Rate", mass + "," + height + "," + age + "," + sex, labelDesc);
             }
             catch
@@ -49,6 +54,7 @@ namespace OMNIATHLETICS
             }
         }
 
+        //goes back through the objects local memory to the previous calculation
         private void buttonBack_Click(object sender, EventArgs e)
         {
             if (ActiveCalculator.nutritionCalculator.currentMetabolicRateCalcualtionLoaded > 0)
@@ -70,17 +76,19 @@ namespace OMNIATHLETICS
                 }
 
                 labelMBR.Text = calculationFileds[4];
-                //delete it from list when gone
+                //remove current calculation
                 ActiveCalculator.nutritionCalculator.localMetabolicRateCalculationMemory.Remove(ActiveCalculator.nutritionCalculator.localMetabolicRateCalculationMemory[ActiveCalculator.nutritionCalculator.currentMetabolicRateCalcualtionLoaded]);
                 ActiveCalculator.nutritionCalculator.currentMetabolicRateCalcualtionLoaded--;
             }
         }
 
+        //display info about the equation
         private void buttonAbout_Click(object sender, EventArgs e)
         {
             ActiveCalculator.nutritionCalculator.About("Metabolic Rate");
         }
 
+        //clears text box fields
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
             List<TextBox> textBoxes = new List<TextBox>() { textBoxHeight, textBoxMass, textBoxAge };

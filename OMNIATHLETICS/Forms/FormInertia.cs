@@ -20,13 +20,16 @@ namespace OMNIATHLETICS
             DoubleBuffered = true;
         }
 
+        //function to close the form
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        //calculate button press event function to get field values, calculate equation and store the result
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
+            //catch non numerical inputs
             try
             {
                 string mass = textBoxMass.Text;
@@ -34,7 +37,9 @@ namespace OMNIATHLETICS
                 string inertia = ActiveCalculator.biomechanicsCalculator.Inertia(double.Parse(mass), double.Parse(radius));
                 string labelDesc = "Inertia: " + inertia;
                 labelInertia.Text = (labelDesc);
+                //store in local object memory list
                 ActiveCalculator.biomechanicsCalculator.SaveInertiaToMemory(mass + "," + radius + "," + labelDesc);
+                //add to history DB
                 ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.biomechanicsCalculator.ToString(), "Inertia", "I = " + mass + "*" + radius + "^2", labelDesc);
             }
             catch
@@ -43,6 +48,7 @@ namespace OMNIATHLETICS
             }
         }
 
+        //goes back through the objects local memory to the previous calculation
         private void buttonBack_Click(object sender, EventArgs e)
         {
             if (ActiveCalculator.biomechanicsCalculator.currentInertiaCalcualtionLoaded > 0)
@@ -52,17 +58,19 @@ namespace OMNIATHLETICS
                 textBoxMass.Text = calculationFileds[0];
                 textBoxRadius.Text = calculationFileds[1];
                 labelInertia.Text = calculationFileds[2];
-                //delete it from list when gone
+                //remove current calculation
                 ActiveCalculator.biomechanicsCalculator.localInertiaCalculationMemory.Remove(ActiveCalculator.biomechanicsCalculator.localInertiaCalculationMemory[ActiveCalculator.biomechanicsCalculator.currentInertiaCalcualtionLoaded]);
                 ActiveCalculator.biomechanicsCalculator.currentInertiaCalcualtionLoaded--;
             }
         }
 
+        //display info about the equation
         private void buttonAbout_Click(object sender, EventArgs e)
         {
             ActiveCalculator.biomechanicsCalculator.About("Inertia");
         }
 
+        //clears text box fields
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
             List<TextBox> textBoxes = new List<TextBox>() { textBoxMass, textBoxRadius };

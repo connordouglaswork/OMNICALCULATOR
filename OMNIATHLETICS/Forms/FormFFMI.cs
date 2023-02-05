@@ -21,13 +21,16 @@ namespace OMNIATHLETICS
             DoubleBuffered = true;
         }
 
+        //function to close the form
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        //calculate button press event function to get field values, calculate equation and store the result
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
+            //catch non numerical inputs
             try
             {
                 string mass = textBoxMass.Text;
@@ -36,9 +39,10 @@ namespace OMNIATHLETICS
                 string ffmi = ActiveCalculator.nutritionCalculator.FFMI(double.Parse(bodyfat), double.Parse(mass), double.Parse(height));
                 string labelDesc = "FFMI: " + ffmi;
                 labelFFMI.Text = (labelDesc);
+                //store in local object memory list
                 ActiveCalculator.nutritionCalculator.SaveToFFMIMemory(mass + "," + bodyfat + "," + height + "," + labelDesc);
+                //add to history DB
                 ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.nutritionCalculator.ToString(), "FFMI", "FFMI=" + mass + "-(" + mass + "*(" + bodyfat + "/100))" + "/ " + height + "^2).", labelDesc);
-
             }
             catch
             {
@@ -46,6 +50,7 @@ namespace OMNIATHLETICS
             }
         }
 
+        //goes back through the objects local memory to the previous calculation
         private void buttonBack_Click(object sender, EventArgs e)
         {
             if (ActiveCalculator.nutritionCalculator.currentFFMICalcualtionLoaded > 0)
@@ -56,17 +61,19 @@ namespace OMNIATHLETICS
                 textBoxBodyfat.Text = calculationFileds[1];
                 textBoxHeight.Text = calculationFileds[2];
                 labelFFMI.Text = calculationFileds[3];
-                //delete it from list when gone
+                //remove current calculation
                 ActiveCalculator.nutritionCalculator.localFFMICalculationMemory.Remove(ActiveCalculator.nutritionCalculator.localFFMICalculationMemory[ActiveCalculator.nutritionCalculator.currentFFMICalcualtionLoaded]);
                 ActiveCalculator.nutritionCalculator.currentFFMICalcualtionLoaded--;
             }
         }
 
+        //display info about the equation
         private void buttonAbout_Click(object sender, EventArgs e)
         {
             ActiveCalculator.nutritionCalculator.About("FFMI");
         }
 
+        //clears text box fields
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
             List<TextBox> textBoxes = new List<TextBox>() { textBoxBodyfat, textBoxHeight, textBoxMass };

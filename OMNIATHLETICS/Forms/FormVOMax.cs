@@ -21,13 +21,16 @@ namespace OMNIATHLETICS
             DoubleBuffered = true;
         }
 
+        //function to close the form
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        //calculate button press event function to get field values, calculate equation and store the result
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
+            //catch non numerical inputs
             try
             {
                 bool platau = false;
@@ -43,9 +46,10 @@ namespace OMNIATHLETICS
                 string valid = ActiveCalculator.aerobicCalculator.VOMaxValidator(platau, double.Parse(blood), double.Parse(rer), double.Parse(rpe), double.Parse(hr), int.Parse(age));
                 string labelDesc = "Valid VO2 Max: " + valid;
                 labelValid.Text = (labelDesc);
+                //store in local object memory list
                 ActiveCalculator.aerobicCalculator.SaveToVOMemory(platau.ToString() + "," + blood + "," + rer + "," + rpe + "," + hr + "," + age + "," + labelDesc);
+                //add to history DB
                 ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.aerobicCalculator.ToString(), "VO2 Max Validator", "Platau Observed=" + platau.ToString() + "Blood Lactate=" + blood + "RER" + rer + "RPE=" + rpe + "hr=" + hr + " age=" + age, labelDesc);
-
             }
             catch
             {
@@ -53,6 +57,7 @@ namespace OMNIATHLETICS
             }
         }
 
+        //goes back through the objects local memory to the previous calculation
         private void buttonBack_Click(object sender, EventArgs e)
         {
             if (ActiveCalculator.aerobicCalculator.currentVOCalcualtionLoaded > 0)
@@ -73,17 +78,19 @@ namespace OMNIATHLETICS
                 textBoxHeartRate.Text = calculationFileds[4];
                 textBoxAge.Text = calculationFileds[5];
                 labelValid.Text = calculationFileds[6];
-                //delete it from list when gone
+                //remove current calculation
                 ActiveCalculator.aerobicCalculator.localVOCalculationMemory.Remove(ActiveCalculator.aerobicCalculator.localVOCalculationMemory[ActiveCalculator.aerobicCalculator.currentVOCalcualtionLoaded]);
                 ActiveCalculator.aerobicCalculator.currentVOCalcualtionLoaded--;
             }
         }
 
+        //display info about the equation
         private void buttonAbout_Click(object sender, EventArgs e)
         {
             ActiveCalculator.aerobicCalculator.About("VO2 Max Validator");
         }
 
+        //clears text box fields
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
             List<TextBox> textBoxes = new List<TextBox>() { textBoxBloodLactate, textBoxRER, textRPE, textBoxHeartRate };

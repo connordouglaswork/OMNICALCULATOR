@@ -19,13 +19,17 @@ namespace OMNIATHLETICS
             InitializeComponent();
             DoubleBuffered = true;
         }
+
+        //function to close the form
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        //calculate button press event function to get field values, calculate equation and store the result
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
+            //catch non numerical inputs
             try
             {
                 string angleInit = textBoxAngleInit.Text;
@@ -35,7 +39,9 @@ namespace OMNIATHLETICS
                 string angularVelocity = ActiveCalculator.biomechanicsCalculator.AngularVelocity(double.Parse(angleInit), double.Parse(angleFinal), double.Parse(timeInit), double.Parse(timeFinal));
                 string labelDesc = "Angular Velocity: " + angularVelocity;
                 labelAngularVelocity.Text = (labelDesc);
+                //store in local object memory list
                 ActiveCalculator.biomechanicsCalculator.SaveToAngularVelocityMemory(angleInit + "," + angleFinal + "," + timeInit + "," + timeFinal + "," + labelDesc);
+                //add to history DB
                 ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.biomechanicsCalculator.ToString(), "Angular Velocity", "w = " + angleFinal + " - " + angleInit + " / " + timeFinal + "-" + timeInit, labelDesc);
             }
             catch
@@ -44,6 +50,7 @@ namespace OMNIATHLETICS
             }
         }
 
+        //goes back through the objects local memory to the previous calculation
         private void buttonBack_Click(object sender, EventArgs e)
         {
             if (ActiveCalculator.biomechanicsCalculator.currentAngularVelocityCalcualtionLoaded > 0)
@@ -55,17 +62,19 @@ namespace OMNIATHLETICS
                 textBoxTimeInit.Text = calculationFileds[2];
                 textBoxTimeFinal.Text = calculationFileds[3];
                 labelAngularVelocity.Text = calculationFileds[4];
-                //delete it from list when gone
+                //remove current calculation
                 ActiveCalculator.biomechanicsCalculator.localAngularVelocityCalculationMemory.Remove(ActiveCalculator.biomechanicsCalculator.localAngularVelocityCalculationMemory[ActiveCalculator.biomechanicsCalculator.currentAngularVelocityCalcualtionLoaded]);
                 ActiveCalculator.biomechanicsCalculator.currentAngularVelocityCalcualtionLoaded--;
             }
         }
 
+        //display info about the equation
         private void buttonAbout_Click(object sender, EventArgs e)
         {
             ActiveCalculator.biomechanicsCalculator.About("Angular Velocity");
         }
 
+        //clears text box fields
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
             List<TextBox> textBoxes = new List<TextBox>() { textBoxAngleInit, textBoxAngleFinal, textBoxTimeInit, textBoxTimeFinal };

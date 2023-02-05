@@ -20,13 +20,16 @@ namespace OMNIATHLETICS
             DoubleBuffered = true;
         }
 
+        //function to close the form
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        //calculate button press event function to get field values, calculate equation and store the result
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
+            //catch non numerical inputs
             try
             {
                 string mass = textBoxJumpHeight.Text;
@@ -34,7 +37,9 @@ namespace OMNIATHLETICS
                 string lbPower = ActiveCalculator.powerCalculator.LowerBodyPeakPowerPredictor(double.Parse(height), double.Parse(mass));
                 string labelDesc = "Peak Power: " + lbPower;
                 labelPower.Text = (labelDesc);
+                //store in local object memory list
                 ActiveCalculator.powerCalculator.SaveToPeakMemory(mass + "," + height + "," + labelDesc);
+                //add to history DB
                 ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.powerCalculator.ToString(), "Lower Body Peak Power Predictor", "Power (W) = 60.7x " + height + " +45.3 x " + mass + "-2055.", labelDesc);
             }
             catch
@@ -43,6 +48,7 @@ namespace OMNIATHLETICS
             }
         }
 
+        //goes back through the objects local memory to the previous calculation
         private void buttonBack_Click(object sender, EventArgs e)
         {
             if (ActiveCalculator.powerCalculator.currentPeakCalcualtionLoaded > 0)
@@ -52,17 +58,19 @@ namespace OMNIATHLETICS
                 textBoxMass.Text = calculationFileds[0];
                 textBoxMass.Text = calculationFileds[1];
                 labelPower.Text = calculationFileds[2];
-                //delete it from list when gone
+                //remove current calculation
                 ActiveCalculator.powerCalculator.localPeakCalculationMemory.Remove(ActiveCalculator.powerCalculator.localPeakCalculationMemory[ActiveCalculator.powerCalculator.currentPeakCalcualtionLoaded]);
                 ActiveCalculator.powerCalculator.currentPeakCalcualtionLoaded--;
             }
         }
 
+        //display info about the equation
         private void buttonAbout_Click(object sender, EventArgs e)
         {
             ActiveCalculator.powerCalculator.About("Lower Body Peak Power Predictor");
         }
 
+        //clears text box fields
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
             List<TextBox> textBoxes = new List<TextBox>() { textBoxJumpHeight, textBoxMass };

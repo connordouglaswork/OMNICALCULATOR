@@ -20,13 +20,16 @@ namespace OMNIATHLETICS
             DoubleBuffered = true;
         }
 
+        //function to close the form
         private void buttonExit_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        //calculate button press event function to get field values, calculate equation and store the result
         private void buttonCalculate_Click(object sender, EventArgs e)
         {
+            //catch non numerical inputs
             try
             {
                 string BPF = textBoxBPF.Text;
@@ -34,7 +37,9 @@ namespace OMNIATHLETICS
                 string DSI = ActiveCalculator.strengthCalculator.DynamicStrengthIndex(Double.Parse(BPF), Double.Parse(DPF));
                 string labelDesc = "DSI: " + DSI;
                 labelDSI.Text = (labelDesc);
+                //store in local object memory list
                 ActiveCalculator.strengthCalculator.SaveToDSIMemory(BPF + "," + DPF + "," + labelDesc);
+                //add to history DB
                 ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.strengthCalculator.ToString(), "Dynamic Strength Index", "DSI = " + BPF + " / " + DPF, labelDesc);
             }
             catch
@@ -43,11 +48,13 @@ namespace OMNIATHLETICS
             }
         }
 
+        //display info about the equation
         private void buttonAbout_Click(object sender, EventArgs e)
         {
             ActiveCalculator.strengthCalculator.About("Dynamic Strength Index");
         }
 
+        //goes back through the objects local memory to the previous calculation
         private void buttonBack_Click(object sender, EventArgs e)
         {
             if (ActiveCalculator.strengthCalculator.currentDSICalcualtionLoaded > 0)
@@ -57,12 +64,13 @@ namespace OMNIATHLETICS
                 textBoxBPF.Text = calculationFileds[0];
                 textBoxDPF.Text = calculationFileds[1];
                 labelDSI.Text = calculationFileds[2];
-                //delete it from list when gone
+                //remove current calculation
                 ActiveCalculator.strengthCalculator.localDSICalculatioMemory.Remove(ActiveCalculator.strengthCalculator.localDSICalculatioMemory[ActiveCalculator.strengthCalculator.currentDSICalcualtionLoaded]);
                 ActiveCalculator.strengthCalculator.currentDSICalcualtionLoaded--;
             }
         }
 
+        //clears text box fields
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
             List<TextBox> textBoxes = new List<TextBox>() { textBoxBPF, textBoxDPF };
