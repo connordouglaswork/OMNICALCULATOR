@@ -12,11 +12,8 @@ namespace OMNIATHLETICS
     //Parent Class for unique sports calculators that contains base calculator functions 
     public class Calculator
     {
-        //Databse connection string for calcualtion history
+        //Database connection string for calcualtion history
         private string conString = "Data Source=DESKTOP-PGJPJK2\\MSSQLSERVER01;Initial Catalog=OmniCalculationsDB;Integrated Security=True";
-
-        //Current insert ID for primary key reference
-        private int currentCalcualtionID = 1;
 
         //Save to calcualtion history table in OmniCalculationsDB
         public void SaveToCalculatorHistory(string calculator, string calculation, string equation, string result)
@@ -25,12 +22,25 @@ namespace OMNIATHLETICS
             con.Open();
             if (con.State == System.Data.ConnectionState.Open)
             {
-                string q = "insert into CalculationData(id,Calculator,Calculation,Equation,Result)values('" + currentCalcualtionID + "','" + calculator + "','" + calculation + "','" + equation + "','" + result + "')";
+                string q = "insert into CalculationData(Calculator,Calculation,Equation,Result)values('" + calculator + "','" + calculation + "','" + equation + "','" + result + "')";
                 SqlCommand cmd = new SqlCommand(q, con);
                 cmd.ExecuteNonQuery();
-                currentCalcualtionID++;
             }
         }
+
+        //Delete from calcualtion history table in OmniCalculationsDB
+        public void DeletefromCalculatorHistory(int id)
+        {
+            SqlConnection con = new SqlConnection(conString);
+            con.Open();
+            if (con.State == System.Data.ConnectionState.Open)
+            {
+                string q = "delete from CalculationData where ID='" + id + "'";
+                SqlCommand cmd = new SqlCommand(q, con);
+                cmd.ExecuteNonQuery();
+            }
+        }
+
 
         //help/naming ToString override
         public override string ToString()

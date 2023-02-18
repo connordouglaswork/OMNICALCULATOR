@@ -118,43 +118,46 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="aerobiciamge_35x35" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\aerobiciamge_35x35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="strengthimage_35x35" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\strengthimage_35x35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="biomechanicsimage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\biomechanicsimage1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="poweriamge_35x35" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\poweriamge_35x35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="nutritionimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nutritionimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="nutritionimage_35x35" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nutritionimage_35x35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="anaerobicimage_35x35" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\anaerobicimage_35x35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="homepagebackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\homepagebackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="biomechanicsimage_35x35" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\biomechanicsimage_35x35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="biomechanicsimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\biomechanicsimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="strengthimage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\strengthimage1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="strengthimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\strengthimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="aerobiciamge_35x35" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aerobiciamge_35x35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nutritionimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nutritionimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="strengthimage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strengthimage1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="anaerobicimage_35x35" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\anaerobicimage_35x35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="biomechanicsimage_35x35" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\biomechanicsimage_35x35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="homepagebackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\homepagebackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="biomechanicsimage1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\biomechanicsimage1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="nutritionimage_35x35" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nutritionimage_35x35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="poweriamge" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\poweriamge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="biomechanicsimage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\biomechanicsimage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="strengthimage_35x35" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\strengthimage_35x35.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="background_970x699" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\background_970x699.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

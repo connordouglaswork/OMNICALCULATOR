@@ -343,6 +343,7 @@
     <None Include="Resources\poweriamge.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\background_970x699.jpg" />
     <Content Include="UML\OMNIathleticsUML.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
