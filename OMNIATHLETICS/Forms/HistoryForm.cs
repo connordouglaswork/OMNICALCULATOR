@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.SQLite;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,7 +24,30 @@ namespace OMNIATHLETICS
         private void HistoryForm_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'omniCalculationsDBDataSet.CalculationData' table. You can move, or remove it, as needed.
-            this.calculationDataTableAdapter.Fill(this.omniCalculationsDBDataSet.CalculationData);
+            var parentdir = Path.GetDirectoryName(System.Windows.Forms.Application.StartupPath);
+            string conString = "Data Source=" + parentdir + "\\OmniCalculationsDB.db;";
+            SQLiteConnection con = new SQLiteConnection(conString);
+            con.Open();
+            string select = "SELECT * from CalculationData";
+            string calculatorSelected = comboBoxType.Text;
+            if (calculatorSelected != "All Types")
+            {
+                select = "SELECT * from CalculationData WHERE Calculator='" + calculatorSelected + "'";
+
+            }
+            
+            
+            SQLiteCommand cmd;
+            SQLiteDataAdapter da;
+            cmd = con.CreateCommand();
+            cmd.CommandText = select;
+
+            da = new SQLiteDataAdapter(select, con);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "CalculationData");
+            dataGridViewHistory.DataSource = ds;
+            dataGridViewHistory.DataMember = "CalculationData";
+            con.Close();
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
@@ -37,11 +62,12 @@ namespace OMNIATHLETICS
                 ActiveCalculator.calcualtor.DeletefromCalculatorHistory(id);
             }
             //refresh gridview
-            string conString = "Data Source=DESKTOP-PGJPJK2\\MSSQLSERVER01;Initial Catalog=OmniCalculationsDB;Integrated Security=True";
-            SqlConnection con = new SqlConnection(conString);
+            var parentdir = Path.GetDirectoryName(System.Windows.Forms.Application.StartupPath);
+            string conString = "Data Source=" + parentdir + "\\OmniCalculationsDB.db;";
+            SQLiteConnection con = new SQLiteConnection(conString);
             con.Open();
             string select = "SELECT * from CalculationData";
-            SqlDataAdapter da = new SqlDataAdapter(select, con);
+            SQLiteDataAdapter da = new SQLiteDataAdapter(select, con);
             DataSet ds = new DataSet();
             da.Fill(ds, "CalculationData");
             dataGridViewHistory.DataSource = ds;
@@ -54,11 +80,12 @@ namespace OMNIATHLETICS
             string calculatorSelected = comboBoxType.Text;
             if(calculatorSelected=="All Types")
             {
-                string conString = "Data Source=DESKTOP-PGJPJK2\\MSSQLSERVER01;Initial Catalog=OmniCalculationsDB;Integrated Security=True";
-                SqlConnection con = new SqlConnection(conString);
+                var parentdir = Path.GetDirectoryName(System.Windows.Forms.Application.StartupPath);
+                string conString = "Data Source=" + parentdir + "\\OmniCalculationsDB.db;";
+                SQLiteConnection con = new SQLiteConnection(conString);
                 con.Open();
                 string select = "SELECT * from CalculationData";
-                SqlDataAdapter da = new SqlDataAdapter(select, con);
+                SQLiteDataAdapter da = new SQLiteDataAdapter(select, con);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "CalculationData");
                 dataGridViewHistory.DataSource = ds;
@@ -66,12 +93,13 @@ namespace OMNIATHLETICS
                 con.Close();
             }
             else
-            {           
-                string conString = "Data Source=DESKTOP-PGJPJK2\\MSSQLSERVER01;Initial Catalog=OmniCalculationsDB;Integrated Security=True";
-                SqlConnection con = new SqlConnection(conString);
+            {
+                var parentdir = Path.GetDirectoryName(System.Windows.Forms.Application.StartupPath);
+                string conString = "Data Source=" + parentdir + "\\OmniCalculationsDB.db;";
+                SQLiteConnection con = new SQLiteConnection(conString);
                 con.Open();
                 string select = "SELECT * from CalculationData WHERE Calculator='" + calculatorSelected + "'";
-                SqlDataAdapter da = new SqlDataAdapter(select, con);
+                SQLiteDataAdapter da = new SQLiteDataAdapter(select, con);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "CalculationData");
                 dataGridViewHistory.DataSource = ds;
