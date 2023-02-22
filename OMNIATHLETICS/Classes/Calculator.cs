@@ -19,12 +19,10 @@ namespace OMNIATHLETICS
         //private static string conString = @"URI=file:../OmniCalculationsDB.db";
         SQLiteConnection con;
 
-        public SQLiteConnection CreateConnection()
+        public SQLiteConnection CheckDB()
         {
             var parentdir = Path.GetDirectoryName(System.Windows.Forms.Application.StartupPath);
             string conString = "Data Source=" + parentdir + "\\OmniCalculationsDB.db;";
-            //SQLiteConnection con;
-            // Create a new database connection:
             con = new SQLiteConnection(conString);
             // Open the connection:
             try
@@ -32,12 +30,12 @@ namespace OMNIATHLETICS
                 con.Open();
                 try
                 {
-                    //string insertQuery = "select * from CalculationData";
+                    string insertQuery = "select * from CalculationData";
 
-                    //SQLiteCommand cmd;
-                    //cmd = con.CreateCommand();
-                    //cmd.CommandText = insertQuery;
-                    //cmd.ExecuteReader();
+                    SQLiteCommand cmd;
+                    cmd = con.CreateCommand();
+                    cmd.CommandText = insertQuery;
+                    cmd.ExecuteReader();
                 }
                 catch (Exception)
                 {
@@ -48,6 +46,27 @@ namespace OMNIATHLETICS
             catch (Exception ex) //if table doesnt exist call to create it
             {
             }
+            con.Close();
+            return con;
+        }
+
+        public SQLiteConnection CreateConnection()
+        {
+            var parentdir = Path.GetDirectoryName(System.Windows.Forms.Application.StartupPath);
+            string conString = "Data Source=" + parentdir + "\\OmniCalculationsDB.db;";
+            
+            
+            try
+            {
+                con = new SQLiteConnection(conString);
+                con.Open();
+            }
+            catch (Exception)
+            {
+                CreateTable(con);
+
+            }
+            
             return con;
         }
         //Save to calcualtion history table in OmniCalculationsDB

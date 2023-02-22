@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OMNIATHLETICS.ActiveDirectory;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,12 +14,12 @@ namespace OMNIATHLETICS
     public partial class Form1 : Form
     {
         public Form1()
-        {           
+        {
             InitializeComponent();
             customizeDesign();
             DoubleBuffered = true;
+            ActiveCalculator.calcualtor.CheckDB();
         }
-
         //Hides submenu items on entry
         private void customizeDesign()
         {
