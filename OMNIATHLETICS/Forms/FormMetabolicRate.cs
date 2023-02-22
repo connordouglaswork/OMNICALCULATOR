@@ -41,12 +41,12 @@ namespace OMNIATHLETICS
                     sex = "Male";
                 }
                 string metabolicRate = ActiveCalculator.nutritionCalculator.MetabolicRate(double.Parse(mass), double.Parse(height), int.Parse(age), sex);
-                string labelDesc = "MBR: " + metabolicRate;
+                string labelDesc = "MBR(cals): " + metabolicRate;
                 labelMBR.Text = (labelDesc);
                 //store in local object memory list
                 ActiveCalculator.nutritionCalculator.SaveToMetabolicRateMemory(mass + "," + height + "," + age + "," + sex + "," + labelDesc);
                 //add to history DB
-                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.nutritionCalculator.ToString(), "Metabolic Rate", mass + "," + height + "," + age + "," + sex, labelDesc);
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.nutritionCalculator.ToString(), "Metabolic Rate", "Body Stats:" + mass + "kg," + height + "cm," + age + "yrs," + sex, labelDesc);
             }
             catch
             {

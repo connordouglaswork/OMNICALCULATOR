@@ -40,7 +40,7 @@ namespace OMNIATHLETICS
                 //store in local object memory list
                 ActiveCalculator.biomechanicsCalculator.SaveToHorizontalProjectionVelocityMemory(velocity + "," + angle + "," + labelDesc);
                 //add to history DB
-                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.biomechanicsCalculator.ToString(), "Horizontal Projection Velocoty", "The horizontal component of the projection velocity = " + velocity + " COS * " + angle, labelDesc);
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.biomechanicsCalculator.ToString(), "Horizontal Projection Velocoty", "velocity = " + velocity + " COS * " + angle, labelDesc);
             }
             catch
             {

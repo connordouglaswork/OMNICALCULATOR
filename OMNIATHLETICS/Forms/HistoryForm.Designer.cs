@@ -29,8 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewHistory = new System.Windows.Forms.DataGridView();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calculatorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.calculationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.equationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.resultDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.calculationDataBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.omniCalculationsDBDataSet = new OMNIATHLETICS.OmniCalculationsDBDataSet();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,11 +44,6 @@
             this.comboBoxType = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonSearch = new System.Windows.Forms.Button();
-            this.resultDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.equationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.calculationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.calculatorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewHistory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.calculationDataBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.omniCalculationsDBDataSet)).BeginInit();
@@ -54,14 +54,14 @@
             this.dataGridViewHistory.AutoGenerateColumns = false;
             this.dataGridViewHistory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewHistory.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(29)))));
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewHistory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewHistory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewHistory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn,
@@ -75,6 +75,41 @@
             this.dataGridViewHistory.Name = "dataGridViewHistory";
             this.dataGridViewHistory.Size = new System.Drawing.Size(799, 529);
             this.dataGridViewHistory.TabIndex = 0;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // calculatorDataGridViewTextBoxColumn
+            // 
+            this.calculatorDataGridViewTextBoxColumn.DataPropertyName = "Calculator";
+            this.calculatorDataGridViewTextBoxColumn.FillWeight = 101.5228F;
+            this.calculatorDataGridViewTextBoxColumn.HeaderText = "Calculator";
+            this.calculatorDataGridViewTextBoxColumn.Name = "calculatorDataGridViewTextBoxColumn";
+            // 
+            // calculationDataGridViewTextBoxColumn
+            // 
+            this.calculationDataGridViewTextBoxColumn.DataPropertyName = "Calculation";
+            this.calculationDataGridViewTextBoxColumn.FillWeight = 99.49239F;
+            this.calculationDataGridViewTextBoxColumn.HeaderText = "Calculation";
+            this.calculationDataGridViewTextBoxColumn.Name = "calculationDataGridViewTextBoxColumn";
+            // 
+            // equationDataGridViewTextBoxColumn
+            // 
+            this.equationDataGridViewTextBoxColumn.DataPropertyName = "Equation";
+            this.equationDataGridViewTextBoxColumn.FillWeight = 99.49239F;
+            this.equationDataGridViewTextBoxColumn.HeaderText = "Equation";
+            this.equationDataGridViewTextBoxColumn.Name = "equationDataGridViewTextBoxColumn";
+            // 
+            // resultDataGridViewTextBoxColumn
+            // 
+            this.resultDataGridViewTextBoxColumn.DataPropertyName = "Result";
+            this.resultDataGridViewTextBoxColumn.FillWeight = 99.49239F;
+            this.resultDataGridViewTextBoxColumn.HeaderText = "Result";
+            this.resultDataGridViewTextBoxColumn.Name = "resultDataGridViewTextBoxColumn";
             // 
             // calculationDataBindingSource
             // 
@@ -123,7 +158,7 @@
             "All Types",
             "Strength Calculator",
             "Power Calculator",
-            "Anaerboic Calculator",
+            "Anaerobic Calculator",
             "Aerobic Calculator",
             "Nutrition Calculator",
             "Biomechanics Calculator"});
@@ -155,41 +190,6 @@
             this.buttonSearch.Text = "Search Calculations";
             this.buttonSearch.UseVisualStyleBackColor = false;
             this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
-            // 
-            // resultDataGridViewTextBoxColumn
-            // 
-            this.resultDataGridViewTextBoxColumn.DataPropertyName = "Result";
-            this.resultDataGridViewTextBoxColumn.FillWeight = 99.49239F;
-            this.resultDataGridViewTextBoxColumn.HeaderText = "Result";
-            this.resultDataGridViewTextBoxColumn.Name = "resultDataGridViewTextBoxColumn";
-            // 
-            // equationDataGridViewTextBoxColumn
-            // 
-            this.equationDataGridViewTextBoxColumn.DataPropertyName = "Equation";
-            this.equationDataGridViewTextBoxColumn.FillWeight = 99.49239F;
-            this.equationDataGridViewTextBoxColumn.HeaderText = "Equation";
-            this.equationDataGridViewTextBoxColumn.Name = "equationDataGridViewTextBoxColumn";
-            // 
-            // calculationDataGridViewTextBoxColumn
-            // 
-            this.calculationDataGridViewTextBoxColumn.DataPropertyName = "Calculation";
-            this.calculationDataGridViewTextBoxColumn.FillWeight = 99.49239F;
-            this.calculationDataGridViewTextBoxColumn.HeaderText = "Calculation";
-            this.calculationDataGridViewTextBoxColumn.Name = "calculationDataGridViewTextBoxColumn";
-            // 
-            // calculatorDataGridViewTextBoxColumn
-            // 
-            this.calculatorDataGridViewTextBoxColumn.DataPropertyName = "Calculator";
-            this.calculatorDataGridViewTextBoxColumn.FillWeight = 101.5228F;
-            this.calculatorDataGridViewTextBoxColumn.HeaderText = "Calculator";
-            this.calculatorDataGridViewTextBoxColumn.Name = "calculatorDataGridViewTextBoxColumn";
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.Visible = false;
             // 
             // HistoryForm
             // 

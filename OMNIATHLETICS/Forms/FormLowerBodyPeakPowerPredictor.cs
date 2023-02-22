@@ -40,7 +40,7 @@ namespace OMNIATHLETICS
                 //store in local object memory list
                 ActiveCalculator.powerCalculator.SaveToPeakMemory(mass + "," + height + "," + labelDesc);
                 //add to history DB
-                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.powerCalculator.ToString(), "Lower Body Peak Power Predictor", "Power (W) = 60.7x " + height + " +45.3 x " + mass + "-2055.", labelDesc);
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.powerCalculator.ToString(), "Lower Body Peak Power Predictor", "Power (W) = 60.7 x " + height + " + 45.3 x " + mass + " - 2055.", labelDesc);
             }
             catch
             {

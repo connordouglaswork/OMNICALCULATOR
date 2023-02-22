@@ -49,7 +49,7 @@ namespace OMNIATHLETICS
                 //store in local object memory list
                 ActiveCalculator.aerobicCalculator.SaveToVOMemory(platau.ToString() + "," + blood + "," + rer + "," + rpe + "," + hr + "," + age + "," + labelDesc);
                 //add to history DB
-                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.aerobicCalculator.ToString(), "VO2 Max Validator", "Platau Observed=" + platau.ToString() + "Blood Lactate=" + blood + "RER" + rer + "RPE=" + rpe + "hr=" + hr + " age=" + age, labelDesc);
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.aerobicCalculator.ToString(), "VO2 Max Validator", "Platau Observed=" + platau.ToString() + ",Blood Lactate=" + blood + ",RER=" + rer + ",RPE=" + rpe + ",hr=" + hr + " ,age=" + age, labelDesc);
             }
             catch
             {

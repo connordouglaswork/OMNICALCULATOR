@@ -40,7 +40,7 @@ namespace OMNIATHLETICS
                 //store in local object memory list
                 ActiveCalculator.strengthCalculator.SaveToLoadingMemory(max + "," + percent + "," + labelDesc);
                 //add to history DB
-                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.strengthCalculator.ToString(), "Loading Tool", "Loading = % / 100 *" + max, labelDesc);
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.strengthCalculator.ToString(), "Loading Tool", "Loading = " + percent + " / 100 *" + max, labelDesc);
             }
             catch
             {

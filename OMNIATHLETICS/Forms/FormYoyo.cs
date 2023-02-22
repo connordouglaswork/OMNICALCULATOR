@@ -33,10 +33,18 @@ namespace OMNIATHLETICS
             //catch non numerical inputs
             try
             {
-                string level = textBoxLevel.Text;
-                string distance = textBoxDistance.Text;
+                string level = "0";
+                string distance = "0";
+                if (textBoxLevel.Text != "")
+                {
+                    level = textBoxLevel.Text;
+                }
+                if (textBoxDistance.Text != "")
+                {
+                    distance = textBoxDistance.Text;
+                }
                 string type = "";
-                if (distance != "")
+                if (distance != "0")
                 {
                     type = "meters";
                 }

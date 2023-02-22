@@ -40,7 +40,7 @@ namespace OMNIATHLETICS
                 //store in local object memory list
                 ActiveCalculator.nutritionCalculator.SaveToProteinIndexMemory(mass + "," + trainingType + "," + labelDesc);
                 //add to history DB
-                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.nutritionCalculator.ToString(), "Protein Index", mass + "," + trainingType, labelDesc);
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.nutritionCalculator.ToString(), "Protein Index", "Mass(kg): " + mass + ", Training Type: " + trainingType, labelDesc);
             }
             catch
             {

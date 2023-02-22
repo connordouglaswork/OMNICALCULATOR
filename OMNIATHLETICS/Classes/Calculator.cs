@@ -32,12 +32,12 @@ namespace OMNIATHLETICS
                 con.Open();
                 try
                 {
-                    string insertQuery = "select * from CalculationData";
+                    //string insertQuery = "select * from CalculationData";
 
-                    SQLiteCommand cmd;
-                    cmd = con.CreateCommand();
-                    cmd.CommandText = insertQuery;
-                    cmd.ExecuteReader();
+                    //SQLiteCommand cmd;
+                    //cmd = con.CreateCommand();
+                    //cmd.CommandText = insertQuery;
+                    //cmd.ExecuteReader();
                 }
                 catch (Exception)
                 {
@@ -54,13 +54,19 @@ namespace OMNIATHLETICS
         public void SaveToCalculatorHistory(string calculator, string calculation, string equation, string result)
         {
             CreateConnection();
+            try
+            {
+                string insertQuery = "insert into CalculationData(Calculator,Calculation,Equation,Result)values('" + calculator + "','" + calculation + "','" + equation + "','" + result + "')";
+                SQLiteCommand cmd;
+                cmd = con.CreateCommand();
+                cmd.CommandText = insertQuery;
+                cmd.ExecuteNonQuery();
+            }           
+            catch (Exception)
+            {
+                CreateTable(con);
 
-            string insertQuery = "insert into CalculationData(Calculator,Calculation,Equation,Result)values('" + calculator + "','" + calculation + "','" + equation + "','" + result + "')";
-
-            SQLiteCommand cmd;
-            cmd = con.CreateCommand();
-            cmd.CommandText = insertQuery;
-            cmd.ExecuteNonQuery();
+            }
             con.Close();
         }
 

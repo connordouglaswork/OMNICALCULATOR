@@ -42,7 +42,7 @@ namespace OMNIATHLETICS
                 //store in local object memory list
                 ActiveCalculator.nutritionCalculator.SaveToFFMIMemory(mass + "," + bodyfat + "," + height + "," + labelDesc);
                 //add to history DB
-                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.nutritionCalculator.ToString(), "FFMI", "FFMI=" + mass + "-(" + mass + "*(" + bodyfat + "/100))" + "/ " + height + "^2).", labelDesc);
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.nutritionCalculator.ToString(), "FFMI", "FFMI=" + mass + "-((" + mass + "*(" + bodyfat + "/100))" + "/ " + height + "^2).", labelDesc);
             }
             catch
             {

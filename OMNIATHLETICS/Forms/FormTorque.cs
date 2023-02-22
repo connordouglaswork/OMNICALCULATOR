@@ -39,7 +39,7 @@ namespace OMNIATHLETICS
                 //store in local object memory list
                 ActiveCalculator.biomechanicsCalculator.SaveToTorqueMemory(force + "," + radius + "," + labelDesc);
                 //add to history DB
-                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.biomechanicsCalculator.ToString(), "Torque", "Torque = " + force + "*" + radius, labelDesc);
+                ActiveCalculator.calcualtor.SaveToCalculatorHistory(ActiveCalculator.biomechanicsCalculator.ToString(), "Torque", "T = " + force + "*" + radius, labelDesc);
             }           
             catch
             {

@@ -188,9 +188,9 @@
             this.labelMBR.ForeColor = System.Drawing.SystemColors.Control;
             this.labelMBR.Location = new System.Drawing.Point(47, 337);
             this.labelMBR.Name = "labelMBR";
-            this.labelMBR.Size = new System.Drawing.Size(68, 25);
+            this.labelMBR.Size = new System.Drawing.Size(120, 25);
             this.labelMBR.TabIndex = 21;
-            this.labelMBR.Text = "MBR:";
+            this.labelMBR.Text = "MBR(cals):";
             // 
             // label3
             // 
