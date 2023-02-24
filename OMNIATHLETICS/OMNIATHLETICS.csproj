@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>CalculatorIcon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System">
       <HintPath>..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
@@ -361,6 +364,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\background_970x699.jpg" />
+    <Content Include="CalculatorIcon.ico" />
+    <Content Include="Resources\CalculatorIcon.ico" />
     <Content Include="UML\OMNIathleticsUML.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -21,11 +21,12 @@ namespace OMNIATHLETICS
             InitializeComponent();           
         }
 
+        //initialze form
         private void HistoryForm_Load(object sender, EventArgs e)
         {
             try
             {
-                // TODO: This line of code loads data into the 'omniCalculationsDBDataSet.CalculationData' table. You can move, or remove it, as needed.
+                // This line of code loads data into the 'omniCalculationsDBDataSet.CalculationData' table. You can move, or remove it, as needed.
                 var parentdir = Path.GetDirectoryName(System.Windows.Forms.Application.StartupPath);
                 string conString = "Data Source=" + parentdir + "\\OmniCalculationsDB.db;";
                 SQLiteConnection con = new SQLiteConnection(conString);
@@ -41,7 +42,6 @@ namespace OMNIATHLETICS
                 SQLiteDataAdapter da;
                 cmd = con.CreateCommand();
                 cmd.CommandText = select;
-
                 da = new SQLiteDataAdapter(select, con);
                 DataSet ds = new DataSet();
                 da.Fill(ds, "CalculationData");
@@ -55,6 +55,7 @@ namespace OMNIATHLETICS
             }
         }
 
+        //remove highlighted table line
         private void buttonDelete_Click(object sender, EventArgs e)
         {
             try
@@ -75,6 +76,7 @@ namespace OMNIATHLETICS
                 con.Open();
                 string calculatorSelected = comboBoxType.Text;
                 string select = "SELECT * from CalculationData";
+                //make sure grid is refreshed with correct SELECT statement
                 if (calculatorSelected != "All Types")
                 {
                     select = "SELECT * from CalculationData WHERE Calculator='" + calculatorSelected + "'";
@@ -92,6 +94,7 @@ namespace OMNIATHLETICS
             }          
         }
 
+        //change the gridview based on calcualtor type
         private void buttonSearch_Click(object sender, EventArgs e)
         {
             try

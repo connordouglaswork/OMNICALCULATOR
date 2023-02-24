@@ -15,10 +15,11 @@ namespace OMNIATHLETICS
     public class Calculator
     {
         //Databse connection string for calcualtion history
-        // private static string rconString = "Data Source=OmniCalculationsDB.db; Version = 3; New = True; Compress = True; ";
+        //private static string rconString = "Data Source=OmniCalculationsDB.db; Version = 3; New = True; Compress = True; ";
         //private static string conString = @"URI=file:../OmniCalculationsDB.db";
         SQLiteConnection con;
 
+        //builds table, to be called when form first loads in 
         public SQLiteConnection CheckDB()
         {
             var parentdir = Path.GetDirectoryName(System.Windows.Forms.Application.StartupPath);
@@ -28,10 +29,10 @@ namespace OMNIATHLETICS
             try
             {
                 con.Open();
+                //if table doesn't exist then catch and make one
                 try
                 {
                     string insertQuery = "select * from CalculationData";
-
                     SQLiteCommand cmd;
                     cmd = con.CreateCommand();
                     cmd.CommandText = insertQuery;
@@ -50,6 +51,7 @@ namespace OMNIATHLETICS
             return con;
         }
 
+        //initialize connection to DB
         public SQLiteConnection CreateConnection()
         {
             var parentdir = Path.GetDirectoryName(System.Windows.Forms.Application.StartupPath);
@@ -69,6 +71,7 @@ namespace OMNIATHLETICS
             
             return con;
         }
+
         //Save to calcualtion history table in OmniCalculationsDB
         public void SaveToCalculatorHistory(string calculator, string calculation, string equation, string result)
         {
@@ -108,6 +111,7 @@ namespace OMNIATHLETICS
             }
         }
 
+        //build calculation history table
         public void CreateTable(SQLiteConnection conn)
         {
             SQLiteCommand cmd;
@@ -123,7 +127,6 @@ namespace OMNIATHLETICS
         }
 
 
-
         //Delete from calcualtion history table in OmniCalculationsDB
         public void DeletefromCalculatorHistory(int id)
         {
@@ -136,6 +139,7 @@ namespace OMNIATHLETICS
             }
             con.Close();
         }
+
         //Example to read data
         public void ReadData()
         {

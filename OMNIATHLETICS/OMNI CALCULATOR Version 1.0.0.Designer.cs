@@ -812,6 +812,7 @@
             this.ClientSize = new System.Drawing.Size(1210, 699);
             this.Controls.Add(this.panelHomePage);
             this.Controls.Add(this.panelSideMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "OMNI CALCULATOR Version 1.0.0";
             this.panelSideMenu.ResumeLayout(false);
